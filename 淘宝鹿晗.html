@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src=""></script>
+    <style>
+    body,html{
+        background:#0f0;
+        height: 100%;overflow: hidden;
+    }
+    div{
+        position: absolute;
+        animation: conSlide 3s linear;
+        left: 100%;
+
+    }
+        @keyframes conSlide {
+           from{
+               left:0;
+           } to{
+                left: 100%;
+            display: none;
+                        }
+        }
+    </style>
+<script src="jquery-3.2.1.min.js"></script>
+</head>
+<body>
+</body>
+<script>
+var content=["鹿晗管我鸟事","刷屏干嘛","闹得沸沸扬扬"];
+var slides=[];
+var num=[];
+function shiLiuJinZ(){
+    for(var i=0;i<6;i++){
+        num[i]=Math.ceil(Math.random()*16);
+        if(num[i]>=10){
+            switch (num[i]){
+                case 10:
+                    num[i]="a";
+                    break;
+                case 11:
+                    num[i]="b";
+                    break;
+                case 12:
+                    num[i]="c";
+                    break;
+                case 13:
+                    num[i]="d";
+                    break;
+                case 14:
+                    num[i]="e";
+                    break;
+                case 15:
+                    num[i]="f";
+                    break;
+                case 16:
+                    num[i]="a";
+                    break;
+            }
+        }
+    }
+    return num.join("");
+}
+var i=0;
+    function danMu(){
+        slides[i]=document.createElement("div");
+        slides[i].innerText=content[parseInt(Math.random()*3)];
+        slides[i].style.top=i*30+"px";
+        slides[i].style.animation="conSlide "+Math.ceil(Math.random()*10)+"s linear";
+        slides[i].style.width=100+"px";
+        slides[i].style.color="#"+shiLiuJinZ();
+        slides[i].className="slideDiv_"+i;
+        document.getElementsByTagName("body")[0].appendChild(slides[i]);
+
+        i++;
+        if(i*30>=document.body.offsetHeight){
+            for(var h=0;h<slides.length;h++){
+                if($(".slideDiv_"+h).offset().left>=$("html").width()){
+                    $(".slideDiv_"+h).eq(0).remove();
+                }
+            }
+            i=0;
+        }
+    }
+setInterval(danMu,50)
+</script>
+</html>

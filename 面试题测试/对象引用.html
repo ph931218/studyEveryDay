@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //var foo = {n:1};
+   // var bar = foo;
+    //foo.x = foo = {n:2};
+    //console.log(foo);
+    //console.log(bar);
+
+//    for(var i=1;i<=3;i++){
+//        setTimeout(function(){
+//            console.log(i);
+//        },0);
+//    };
+
+//    for(var i=1;i<=3;i++) {
+//        setTimeout((function (a) {
+//            console.log(a);
+//        })(i), 0)
+//    }
+//    function Animal(name){
+//        this.name = name;
+//    }
+//    Animal.color = "black";
+//    Animal.prototype.say = function(){//每个函数都有一个prototype属性，这个属性是指向一个对象的引用，这个对象称为原型对象，原型对象包含函数实例共享的方法和属性，也就是说将函数用作构造函数调用（使用new操作符调用）的时候，新创建的对象会从原型对象上继承属性和方法。
+//        console.log("I'm " + this.name);
+//    };
+//    var cat = new Animal("cat");
+//
+//    console.log(
+//            cat.name, //cat
+//            cat.height //undefined
+//    );
+//    cat.say(); //I'm cat
+//
+//    console.log(
+//            Animal.name, //Animal
+//            Animal.color //back
+//    );
+//   // Animal.say(); //Animal.say is not a function
+//
+//
+//
+//    function Foo() {
+//        getName = function () { console.log(1); };
+//        return this;
+//    }
+//    Foo.getName = function () { console.log(2);};
+//    Foo.prototype.getName = function () { console.log(3);};
+//    var getName = function () { console.log(4);};
+//    function getName() { console.log(5);}
+//
+//    //请写出以下输出结果：
+//    Foo.getName();//2
+//    getName();//4
+//    Foo().getName();//1
+//    getName();//1
+//    new Foo.getName();//2
+//    new Foo().getName();//3
+//    new new Foo().getName();//3
+
+//    var test = ( function(a) {
+//        this.a = a;
+//        return function(b) {
+//            return this.a+b;
+//        }
+//    })( (function(a, b){
+//        return a
+//    })( 1,2) );
+//    console.log(test(4));
+//    for(var i=1;i<=3; i++) {
+//        console.log(i);
+//    }
+//    for(var i=1;i<=3; i++) {
+//        setTimeout((function() {
+//            console.log(i);
+//        })(),0)
+//    }
+//    for(var i=1;i<=3; i++) {
+//        setTimeout((function(a) {
+//            console.log(a);
+//        })(i),0)
+//    }
+//    console.log("aaa");
+
+
+
+
+//    var a = 1;
+//    console.log(a.__proto__);//Number
+//    console.log(a.__proto__.__proto__);//Object
+//    console.log(a.__proto__.__proto__.__proto__);//null
+//    console.log(a.prototype);
+//
+//    var a = {
+//        x:1
+//    };
+//    console.log(a.__proto__);//Object
+//    console.log(a.__proto__.__proto__);//null
+//    console.log(a.prototype);
+//
+//    function a() {
+//        this.y = 2;
+//    }
+//    console.log(a.__proto__);//Object
+//    console.log(a.__proto__.__proto__);//null
+//    console.log(a);
+//
+//    var Person = function() {};
+//    var p = new Person();
+//    console.log(p.__proto__ );
+//    console.log(Person.prototype);
+
+
+//    var scope = 'top';
+//    function f1() {
+//        console.log(scope);
+//    };
+//    function f2() {
+//        var scope = 'f2';
+//        f1();
+//    };
+//    f2();
+
+
+//    let person = {
+//                name : '大胖',
+//                say : function() {
+//                    console.log(this.name);
+//                },
+//                say1 : ()=>{
+//                console.log(this.name);
+//                 }
+//    };
+//    let name = '二胖';
+//    setTimeout(function() {
+//        console.log(this);//window
+//        person.say();//大胖
+//    }, 100);
+//    person.say();
+//    var test=person.say;
+//    test();
+//    setTimeout( person.say, 100 );
+
+//    person.say1();//箭头函数不绑定上下文，它会根据作用域链想上寻找上下文并绑定此时person.say1的上下文为window
+//    setTimeout(function() {
+//        console.log(this);
+//        person.say1();
+//    }, 100);
+//    setTimeout( person.say1, 100 );
+
+
+//    var sayName=()=>{
+//        console.log(this);
+//    }
+//    var ph={
+//        say: ()=>{
+//                console.log(this);
+//    },
+//        say1:function(){
+//            console.log(this)
+//        }
+//    }
+//    ph.say();
+//    ph.say1();
+
+
+//
+//    setTimeout(function() {
+//        console.log(1);
+//    },100);
+//
+//    for(var i=0; i<10; i++) {
+//        console.log(2);
+//    }
+//
+//    setTimeout(function() {
+//        console.log(3);
+//    },50);
+
+//    var name = '!!';
+//    var obj = {
+//        name:'monkey',
+//        print:function(){
+//            console.log(this.name);
+//        },
+//        test:function(){
+//            //this.print
+//            setTimeout(this.print,1000);
+//        }
+//    }
+//    obj.test();
+
+
+
+
+    for(var i = 0; i < 5; i++) {
+        console.log(i);
+    }
+    for(var i = 0; i < 5; i++) {
+        setTimeout(function() {
+            console.log(i);
+        }, 1000 * i);
+    }
+    for(var i = 0; i < 5; i++) {
+        (function(i) {
+            setTimeout(function() {
+                console.log(i);
+            }, i * 1000);
+        })(i);
+    }
+    for(var i = 0; i < 5; i++) {
+        (function() {
+            setTimeout(function() {
+                console.log(i);
+            }, i * 1000);
+        })(i);
+    }
+    for(var i = 0; i < 5; i++) {
+        setTimeout((function(i) {
+            console.log(i);
+        })(i), i * 1000);
+    }
+</script>
+</html>

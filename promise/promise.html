@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    new Promise(function(resolve,reject){ setTimeout(function(){
+        console.log("我是第一个timeout我的拖延时间是1000");
+        resolve("执行成功");
+    },1000);}).then(function(value){
+        return  new Promise(function(resolve,reject){
+            setTimeout(function(){
+                console.log("我是第二个timeout我的拖延时间是900");
+                resolve(value);
+            },900);
+        })
+    }).then(function(value){
+        return  new Promise(function(resolve,reject){
+            setTimeout(function(){
+                console.log("我是第二个timeout我的拖延时间是800");
+                resolve(value);
+            },800);
+        })
+    }).then(function(value){
+        return  new Promise(function(resolve,reject){
+            setTimeout(function(){
+                console.log("我是第二个timeout我的拖延时间是700");
+                resolve(value);
+            },700);
+        })
+    })
+
+
+
+
+    setTimeout(function() {
+        console.log('timeout1');
+    }, 100)
+
+    setTimeout(function() {
+        console.log('timeout2');
+    })
+
+    new Promise(function(resolve) {
+        console.log('promise1');
+        for(var i = 0; i < 1000; i++) {
+            i == 99 && resolve();
+        }
+        console.log('promise2'+" "+i);
+    }).then(function() {
+        console.log('then1');
+    });
+
+    console.log('global1');
+
+</script>
+</html>

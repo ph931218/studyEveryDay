@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<!--
+	欢迎体验HBuilder，最快的web编码工具。
+	烈马是需要驯服的，玩不转HBuilder，你快不了。
+	按照lessson1.txt的指导敲击键盘，你会发现HBuilder的神奇所在。
+	你可以用任何其他工具敲这段代码，至少比HBuilder慢5倍!
+	写几十行代码，来一场无鼠标编程之旅，看看who is e。
+	Are you ready?
+	小贴士：可以把lesson1.txt拖到右边或下边，实现分窗格并排浏览。
+	在注释后的第12行开始敲下lesson1里的按键。
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>基础表单</title>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	<style>
+		body{padding: 50px 100px;}
+	</style>
+</head>
+<body>         <!--水平表单-->
+<form role="form">  <!--<form class="form-horizontal" role="form">-->
+  <div class="form-group">
+    <label for="exampleInputEmail1">邮箱：</label>
+    <!--<label for="inputEmail3" class="col-sm-2 control-label">邮箱</label>-->
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="请输入您的邮箱地址">
+  	<!--<input type="email" class="form-control" id="inputEmail3" placeholder="请输入您的邮箱地址">-->
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">密码</label>
+    <!--<label for="inputPassword3" class="col-sm-2 control-label">密码</label>-->
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="请输入您的邮箱密码">
+  </div>
+  	<!--<div class="col-sm-10">
+      <input type="password" class="form-control" id="inputPassword3" placeholder="请输入您的邮箱密码">
+    </div>-->
+  <div class="checkbox">
+	<!--<div class="form-group">
+    		<div class="col-sm-offset-2 col-sm-10">
+      			<div class="checkbox">-->  	
+    <label>
+      <input type="checkbox"> 记住密码
+      </label>
+  </div>
+  <!--<div class="form-group">
+    	<div class="col-sm-offset-2 col-sm-10">-->
+  <button type="submit" class="btn btn-default">进入邮箱</button>
+</form>	
+</body>
+</html>

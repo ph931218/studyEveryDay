@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="parent" style="width: 150px;height: 150px;background: #f00">
+    <div id="child" style="width: 100px;height: 100px;background: #000"></div>
+</div>
+</body>
+<script>
+    document.getElementById("parent").addEventListener("click",function(e){
+        console.log(e.target);
+    })
+</script>
+</html>

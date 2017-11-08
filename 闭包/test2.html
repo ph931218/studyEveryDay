@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+function makeAdder(a) {
+return function(b) {
+return a + b;
+}
+}
+var x = makeAdder(5);
+var y = makeAdder(20);
+alert(x(6)); // 11
+alert(y(7)); // 27
+</script>
+</html>

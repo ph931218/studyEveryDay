@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-size: 14px;
+        }
+        .nav {
+            width: 1000px;
+            height: 50px;
+            margin: 0 auto;
+        }
+        li {
+            width: 68px;
+            text-align: center;
+            line-height: 50px;
+        }
+        .mun1>li{
+            float: left;
+            background: red;
+        }
+        .mun1>li:hover{
+            background: yellow;
+        }
+        .mun1,.mun2{
+            list-style: none;
+            height: 50px;
+        }
+        .mun2 {
+            display: none;
+            width: 100%;
+        }
+        .mun1>li:hover .mun2{
+            display: block;
+        }
+        .mun2 li{
+            background: green;
+        }
+        .mun2 li:hover{
+            background: #666;
+        }
+    </style>
+</head>
+<body>
+<div class="nav">
+    <ul class="mun1">
+        <li>菜单</li>
+        <li>菜单</li>
+        <li>菜单</li>
+        <li>菜单</li>
+        <li>菜单</li>
+        <li>菜单
+            <ul class="mun2">
+                <li>子菜单</li>
+                <li>子菜单</li>
+                <li>子菜单</li>
+                <li>子菜单</li>
+            </ul>
+        </li>
+    </ul>
+</div>
+</body>
+</html>

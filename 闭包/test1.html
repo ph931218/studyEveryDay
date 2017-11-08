@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function sjs(){
+        var a=0;
+        alert(a);
+        return function (){
+            a++;
+            return a;
+        }
+    }
+    var num=sjs();
+    var test=setInterval(function(){
+        var child=document.createElement("div");
+        var val=num();
+        child.innerText=val;
+        document.getElementsByTagName("body")[0].appendChild(child);
+        if(val==10){
+            alert("循环结束");
+            clearInterval(test);
+            num=null;
+            sjs();
+        }
+    },500)
+</script>
+</html>

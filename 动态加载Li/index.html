@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button>点击添加列表</button>
+</body>
+<script>
+    (function (){
+        function getNodes(){
+            var counts=0;
+            document.getElementsByTagName("body")[0].appendChild(document.createElement("ul"));
+            return function (callBack){
+                if(counts<10){
+                    var newNode=document.createElement("li");
+                    newNode.innerHTML="我是第"+(counts+1)+"项";
+                    document.getElementsByTagName("ul")[0].appendChild(newNode);
+                }
+                callBack(counts);
+                counts++;
+            }
+        }
+        var star=getNodes();
+        document.querySelector("button").addEventListener("click",function(){
+            if(!star){
+                alert("元素已创建完成，无需创建");
+            }else {
+                this.disabled=true;
+                var self=this;
+                clearInterval(setJiShi);
+                var setJiShi=setInterval(function(){
+                    star(function(counts){
+                        if(counts==10){
+                            clearInterval(setJiShi);
+                            alert("创建完毕");
+                            star=null;
+                            self.disabled=false;
+                        }
+                    })
+                },1000);
+            }
+
+        })
+    })();
+
+</script>
+</html>

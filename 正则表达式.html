@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" onchange="change()"/><div></div>
+</body>
+<script>
+    var inp=document.getElementsByTagName("input")[0];
+    var sp=document.getElementsByTagName("div")[0];
+    var inpVal=inp.value;
+    sp.innerText="请输入邮箱";
+    var reg=/^[^0][\w]{3,12}@[a-zA-Z]{2,8}\.com/;
+    function change(){
+        if (!reg.test(inp.value)){
+            sp.innerText="请输入正确的邮箱";
+        }else {
+            sp.innerText="邮箱格式正确";
+        }
+
+    }
+
+
+</script>
+</html>

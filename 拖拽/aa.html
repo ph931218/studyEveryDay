@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html style="height: 100%" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .black {
+            width: 100px;
+            height: 100px;
+            background: #000;
+        }
+        .red {
+            width: 200px;
+            height: 200px;
+            background: #f00;
+        }
+    </style>
+</head>
+<body style="height: 100%">
+<div ondragover="over(event)" ondrop="drop(event)" style="height: 100%;width: 100%">
+<div id="container" class="black" draggable="true" ondragstart="start(event)" ></div>
+<div id="el" class="red" ondragover="over(event)" ondrop="drop(event)"></div>
+</div>
+</body>
+<script>
+    function start(ev){
+       // ev.dataTransfer.setData("Text",ev.target.id);
+    }
+    function over(ev){
+        ev.preventDefault();
+        console.log("我在被拖动");
+    }
+    function drop(ev){
+        ev.preventDefault();
+        var data=ev.dataTransfer.getData("text");
+        ev.target.appendChild(document.getElementById("container"));
+        console.log("我被放下了");
+    }
+</script>
+</html>

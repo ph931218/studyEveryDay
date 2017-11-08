@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    /**
+     * Created by Administrator on 2017/8/3.
+     */
+    const musicSheZhi={
+        template:'<div style="background: #EFEFEF;">' +
+        '<div class="mobanTop">' +
+        ' <span @click="back"><img src="./img/arrowLeft.png" style="width: 1.5em;height: 1.5em;vertical-align: middle">返回</span><span>音乐</span> </div> ' +
+        '<div class="musicFenLei"> <span v-for="(zhongLei,index) in fenLei" v-bind:class="{active:index==0}" @click="selectFenLei(index)">{{zhongLei}}</span> </div> ' +
+        '<div class="musicSearch"> <input type="text" placeholder="请输入歌名" @input="search"><button type="button">搜索</button> </div> ' +
+        '<div class="musicList"> <ul>' +
+        ' <li @click="musicPaused"><img src="./img/music/music_off.png"></li>' +
+        ' <li v-for="(musicName,musicPlayIndex) in musicNames"> <span>{{musicName}}</span> <img @click="playMusic(musicPlayIndex)" src="./img/music/music_on.png"><audio class="musicPlay" loop="loop"  v-bind:src="musicSrc[musicPlayIndex]" ></audio></li>' +
+        '</ul>' +
+        '</div>' +
+        '<div class="musicShezhiBottom"> ' +
+        '<span></span> <span></span> ' +
+        '</div>' +
+        '</div>'
+        ,data:function(){
+            return{
+                fenLei:["全部"]
+                ,fenleiMusicNames:[]
+                ,musicSrc:[]
+                ,musicNames:[]
+                ,allMusic:[]
+                ,thisMusic:[[],[]]
+                ,allMusicSrc:[]
+            }
+        }
+        ,methods:{
+
+
+
+
+            back:function(){
+                app1.$router.go(-1);
+            }
+            ,search:function(){
+                var self=this;
+                var inputVal=$(".musicSearch input").val();
+                var inputLength=inputVal.length;
+                var newMusic=[[],[]];
+                if(!inputVal){
+                    this.musicNames=this.thisMusic[0];
+                    this.musicSrc=this.thisMusic[1];
+                    newMusic=[[],[]];
+                }else {
+                    $.each(this.allMusic,function(i,val){
+                        var valLength=val.length;
+                        var rel=null;
+                        var jieQuCiShu=valLength-inputLength+1;
+                        for (var i=0;i<jieQuCiShu;i++){
+                            if(inputVal==val.substr(i,inputLength)){
+                                var jude=true;
+                                if(newMusic[0].length>0){
+                                    $.each(newMusic[0],function(h,data){
+                                        if(val==data){
+                                            jude=false;
+                                        }
+                                    })
+                                }
+                                if(jude){
+                                    newMusic[0].push(val);
+                                    newMusic[1].push(self.thisMusic[1][i]);
+                                }
+                            }
+                        }
+                    });
+                    this.musicNames=newMusic[0];
+                    this.musicSrc=newMusic[1];
+                }
+            }
+            ,selectFenLei:function(index){
+                $(".musicFenLei span").removeClass("active");
+                $(".musicFenLei span").eq(index).addClass("active");
+                $(".musicList li img").attr({src:"./img/music/music_on.png"});
+                $(".musicList li img").eq(0).attr({src:"./img/music/music_off.png"});
+                if(index){
+                    this.thisMusic=[[],[]];
+                    var newMusicFenLei=[[],[]];
+                    var self=this;
+                    $.each(this.fenleiMusicNames[index-1],function(i,data){
+                        self.thisMusic[0].push(data[0]);
+                        self.thisMusic[1].push(data[1]);
+                    })
+
+                    this.musicNames=this.thisMusic[0];
+                    this.musicSrc=this.thisMusic[1];
+                }else{
+                    this.musicNames=this.allMusic;
+                    this.musicSrc=this.allMusicSrc;
+                }
+                $.each($(".musicPlay"),function(i,data){
+                    $(this)[0].pause();
+                })
+
+            }
+            ,musicPaused:function(){
+                $.each($(".musicPlay"),function(i,data){
+                    $(this)[0].pause();
+                });
+                $(".musicList li img").attr({src:"./img/music/music_on.png"});
+                $(".musicList li img").eq(0).attr({src:"./img/music/music_off.png"});
+            }
+            ,playMusic:function(index){
+                var playIndex=index+1;
+                $(".musicList li img").attr({src:"./img/music/music_on.png"});
+                $(".musicList li img").eq(0).attr({src:"./img/music/music_off.png"});
+                if($(".musicList li img").eq(playIndex).attr("src")=="./img/music/music_on.png"){
+                    $(".musicList li img").eq(playIndex).attr({src:"./img/music/music_off.png"});
+                }else {
+                    $(".musicList li img").eq(playIndex).attr({src:"./img/music/music_on.png"});
+                }
+                $.each($(".musicPlay"),function(i,data){
+                    $(this)[0].pause();
+                })
+                $(".musicPlay").eq(index)[0].play();
+                bus.$emit("bgMusic",$(".musicPlay").eq(index).attr("src"));
+            }
+        }
+        ,mounted:function(){
+            var self=this;
+            getData('cate','music','get',function(data){
+                setMusicData(data);
+            })
+
+            ////////获取音乐////////////////////////////////////
+            function setMusicData(datas){
+                var newMusicNamesArry=[];
+                var newMusicSrcArry=[];
+                $.each(datas.list,function(i,data){
+                    var h=i+1;
+                    Vue.set(self.fenLei);//使用Vue.set()方法检测fenlei数组的变化，它的值发生变化视图也发生相应的更新
+                    self.fenLei[h]=data.name;
+                    console.log(self.fenLei)
+                    getData('music',data.value,'get',function(musics){
+                        var fenLeiArr=[];
+                        $.each(musics.list,function(h,sing){
+                            newMusicSrcArry.push(sing.music);
+                            newMusicNamesArry.push(sing.title);
+                            fenLeiArr.push([sing.title,sing.music]);
+                        })
+                        self.fenleiMusicNames[i]=fenLeiArr;
+                        self.musicNames=newMusicNamesArry;
+                        self.allMusicSrc=newMusicSrcArry;
+                        self.musicSrc=newMusicSrcArry;
+                        self.allMusic=self.musicNames;
+                    })
+                })
+                console.log(self.fenleiMusicNames);
+            }
+
+
+            var musicBoxHeight=parseInt($("html").height())-parseInt($(".mobanTop").height())-parseInt($(".musicSearch").height())-parseInt($(".musicFenLei").height())-parseInt($(".musicShezhiBottom").height())+"px";
+            $(".musicList").css({height:musicBoxHeight});
+            $(window).resize(function(){
+                var musicBoxHeight=parseInt($("html").height())-parseInt($(".mobanTop").height())-parseInt($(".musicSearch").height())-parseInt($(".musicFenLei").height())-parseInt($(".musicShezhiBottom").height())+"px";
+                $(".musicList").css({height:musicBoxHeight});
+            })
+        }
+    };
+
+
+
+    const moban={
+        "template": '<div style="height: 100%"> ' +
+        '<div class="mobanTop"> ' +
+        '<span v-on:click="back"><img src="./img/arrowLeft.png" >返回</span><span>模板</span> ' +
+        '</div> ' +
+        '<div class="mobanCon"> ' +
+        '<ul> ' +
+        '<li v-for="(mobanUrl,index) in mobanUrls" ><div v-bind:style="{backgroundImage:url1+mobanUrl+url2}"><span class="mobanDel" v-on:click="del(index)"></span><span class="bottomTitle" v-on:click="changeRoute(mobanEditRoute,index)">编辑</span></div></li>' +
+        '<li  v-on:click="addMoban"><div class="addImg"></div></li> ' +
+        '</ul> ' +
+        '</div> ' +
+        '<div class="rel">' +
+        ' <span class="tip">选择播放效果</span><span class="change"  v-on:click="tabMun">{{qiehuanVal}}<img src="./img/arrowBlue.png"><transition name="tabChange"><ul v-show="tabKey"><li v-for="(texiao,index) in texiaos" v-on:click="selected(index)">{{texiao}}</li></ul></transition></span><br> ' +
+        '<span class="tip">特效:</span><span class="shezhi"><a href="#">设置特效</a></span><br> ' +
+        '<span class="tip">音乐:</span><span class="shezhi"><a @click="changeRoute(musicSheZhi)">设置音乐</a></span><br> ' +
+        '<span class="tip">目录:</span><span class="shezhi" @click="changeRoute(muluSheZhi)"><a>设置目录</a></span> ' +
+        '</div> ' +
+        '<div class="look clearFloat"> ' +
+        '<span class="lookFirst" @click="changeRoute(finished)">预览</span> ' +
+        '<span class="lookLast">保存</span>' +
+        '</div> ' +
+        '</div> ' +
+        '</div>',
+        data:function(){
+            return {
+                mobanUrls:app1.mobanUrls,
+                tabKey:false,
+                texiaos:["场景1","场景2"],
+                qiehuanVal:"切换",
+                mobanEditRoute:"/mobanEdit",
+                musicSheZhi:"/musicSheZhi",
+                muluSheZhi:"/muluSheZhi",
+                finished:"/finished",
+                url1:"url(",
+                url2:")"
+            };
+        },
+        methods:{
+            back:function(){
+                app1.$router.push({path:"/index"});
+            },
+            addMoban:function(){
+                app1.$router.push({path:"/mobanAdd/mobanPage"});
+//                this.mobanUrls.push("url('./img/fa_01.jpg')");
+            },
+            del:function(index){
+                app1.mobanUrls.splice(index,1);
+                delete app1.selectImg[index];
+                for(let i in app1.selectImg) {
+                    if(i>index){
+
+                        let val=i-1;
+                        app1.selectImg[val]=app1.selectImg[i];
+                        delete app1.selectImg[i];
+                    }
+                }
+            },
+            changeRoute:function(route,index){
+                app1.$router.push(route);
+                if (index!=undefined){
+                    bus.$emit("index",index);
+                }
+            },
+            tabMun:function (){
+                this.tabKey=!this.tabKey;
+            },
+            selected:function (index){
+                this.qiehuanVal=this.texiaos[index]
+            }
+        },
+        mounted:function(){
+            pageAuto(".mobanCon>ul>li",".mobanCon");
+            //this.mobanUrls=this.moabnUrl;
+            bus.$emit("mobanUrls",this.mobanUrls);
+        }
+        ,
+        computed:{
+            //moabnUrl:function(){
+            //    return store.state.mobanUrls
+            //}
+        }
+    };
+
+</script>
+</html>

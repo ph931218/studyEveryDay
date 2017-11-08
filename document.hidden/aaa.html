@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+//    document.addEventListener("visibilitychange", function(){
+//        alert("aaa");
+//    });
+    function a(callBack){
+        console.log("aaaaaa");
+        return (function (){
+
+            return false;
+        })();
+    }
+    window.onbeforeunload =function(){
+        console.log("aaaaaa");
+        return false;
+    };
+//        window.onbeforeunload=function (){
+//        alert("===onbeforeunload===");
+//        return false;
+//        }
+</script>
+</html>

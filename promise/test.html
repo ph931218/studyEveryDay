@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var a=1;
+    var b=1;
+    alert(a===b)
+
+
+    new Promise(function(resolve,reject){
+        var num="圣火";
+        setTimeout(function(){
+            alert("我是3秒,我点燃了圣火");
+            resolve(num);
+        },3000)
+    }).then(function(val){
+        return new Promise(function(resolve,reject){
+            setTimeout(function(){
+                alert(val+"在两秒这里");
+                resolve(val);
+            },2000)
+        })
+    }).then(function(val){
+        setTimeout(function(){
+            alert(val+"来到了一秒")
+        },1000)
+    })
+</script>
+</html>

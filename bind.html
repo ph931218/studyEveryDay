@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var a="我是window";
+    var obj={
+        a:"我是obj"
+    };
+    function test(){
+        alert(this.a);
+    };
+
+    test.bind(obj)();
+</script>
+</html>

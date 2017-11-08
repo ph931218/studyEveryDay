@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+//    function t1(a,b){
+//        return function () {
+//            alert(a + b);
+//        }
+//    }
+//    setTimeout(t1(2,3),2000)
+
+    var a=1;
+    function foo(){
+        console.log(this.a);
+    }
+    var obj = {
+        a : 2,
+        foo:foo
+    };
+    setTimeout(obj.foo.bind(obj),1000);
+
+
+</script>
+</html>

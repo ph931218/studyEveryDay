@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+<ul class="ulbszn">
+
+    <li class="ulbsznadd"><a href="###" title='首次登记'>
+        首次登记
+    </a></li>
+
+
+
+    <ul class="left_menu" style="display: none;">
+
+        <li><a href='bszn.aspx?type=bszn&class=2' title='抵押权首次登记'>
+            抵押权首次登记</a></li>
+
+        <li><a href='bszn.aspx?type=bszn&class=3' title='国有建设用地使用权首次登记'>
+            国有建设用地使用权首次登记</a></li>
+
+        <li><a href='bszn.aspx?type=bszn&class=4' title='国有建设用地使用权及房屋所有权首次登记'>
+            国有建设用地使用权及房屋所有权首次登记</a></li>
+
+    </ul>
+
+
+
+
+    <li class="ulbsznadd"><a href="###" title='转移登记'>
+        转移登记
+    </a></li>
+
+
+
+    <ul class="left_menu" style="display: none;">
+
+        <li><a href='bszn.aspx?type=bszn&class=1' title='国有建设用地使用权转移登记'>
+            国有建设用地使用权转移登记</a></li>
+
+        <li><a href='bszn.aspx?type=bszn&class=5' title='国有建设用地使用权及房屋所有权转移登记'>
+            国有建设用地使用权及房屋所有权转移登记</a></li>
+
+    </ul>
+
+
+
+
+    <li class="ulbsznadd"><a href="###" title='变更登记'>
+        变更登记
+    </a></li>
+
+
+
+    <ul class="left_menu" style="display: none;">
+
+        <li><a href='bszn.aspx?type=bszn&class=7' title='抵押权变更登记'>
+            抵押权变更登记</a></li>
+
+        <li><a href='bszn.aspx?type=bszn&class=8' title='国有建设用地使用权变更登记'>
+            国有建设用地使用权变更登记</a></li>
+
+    </ul>
+
+
+
+
+    <li class="ulbsznadd"><a href="###" title='抵押登记'>
+        抵押登记
+    </a></li>
+
+
+
+    <ul class="left_menu" style="display: none;">
+
+        <li><a href='bszn.aspx?type=bszn&class=6' title='陕县国土资源局做好土地抵押登记'>
+            陕县国土资源局做好土地抵押登记</a></li>
+
+    </ul>
+
+
+
+
+</ul>
+
+</body>
+<script>
+//    $.each($(".ulbsznadd"),function(index,el){
+//        $(this).click(function(){
+//            if($(".left_menu").eq(index).css("display")=="block"){
+//                $(".ulbsznadd").eq(index).css({listStyleImage:"url('images/add.png')"});
+//                $(".left_menu").eq(index).css({display:"none"});
+//            }else{
+//                $(".ulbsznadd").css({listStyleImage:"url('images/add.png')"});
+//                $(".left_menu").css({display:"none"});
+//                $(".ulbsznadd").eq(index).css({listStyleImage:"url('images/sub.png')"});
+//                $(".left_menu").eq(index).css({display:"block"});
+//            }
+//
+//        })
+//    })
+
+
+    $.each($(".ulbsznadd"),function(index,el){
+        $(this).click(function(){
+            if($(".left_menu").eq(index).css("display")=="block"){
+                $(".left_menu").eq(index).toggle(500);
+                $(".ulbsznadd").eq(index).css({listStyleImage:"url('images/add.png')"});
+            }else {
+                $(".left_menu").eq(index).toggle(500);
+                $(".ulbsznadd").eq(index).css({listStyleImage:"url('images/sub.png')"});
+                $.each($(".left_menu"),function(h,el){
+                    if(h!=index){
+                    if($(this).css("display")=="block"){
+                        $(this).toggle(500);
+                    }}
+                })
+
+            }
+        })
+    })
+</script>
+</html>

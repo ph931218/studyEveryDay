@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+//    var a = 1;
+//    console.log(a.__proto__);//Number
+//    console.log(a.__proto__.__proto__);//Object
+//    console.log(a.__proto__.__proto__.__proto__);//null
+//    console.log(a.prototype);
+
+//    var a = {
+//        x:1
+//    };
+//    console.log(a.__proto__);//Object
+//    console.log(a.__proto__.__proto__);//null
+//    console.log(a.prototype);
+
+    function a() {
+        this.y = 2;
+    }
+    console.log(a.__proto__);//Object
+    console.log(a.__proto__.__proto__);//null
+    console.log(a.prototype);
+//
+    var Person = function() {};
+    var p = new Person();
+    console.log(p.__proto__ );
+    console.log(Person.prototype);
+</script>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="topNav">
+    <div class="topCon">
+        <a href="http://www.{$Think.const.TOP_DOMAIN}" style="float: left;border: none" class="topTitle on">智农首页</a>
+        <div style="float: left;border: none">
+            <a href="#" class="sprite1"></a>
+            <a>北京[切换城市]</a>
+        </div>
+        <a>移动客户端</a>
+
+        <if condition="$userinfo['state']">
+            <a style="display: inline-block" href="http://www.{$Think.const.TOP_DOMAIN}/user/logout.php">退出</a>
+            <a href="http://www.{$Think.const.TOP_DOMAIN}/user/?f=newindex">您好，{$userinfo['nickname']}</a>
+            <else />
+            <a style="display: none">退出</a>
+            <a href="http://www.{$Think.const.TOP_DOMAIN}/user/login.php">登录</a>
+        </if>
+        <a href="http://www.{$Think.const.TOP_DOMAIN}/Content/cate?catid=22">雷达</a>
+        <div class="topTitle" style="position: relative">
+            <div class="gouWuTips"><?php echo count($gwc);?></div>
+            <a class="sprite4"></a>
+            <ul class="sub gouWu">
+                <foreach name='gwc' item='vo'>
+                    <li>
+                        <a class="gouWuCheAllInfo" href="http://mall.{$Think.const.TOP_DOMAIN}/index.php?app=cart">
+                            <img src="http://mall.{$Think.const.TOP_DOMAIN}/{$vo['goods_image']}">
+					<span href="#" style="float: right;display: block">
+						<span class="gouWuTitle">{$vo['goods_name']}</span>
+						<span style="color: red;">￥{$vo['price']}</span>
+					</span>
+                        </a>
+                        <a class="del" href="http://www.{$Think.const.TOP_DOMAIN}/?a=delCart&goods_id={$vo['goods_id']}">删除</a>
+                    </li>
+                </foreach>
+            </ul>
+        </div>
+        <div style="position: relative">
+            <a class="sprite3" href="http://www.{$Think.const.TOP_DOMAIN}/user/?f=im&on=xitong"></a>
+            <div class="gouWuTips"> {$notice}</div>
+        </div>
+        <div style="float: right" class="topTitle">
+            <a href="#">频道</a>
+            <a class="sprite2"></a>
+            <ul class="sub pingDaoMun">
+                <li><a href="http://mall.{$Think.const.TOP_DOMAIN}">农贸集市</a></li>
+                <li><a href="http://zc.{$Think.const.TOP_DOMAIN}">众创空间</a></li>
+                <li><a href="http://news.{$Think.const.TOP_DOMAIN}">农事资讯</a></li>
+                <li><a href="http://baike.{$Think.const.TOP_DOMAIN}">农事百科</a></li>
+                <li><a href="http://pvp.{$Think.const.TOP_DOMAIN}">植物品种</a></li>
+                <li><a href="http://bigdata.{$Think.const.TOP_DOMAIN}">涉农专利</a></li>
+            </ul>
+        </div>
+        <script>
+            jQuery(".topCon").slide({
+                type: "menu",
+                titCell: ".topTitle",
+                targetCell: ".sub",
+                effect: "slideDown",
+                delayTime: 300,
+                triggerTime: 0,
+                returnDefault: true
+            });
+        </script>
+    </div>
+</div>
+</body>
+</html>

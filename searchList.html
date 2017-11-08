@@ -1,0 +1,399 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="http://www.ipa361.com/favicon.png" rel="shortcut icon" type="/favicon.ico" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>智农361-农业大数据</title>
+    <script src="./js/jquery.js"></script>
+    <script src="./js/vue.js" ></script>
+    <script src="./js/ajaxConfig.js"></script>
+    <link href="./css/vv_data.css" rel="stylesheet" type="text/css">
+    <link href="http://www.ipa361.com/style/public.css" type="text/css" rel="stylesheet" />
+    <link href="./css/public/list.css" rel="stylesheet" type="text/css">
+    <link href="./css/public/initi.css" type="text/css" rel="stylesheet" />
+    <style>
+        html,body {
+            background: #fff;
+        }
+    </style>
+</head>
+<body>
+<div class="vvb_header"><SCRIPT type="text/javascript" src="http://www.ipa361.com/Phpjs/top"></SCRIPT>
+    <script>
+        $(window).ready(function(){
+            $("#top").on("click",function(){
+                $(this).remove()
+            });
+        });
+    </script>
+</div>
+
+<!--农业大数据首页主体  开始-->
+<iframe src="./fromZnHeader.html" style=" height:115px;width:100%;"></iframe>
+
+<div style="width:100%;" id="parent">
+    <my_list></my_list>
+</div>
+<div style=" height:100px;width:1000px;margin: 0 auto;margin-top:8px;">
+    <iframe src="http://www.ipa361.com/foot.html" frameborder="0" scrolling="no" height="90" width="1000" allowtransparency="true" style="background-color=transparent">
+    </iframe> </div>
+</body>
+<script type="text/javascript">
+    jQuery.support.cors = true;//支持cors协议实现跨域
+    var indexSearchData=null;
+    var bgColor=[];
+    var page=1;
+    var rows=16;
+    var searchable=[
+        ['enterprise_name','product_name', 'commodity_name', 'fit_crop', 'register_id', 'product_form'],
+        ['pesticide_name','enterprise_name', 'effective_constituent', 'dose', 'pesticide_register', 'virulence_classification'],
+        ['companyname','detail', 'adds', 'linkman'],
+        ['crop_kind','variety_name', 'id', 'variety_source', 'varieties_company'],
+        ['af','ar', 'au'],
+        ['apply_num','title', 'sgonggaohao', 'squanliren'],
+        ['company_name','address', 'contact_address'],
+        ['pesticide_name','register_crop', 'prevention_obj'],
+        ['country','law_title', 'wipo_lex_no'],
+        ['product_name','batch_number', 'province', 'detailed_classification'],
+        ['law_title','promulgation_unit', 'issued_number'],
+        ['title','legal_person', 'address'],
+        ['title','unified_social_credit_code', 'registration_certificate_no', 'organization_code'],
+        ['title','classification', 'applicant', 'applicant_address'],
+        ['standard_name','responsibility_company', 'draft_company'],
+        ['companys','names']
+    ];
+    var modelName=["BigFertilizerRegister",'BigPesticidesRegister', 'BigCompany','BigPvpBasicInfo','BigTechnologyLiterature','PatentInfo', 'BigScientificOrganization', 'BigPesticidesPurpose','BigLaw','BigGeographicalIndication','BigAllCountriesLaw', 'BigFarmCooperatives','BigSocialOrganization','BigAgriculturalTrade_mark','BigDataStandard','BigSpecialist'];
+    var fromIndexData=[];
+    var title=["化学肥料","农药登记" ,"农资企业","植物品种","科技文献","专利信息","科研机构","农药用途","国际条约","地理标识","国内法","农场合作社","社会组织","农业商标","标准数据库","专家"];
+    var newTitle=[];
+    var newOptions=[];
+    var keyWordVal="";
+    var searchData = {
+        "title": ["搜索中"],
+        "allData": [],
+        "options":[
+            {}]
+    };
+
+
+    var error=[];
+    var url ='http://'+firstName+'.'+domainData+'/index.php/';
+    function getData(model,lirstRow,page,keyword,keyword_field){
+        var datas ={
+            domain:'web',
+            model: model,
+            mothod: 'search_data_list',
+            listRows: lirstRow,
+            page:page,
+            keyword: keyword,// 关键词为字符串
+            keyword_field:keyword_field,
+            url:window.location.href,
+            pattern: 0,
+            keywords: keyword,
+            url: window.location.href
+        };
+        return datas
+    }
+    var numIndex=0;
+
+
+    //////////////////判断页面是否是主页打开的/////////////////////
+    var isFromIndex=false;
+    var newIndexArr=[];
+
+    window.onload=function(){
+
+        var urlVal=decodeURI(window.location.search).split("");
+        urlVal.shift();
+        keyWordVal=urlVal.join("").split("&")[0];
+        if(urlVal.join("").split("&")[1]=="zn"){
+            isFromIndex=true;
+        }
+        function getFromIndeData(call){
+            var columnVal=["1-1","1-2","1-3","1-1358","2-1","2-3","2-29","2-30","2-2","3-a","3-b","3-c","4-a","4-b","4-c"];
+            var indexTitle=["农产品","乡村旅游","农资","技术服务","农场","农资企业","专家","科研单位","乡旅服务商户","品种","专利","地标","百科","新闻","问答"]
+            function fromIndex(col,callback){
+                var indexDataUrl="http://dashuju."+domainData+"/search.php";
+
+                var datas={
+                    a: "search",
+                    p: 1,
+                    keywords: keyWordVal,
+                    rows: 16,
+                    column: col
+                };
+                $.ajax({
+                    url : indexDataUrl,
+                    data : datas,
+                    success : function(data){
+                        callback(JSON.parse(data));
+                    }
+                })
+            }
+
+            var indexFenlei=["ecm_goods","ecm_store",""]
+            $.each(columnVal,function(i,data){
+                var num=0;
+                fromIndex(data,function(indexDatas){
+                    indexSearchData=indexDatas;
+                    if(data=="1-1"||data=="1-2"||data=="1-3"||data=="1-1358"){
+                        for(var h in indexDatas.list["ecm_goods"][0]){
+                            num++;
+                        }
+                        if(num>1){
+                            newIndexArr.push(indexDatas.list["ecm_goods"]);
+                            fromIndexData.push(indexTitle[i]);
+                            newOptions.push({model:null});
+                        }
+                    }else if(data=="2-1"||data=="2-3"||data=="2-29"||data=="2-30"||data=="2-2"){
+                        for(var h in indexDatas.list["ecm_store"][0]){
+                            num++;
+                        }
+                        if(num>1){
+
+                            newIndexArr.push(indexDatas.list["ecm_store"]);
+                            fromIndexData.push(indexTitle[i]);
+                            newOptions.push({model:null});
+                        }
+                    }else if(data=="3-a"||data=="3-b"||data=="3-c"||data=="4-a"||data=="4-b"||data=="4-c"){
+                        for(var h in indexDatas.list[0]){
+                            num++;
+                        }
+                        if(num>1){
+                            indexDatas.list
+                            newIndexArr.push(indexDatas.list);
+
+                            fromIndexData.push(indexTitle[i]);
+                            newOptions.push({model:null});
+                        }
+                        if(data=="4-c"){
+                            call();
+                        }
+                    }
+
+                });
+            })
+
+        }
+
+        if(isFromIndex){
+            getFromIndeData(function(){
+                newTitle=[];
+                numIndex=0;
+                dataNum(3,keyWordVal);
+            });
+
+
+        }else{
+            newTitle=[];
+            numIndex=0;
+            searchData.allData=[];
+            dataNum(3,keyWordVal);
+        }
+
+
+    };
+    //////////////////////////////
+
+
+    function dataNum(num,key){
+        var n=1;
+        var num=num;
+        var length1=newTitle.length;
+        if(key){
+            var searchDataInterva=setInterval(function(){
+                $(function(){
+                    setTimeout(function(){
+                        var index=numIndex;
+                        if(numIndex<16){
+                            datas=getData(modelName[index],rows,page,key,searchable[index]);
+                            ajaxF(datas,index);
+                            numIndex++;
+                        }else{
+                            if(newTitle.length==0){
+                                searchData.title=fromIndexData;
+                                searchData.allData=newIndexArr;
+                            }
+                            clearInterval(searchDataInterva);
+                        }
+                    },0);
+                    function ajaxF(options,index){
+
+                        $.ajax({
+                            type: 'get',			// 传值类型
+                            url: url,
+                            data:options,
+                            async : false,
+                            success: function(datas) {
+                                var data=JSON.parse(datas);
+                                if(data.code==200){
+                                    n=0;
+                                    newTitle.push(title[index]);
+                                    newOptions.push(options)
+                                    searchData.options=newOptions;
+                                    makeColor(1);
+                                    var val=data.list;
+                                    searchData.allData.push(val);
+                                    searchData.title=newTitle;///
+                                    if(isFromIndex){
+                                        searchData.title=fromIndexData.concat(searchData.title);
+                                    }
+                                }
+
+
+
+
+                                if ((newTitle.length-length1)==num){
+
+                                    clearInterval(searchDataInterva);
+                                    if(num==3){
+                                        console.log(searchData.allData);
+                                        searchData.allData=newIndexArr.concat(searchData.allData);
+                                    }
+
+                                }
+                            },
+                            error:function(e){
+
+                                console.log(e);
+                            }
+                        });
+                    }
+
+
+                })
+            },20);
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+    var myList = {
+        template: '<div><div class="dataModel" v-for="(list,index) in listData.title"><div class="title" v-bind:style="bg"><span v-bind:style="dataTitle[index]">{{list}}</span></div>' +
+        '<ul><li v-on:click="detailInfo(index,i)" v-for="(data,i) in listData.allData[index]"><span v-for="(con,k,index) in data" v-show="index" v-bind:title="con?con:errorTip">{{con?con:errorTip}}</span></li><li v-show="listData.options[index].model" style="border-left: 1px solid #ccc"><a v-on:click="hrefVal(index)" >查看更多相关搜索》</a></li></ul></div></div>',
+        data:function(){
+            return {
+                listData: searchData,
+                bg:{background:'#E5E5E5'},
+                errorTip:"",
+                dataTitle:bgColor
+            }
+        },
+        mounted:function(){
+        },
+        methods: {
+            hrefVal:function(index){
+
+                var list=searchData.title[index];
+                var listData=searchData;
+                url="listDetail.html?listDetail&"+list+"&keyword="+listData.options[index].keyword+"&"+listData.options[index].keyword_field+"&model="+listData.options[index].model
+                window.open(url)
+            },
+            detailInfo:function(index,i){
+
+                var data=searchData.allData[index][i];
+                var listData=searchData;
+
+                console.log(listData.options)
+                if(listData.options[index].model){
+
+                    urlVal=data.id+'&'+data.info_id+'&'+listData.options[index].model+'&'+listData.title[index];
+                    var val=urlVal.split("&");
+                    var newUrlVal=[]
+
+                    $.each(val,function(i,el){
+
+                        if(el!="undefined"){
+                            newUrlVal.push(el);
+                        }
+
+                    })
+                    newUrlVal=newUrlVal.join("&");
+                    if(listData.options[index].model=="BigPvpBasicInfo"){
+                        window.open("pinZhongDetail.html?&"+newUrlVal,"_self");
+                    }else{
+                        window.open("detailInfo.html?&"+newUrlVal,"_self");
+                    };
+                }else if(isFromIndex){
+                    if(searchData.title[index]=="农场"||searchData.title[index]=="农资企业"||searchData.title[index]=="专家"||searchData.title[index]=="科研单位"||searchData.title[index]=="乡旅服务商户"){
+                        window.open("http://"+data.domain+"."+domainData+"/Shop?store_id="+data.store_id,"_blank");
+
+                    }else if(searchData.title[index]=="农产品"||searchData.title[index]=="乡村旅游"||searchData.title[index]=="农资"||searchData.title[index]=="技术服务"){
+
+                        window.open("http://"+data.domain+"."+domainData+"/ShopGoods/index/goods_id/"+data.goods_id,"_blank");
+
+                    }else if(searchData.title[index]=="品种"){
+                        window.open("http://pvp."+domainData+"ipa361.com/index.php?app=goods&id="+data.goods_id,"_blank");
+                    }else if(searchData.title[index]=="专利"){
+
+                        window.open("http://patent."+domainData+"/Show/index/info_id/"+data.info_id+".html","_blank")
+                    }else if(searchData.title[index]=="百科"){
+                        window.open("http://baike."+domainData+"/index.php?doc-view-"+data.did+".html","_blank")
+                    }else if(searchData.title[index]=="新闻"){
+                        window.open("http://www."+domainData+data.url,"_blank")
+                    }else if(searchData.title[index]=="问答"){
+                        window.open("http://zc."+domainData+"/index.php/Home/Ask/askinfo/qid/"+data.qid,"_blank")
+                    }else if(searchData.title[index]=="地标"){
+                        window.open("http://gi."+domainData+"/index.php?app=search&cate_id="+data.cate_id,"_blank")
+                    }
+                }
+
+
+            }
+        }
+    };
+
+
+
+    var search = new Vue({
+        el: "#parent",
+        data: {
+            aaa: "我是app的值"
+        },
+        methods: {
+        },
+        components: {
+            my_list: myList
+        }
+    });
+
+
+    $(window).bind("scroll",function () {
+        if($("html").height()-($("#parent>div").height()+36+130+108-$(window).scrollTop())<=2){
+            if(numIndex<=19){
+                makeColor(1);
+                dataNum(1,keyWordVal);
+            }
+        }
+    });
+    function makeColor(num){
+        var colors=["#9CB1A2","#BDC3A9","#CBC0BC","#91BBC9","#D3E0AA","#BDB4A5"];
+        for (var i = 0; i < num; i++) {
+            bgColor.push({background:colors[Math.round(Math.random()*5)]});
+        }
+
+    }
+    $(document).ready(function () {
+        $(function () {
+            var title = document.getElementsByClassName("title");
+            makeColor(title.length);
+        });
+        $("#top").click();
+
+
+
+
+    });
+
+</script>
+</html>

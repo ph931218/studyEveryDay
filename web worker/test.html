@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>大家好</div>
+</body>
+<script>
+var w=new Worker("aaa.js");
+    w.onmessage=function(event){
+        document.write(event.data);
+        if(event.data==10){
+            w.terminate();
+        }
+    }
+</script>
+</html>

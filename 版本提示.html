@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+    /*判断浏览器版本是否过低*/
+    $(document).ready(function() {
+        var b_name = navigator.appName;
+        var b_version = navigator.appVersion;
+        var version = b_version.split(";");
+        var trim_version = version[1].replace(/[ ]/g, "");
+        if (b_name == "Microsoft Internet Explorer") {
+            /*如果是IE6或者IE7*/
+            if (trim_version == "MSIE8.0"||trim_version == "MSIE7.0" || trim_version == "MSIE6.0") {
+                alert("IE浏览器版本过低，请到指定网站去下载相关版本");
+                window.location.href="http://jiaoxueyun.com/download.jsp";
+            }
+        }
+    });
+</script>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    async function ph(){
+        var a=10;
+        await new Promise(function(resolve){setTimeout(function(){
+            console.log("已经过了三秒");
+            resolve(a++);
+        },3000);});
+        return a;
+    }
+    ph().then(function(data){
+        alert(data);
+    })
+</script>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function a(){//新建了一个房子A
+        var num=10;
+        return function (){                   //房子a里有一个套房使用着房子A的电表num
+            //电表开始走字
+            console.log(num++);
+            return num;
+        }
+    }
+    var b=a();//这时候a的套房经过改造变成了与房间A相邻的另一房间b，但电表用的还是房子a的电表，但是从房间a已经无法再来到房间b
+    setInterval(function(){
+        var test=b();//房间b开始用电，电表开始走字;
+        if(test>=20){
+            //从新将房间b还给了房间a；
+            b=null
+        }
+    },1000);
+</script>
+</html>
