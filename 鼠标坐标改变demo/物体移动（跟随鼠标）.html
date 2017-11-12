@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //offsetLeft 子元素想当父元素的左位移
+        // offsetTop 子元素想当父元素的上位移
+        // offsetWidth 盒子本身的宽高 不包括滚动条
+        // event.clientX 鼠标的X，Y轴相对与整个页面，而非子元素
+
+        window.onload = function () {
+            var box = document.getElementById("box");
+            var nav = document.getElementById("nav");
+
+            box.onmousemove = function (e) {
+                //兼容ie浏览器
+                var e = e || window.event
+                var left = e.clientX - this.offsetLeft - nav.offsetWidth / 2
+                var top = e.clientY - this.offsetTop - nav.offsetHeight / 2
+
+                //控制拖拽物体的范围只能在规定的范围内拖拽,预防出现滚动条
+                if (left < 0) {
+                    left = 0
+                } else if (left >= box.offsetWidth - nav.offsetWidth) {
+                    left = box.offsetWidth - nav.offsetWidth
+                }
+
+                if (top < 0) {
+                    top = 0
+                } else if (top >= box.offsetHeight - nav.offsetHeight) {
+                    top = box.offsetHeight - nav.offsetHeight
+                }
+
+                nav.style.left = left + 'px';
+                nav.style.top = top + 'px'
+            }
+        }
+    </script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        #box{
+            width: 600px;
+            height: 400px;
+            border: 1px solid #aaaaaa;
+            margin: 20px;
+            position: relative;
+
+        }
+
+        #nav{
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            cursor: move;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <div id="nav"></div>
+</div>
+</body>
+</html>

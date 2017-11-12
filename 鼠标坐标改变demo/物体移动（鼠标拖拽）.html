@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        //offsetLeft 子元素想当父元素的左位移
+        // offsetTop 子元素想当父元素的上位移
+        // offsetWidth 盒子本身的宽高 不包括滚动条
+        // event.clientX 鼠标的X，Y轴相对与整个页面，而非子元素
+
+        window.onload = function () {
+            var box = document.getElementById("box");
+            var nav = document.getElementById("nav");
+
+            nav.onmousedown = function (e) {
+                //兼容ie浏览器
+                var e = e || window.event
+
+                var left = e.clientX - this.offsetLeft;
+                var top = e.clientY - this.offsetTop;
+
+                document.onmousemove = function () {
+                    var e = e || window.event
+                    var lefttwo = e.clientX - left
+                    var toptwo = e.clientY - top
+
+                    //控制拖拽物体的范围只能在规定的范围内拖拽,预防出现滚动条
+                    if (lefttwo < 0) {
+                        lefttwo = 0
+                    } else if (lefttwo >= box.offsetWidth - nav.offsetWidth) {
+                        lefttwo = box.offsetWidth - nav.offsetWidth
+                    }
+
+                    if (toptwo < 0) {
+                        toptwo = 0
+                    } else if (toptwo >= box.offsetHeight - nav.offsetHeight) {
+                        toptwo = box.offsetHeight - nav.offsetHeight
+                    }
+
+                    //移动时重新得到改物体的具体位置
+                    nav.style.left = lefttwo + "px";
+                    nav.style.top = toptwo + "px";
+                }
+                document.onmouseup = function () {
+                    this.onmousemove = null
+                    this.onmouseup = null
+                }
+            }
+        }
+    </script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        #box{
+            width: 600px;
+            height: 400px;
+            border: 1px solid #aaaaaa;
+            margin: 20px;
+            position: relative;
+        }
+
+        #nav{
+            width: 100px;
+            height: 100px;
+            background: red;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            cursor: move;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <div id="nav"></div>
+</div>
+</body>
+</html>
