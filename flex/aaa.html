@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .parent {
+            width: 200px;
+            background: #f00;
+            display: flex;
+            display: -webkit-flex;
+            flex-direction: column;
+            -webkit-flex-direction: column;
+            justify-content: center;/*主轴方对齐方式*/
+            align-items: center;/*侧轴方对齐方式*/
+            flex-wrap: wrap;
+            -webkit-flex-wrap: wrap;
+        }
+        .child{
+            width: 100px;
+            height: 100px;
+            background: #000;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+        <div class="child"></div>
+
+    </div>
+</body>
+</html>

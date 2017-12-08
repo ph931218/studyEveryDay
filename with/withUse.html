@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function Person(name,age,height){
+        this.name=name;
+        this.age=age;
+        this.height=height;
+    }
+    Person.prototype.sayHi=function(){
+        console.log("大家好，我叫"+this.name+"今年"+this.age+"岁，身高:"+this.height);
+    }
+    var xiaoMing=new Person("小明",20,178);
+    xiaoMing.sayHi();
+    with(xiaoMing){//with可以直接引用传入对象的属性
+        console.log("大家好，我叫"+name+"今年"+age+"岁，身高:"+height);
+        sayHi();
+    }
+</script>
+</html>

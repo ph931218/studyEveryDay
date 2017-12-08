@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="radio" name="test" value="1"/>
+<input type="radio" name="test" value="2"/>
+<input type="radio" name="test" value="3"/>
+<input type="radio" name="test" value="4"/>
+<input type="radio" name="test" value="5"/>
+<button>点击</button>
+<script>
+    (function (){
+        var inputEle=document.getElementsByName("test");
+        console.log(inputEle instanceof Array);
+        console.log(inputEle);
+        var newInputEle_1=Array.from(inputEle);
+        console.log(Array.prototype.isPrototypeOf(newInputEle_1));
+        console.log(newInputEle_1 instanceof Array);
+        console.log(newInputEle_1);
+        var newInputEle_2=Array.prototype.slice.call(inputEle);
+        console.log(Array.prototype.isPrototypeOf(newInputEle_2));
+        console.log(newInputEle_2 instanceof Array);
+        console.log(newInputEle_2);
+
+        document.getElementsByTagName("button")[0].addEventListener("click",function(){
+            document.getElementsByName("test").forEach(function(val,index,arr){
+                if(val.checked){
+                    alert(val.value);
+                }
+            })
+        })
+    })()
+
+</script>
+</body>
+</html>

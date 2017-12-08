@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var arr=[[1,2,2],[3, 4, 5, 5],[6, 7, 8, 9,[11,12,[12,13,[14]]]],10];
+    var newArr_1=arr.toString().split(",");
+    var length=newArr_1.length;
+    var testObj={};
+    for (let i=0;i<length;i++){
+        testObj[newArr_1[i]]=true;
+    }
+    var newArr=[];
+    for (let a in testObj){
+        newArr.push(a);
+    }
+    var rel=newArr.sort(function(a,b){
+        if(a-b<0){
+            return -1
+        }else if(a-b>0){
+            return 1
+        }else {
+            return 0;
+        }
+    })
+</script>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="file">
+</body>
+<script>
+
+    var f=document.getElementsByTagName("input")[0];
+    f.addEventListener("change",function(){
+        console.log(f.value);
+    })
+
+</script>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table {
+            border: 1px solid #000;
+        }
+        td{
+            width: 200px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+<button>点击添加</button>
+<table cellspacing="0">
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+</body>
+<script>
+    (function(){
+        function creatEle(){
+            var index=document.getElementsByTagName("tr").length+1;
+            var aTr=document.createElement('tr');
+            var newArr;
+            for(let i=0;i<4;i++){
+                newArr=document.createElement("td");
+                if(i==0){
+                    newArr.innerHTML=index;
+                }
+                aTr.appendChild(newArr);
+            }
+            document.getElementsByTagName("tbody")[0].appendChild(aTr)
+        }
+        document.getElementsByTagName("button")[0].addEventListener("click",creatEle)
+
+    })()
+</script>
+</html>

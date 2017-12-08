@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button>点击</button>
+</body>
+<script>
+    function Human(name,age){
+        this.name=name;
+        this.age=age;
+    }
+    Human.prototype.sayHi=function (){
+        alert("我是"+this.name+"今年"+this.age+"岁")
+    };
+    function Man(name,age,sex){
+        Human.apply(this,[name,age]);
+        this.sex=sex;
+    }
+    function NewObj(){
+    }
+    NewObj.prototype=Human.prototype;
+    //var newObj_1=Object(Human.prototype);
+    var newObj_1=new NewObj();
+
+    Man.prototype=newObj_1;
+    newObj_1.constructor=Man;
+    var xiaoMing=new Man("小明","12","男");
+    console.log(xiaoMing);
+    document.getElementsByTagName("button")[0].addEventListener("click",function(){
+        xiaoMing.sayHi()
+    })
+</script>
+</html>

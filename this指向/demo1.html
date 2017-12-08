@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var bar={a:"002"};
+    function print(){
+        bar.a="a";
+        Object.prototype.b="b";
+        return function inner(){
+            console.log(bar.a);
+            console.log(bar.b);
+        }
+    }
+    print()();
+    //预计结果：a b
+    //运行结果：a b
+</script>
+</html>

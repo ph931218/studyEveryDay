@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li class="item">0</li>
+    <li class="item">1</li>
+    <li class="item">2</li>
+    <li class="item">3</li>
+    <li class="item">4</li>
+    <li class="item">5</li>
+    <li class="item">6</li>
+    <li class="item">7</li>
+    <li class="item">8</li>
+</ul>
+</body>
+<script>
+    var ulEl=document.getElementsByTagName("ul")[0];
+//    ulEl.onclick=function(event){
+//        console.log(event.target.innerHTML)
+//    };
+    ulEl.addEventListener("click",function(){
+        console.log(event.target.innerHTML);
+        var a=0;
+        alert(a||1)
+    },true)
+</script>
+</html>

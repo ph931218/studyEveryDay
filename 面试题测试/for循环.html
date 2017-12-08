@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var obj = {
+        name: " jsCoder",
+        skill: ["css3","html5", "es6", "react", "angular"],
+        say: function () {
+            var This=this;
+            for(var i = 0, len = this.skill.length; i< len; i++){
+                setTimeout((function(){
+                    console.log("No." + i + This.name);
+                    console.log(This.skill[i]);
+                    console.log('--------------------------');
+                })(),100);
+            }
+        }
+    }
+    obj.say();
+</script>
+</html>
