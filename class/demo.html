@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    //class不会出现变量提升
+    class Human{
+        constructor (name,age){
+            this.name=name;
+            this.age=age;
+        }
+        sayHi(){
+            alert(this.name)
+        }
+        static showName(obj){
+            alert(obj.name);
+        }
+    }
+    var xiaoming=new Human("小明","age");
+    console.log(xiaoming);
+    Human.showName(xiaoming);
+    class Man extends Human {
+        constructor (name,age,sex){
+            super(name,age);
+            this.sex=sex;
+        }
+        saySex(){
+            alert(this.sex);
+        }
+    }
+    var xiaohua=new Man("小华","12","男");
+    xiaohua.sayHi();
+    xiaohua.saySex();
+    console.log(xiaohua);
+</script>
+</html>

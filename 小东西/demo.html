@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <style>
+        .div_1{
+            width: 100px;
+            height: 100px;
+            background: #f00;
+        }
+    </style>
+</head>
+<body>
+<button>消失</button>
+<div class="div_1"></div>
+<script>
+    $("button").click(function(){
+        if($(".div_1").css("display")=="none"){
+            $(this).html("消失")
+        }else {
+            $(this).html("出现")
+        }
+        $(".div_1").toggle(500);
+
+    });
+
+</script>
+</body>
+</html>

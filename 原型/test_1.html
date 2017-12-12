@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var F=function(type,content){
+        if(!(this instanceof  F)){
+            return new F(type,content);
+        }
+    }
+    F.prototype={
+        UI:function(content){
+            this.content=content;
+            (function(content){
+                alert(content);
+            })(content)
+        }
+    };
+    var c=F("UI","UI___");
+    c.UI("U");
+</script>
+</html>
