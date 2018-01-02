@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <input v-model="test">
+    {{test}}
+    <template_1 v-bind:ms="ms" ></template_1>
+</div>
+</body>
+<script>
+    const template_2={
+        template:"<p>{{son}}</p>",
+        props:['son']
+    };
+    const template_1={
+        template:"<div>{{name}}{{ms}}<child v-bind:son='son'></child></div>",
+        props:['ms'],
+        data: function(){
+            return {
+                name:"组件1",
+                son:"儿子"
+            }
+        },
+        components:{
+            child:template_2
+        }
+    };
+
+    var app=new Vue({
+        el:"#app",
+        data:{
+            test:"我是测试值",
+            ms:'我是父组件的值'
+        },
+        components:{
+            template_1:template_1
+        }
+    })
+
+
+</script>
+</html>

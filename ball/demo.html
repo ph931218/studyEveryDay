@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html,body{
+            height: 100%;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+        }
+        #test {
+            height: 100%;
+            width: 500px;
+            margin: 0 auto;
+            overflow: hidden;
+            border: 10px solid #ccc;
+            box-sizing: border-box;
+        }
+        .circle{
+            border-radius: 50%;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+<div id="test">
+
+</div>
+</body>
+<script>
+    var cirStatus={};
+    function Circle(option){
+        this.el=option.el;
+        this.O=option.O;
+        this.R=option.R;
+        this.D=this.R*2;
+        this.bgColor=option.bgColor;
+        this.id=option.id;
+        this.container=document.getElementById(this.el);
+        this.container.style.position="relative";
+        this.cir=document.createElement("div");
+        this.cir.style.width=this.R*2+"px";
+        this.cir.style.height=this.R*2+"px";
+        this.cir.style.backgroundColor=this.bgColor;
+        this.cir.style.marginTop=-this.R+"px";
+        this.cir.style.marginLeft=-this.R+"px";
+        this.cir.classList.add("circle");
+        this.cir.innerHTML=this.id;
+        this.greatCir();
+        this.cirMove();
+    }
+    Circle.prototype.greatCir=function (){
+        for (let cirStatu in cirStatus){
+            if(cirStatu!=this.id){
+                let D=Math.sqrt(Math.pow(cirStatus[cirStatu].O[0]-this.O[0],2)+Math.pow(cirStatus[cirStatu].O[1]-this.O[1],2));
+                if(D<(cirStatus[cirStatu].R+this.R)){
+                    let D_value=(cirStatus[cirStatu].R+this.R-D)/D;
+                    let X_value=this.O[0]-cirStatus[cirStatu].O[0];
+                    let Y_value=this.O[1]-cirStatus[cirStatu].O[1];
+                    this.O[0]=this.O[0]+X_value*D_value;
+                    this.O[1]=this.O[1]+Y_value*D_value;
+                    }
+                }
+            }
+        cirStatus[this.id]={
+            O:this.O,
+            R:this.R
+        };
+        this.cir.style.top=this.O[0]+"px";
+        this.cir.style.left=this.O[1]+"px";
+        this.container.appendChild(this.cir);
+    };
+    Circle.prototype.cirMove=function(){
+        var xAddMove=true,yAddMove=true;
+        setInterval(function(self){
+            return function (){
+                if(self.O[0]+self.R>=self.container.clientWidth){
+                    xAddMove=false;
+                }else if(self.O[0]-self.R<=0){
+                    xAddMove=true;
+                }
+                if(self.O[1]+self.R>=self.container.clientHeight){
+                    yAddMove=false;
+                }else if(self.O[1]-self.R<=0){
+                    yAddMove=true;
+                }
+                console.log(self.container.clientHeight);
+                cirStatus[self.id]={
+                    O:self.O,
+                    R:self.R
+                };
+                for (let cirStatu in cirStatus){
+                    if(cirStatu!=self.id){
+                        let D=Math.sqrt(Math.pow(cirStatus[cirStatu].O[0]-self.O[0],2)+Math.pow(cirStatus[cirStatu].O[1]-self.O[1],2));
+                        if(D<=(cirStatus[cirStatu].R+self.R)){
+                            yAddMove=!yAddMove;
+                            xAddMove=!xAddMove;
+                        }
+                    }
+                }
+                xAddMove?self.O[0]+=1:self.O[0]-=1;
+                yAddMove?self.O[1]+=1:self.O[1]-=1;
+                self.cir.style.top=self.O[1]+"px";
+                self.cir.style.left=self.O[0]+"px";
+                self.container.appendChild(self.cir);
+            }
+        }(this),20)
+    };
+    !function(){
+        var num=function (){
+            var i=1;
+            return function (){
+                var chars=['0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'];
+                var O_X=500*Math.random();
+                var O_y=500*Math.random();
+                var cir_R=40*Math.random()+10;
+                var bgColor="#";
+                for(let i=0;i<6;i++){
+                    bgColor+=chars[Math.round(Math.random()*15)]
+                }
+                console.log(bgColor);
+                new Circle({
+                    el:"test",
+                    O:[O_X,O_y],
+                    R:cir_R,
+                    bgColor:bgColor,
+                    id:"cir_"+i
+                });
+                if(i>9){
+                    num=null;
+                    clearInterval(setIn_1);
+                }else {
+                    i++;
+
+                }
+            }
+        }();
+        var setIn_1=setInterval(num,0);
+    }()
+
+</script>
+</html>

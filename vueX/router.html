@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vue.js"></script>
+    <script src="js/vue-router.js"></script>
+</head>
+<body>
+<div id="app">
+
+</div>
+
+</body>
+<script>
+    const t_1 = {
+        template: "<div>我是组件1</div>"
+    };
+    const t_2 = {
+        template: "<div>我是组件2</div>"
+    };
+    const routes = [
+        {path: "/a", component: t_1},
+        {path: "/b", component: t_2},
+        {path:"*",redirect: "/a"}
+    ];
+    const router=new VueRouter({
+        routes:routes
+    })
+    var app = new Vue({
+        el:"#app",
+        template:"<div><span @click='changeRoute(`/a`)'>to组件1</span><span @click='changeRoute(`/b`)'>to组件2</span><router-view></router-view></div>",
+        data: {},
+        methods:{
+            changeRoute:function(val){
+                this.$router.push({path:val});
+            }
+        },
+        router:router
+    })
+</script>
+</html>

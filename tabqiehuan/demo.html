@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .title {
+            background: #000;
+            color: #fff;
+            float: left;
+        }
+        .content{
+            background: #0f0;
+            display: none;
+        }
+        .active {
+
+        }
+    </style>
+    <script src="../jquery-3.2.1.min.js"></script>
+    <script src="tab.js"></script>
+</head>
+<body>
+<div class="title">标题一</div>
+<div class="title">标题二</div>
+<div class="title">标题三</div><br>
+<div class="content">内容一</div>
+<div class="content">内容二</div>
+<div class="content">内容三</div>
+<script>
+    tab(".title",".content");
+</script>
+</body>
+</html>

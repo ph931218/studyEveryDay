@@ -23,9 +23,8 @@
     Foo().getName();//1
     getName();//1
     new Foo.getName();//2
-    new Foo().getName();//
-    new new Foo().getName();//
-    console.log(new Foo().getName());
-    console.log(new new Foo().getName());
+    new Foo().getName();
+    new new Foo().getName();
+    //new(带参数列表的优先级大于不带参数列表的，等于成员访问“.”)
 </script>
 </html>

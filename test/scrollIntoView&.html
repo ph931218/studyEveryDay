@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html,body {
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div style="background: #000;height: 100%"><button>点击</button></div>
+
+<div style="background: #00f;height: 200%"></div>
+
+</body>
+<script>
+    var div=document.getElementsByTagName("div")[1];
+    var button=document.getElementsByTagName("button")[0];
+    button.addEventListener("click",function(){
+        div.scrollIntoView(false);
+    })
+
+</script>
+</html>
