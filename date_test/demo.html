@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .date_select>div{
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+<div class="date_select">
+
+</div>
+</body>
+<script>
+//    console.log(new Date().valueOf());
+//    console.log(new Date().getTime());
+//    console.log(Date.parse(new Date()));
+    var tomorrow=new Date(new Date().getTime()+24*60*60*1000);
+    Date.prototype.Format=function(){
+        return {
+            Y:this.getFullYear(),
+            M:this.getMonth()+1,
+            D:this.getDate(),
+            W:this.getDay()+1,
+            H:this.getHours(),
+            Min:this.getMinutes(),
+            S:this.getSeconds()
+        }
+    };
+    var con=document.getElementsByClassName("date_select")[0];
+    var selectes="";
+    for(let i=0;i<5;i++){
+        let select=new Date(new Date(tomorrow).getTime()+24*60*60*1000*i);
+        selectes+="<div>"+select.Format().Y+"年"+select.Format().M+"月"+select.Format().D+"日"+"</div>"
+    }
+    con.innerHTML=selectes;
+    if(con.addEventListener){
+        con.addEventListener("click",function(){
+            alert("你预约的时间是："+event.target.innerHTML+"，你点击的时间是"+new Date().Format().Y+"年"+new Date().Format().M+"月"+new Date().Format().D+"日"+new Date().Format().H+"时"+new Date().Format().Min+"分"+new Date().Format().S+"秒");
+        })
+    }else{
+        con.attachEvent("onclick",function(){
+            alert("你预约的时间是："+window.event.srcElement.innerHTML+"，你点击的时间是"+new Date().Format().Y+"年"+new Date().Format().M+"月"+new Date().Format().D+"日"+new Date().Format().H+"时"+new Date().Format().Min+"分"+new Date().Format().S+"秒");
+        })
+    }
+</script>
+</html>

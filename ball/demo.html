@@ -72,8 +72,10 @@
                 }
             }
         cirStatus[this.id]={
-            O:this.O,
-            R:this.R
+            O: this.O,
+            R: this.R,
+            yAddMove: true,
+            xAddMove: true
         };
         this.cir.style.top=this.O[0]+"px";
         this.cir.style.left=this.O[1]+"px";
@@ -94,24 +96,34 @@
                     yAddMove=true;
                 }
                 console.log(self.container.clientHeight);
-                cirStatus[self.id]={
-                    O:self.O,
-                    R:self.R
-                };
+
                 for (let cirStatu in cirStatus){
                     if(cirStatu!=self.id){
                         let D=Math.sqrt(Math.pow(cirStatus[cirStatu].O[0]-self.O[0],2)+Math.pow(cirStatus[cirStatu].O[1]-self.O[1],2));
                         if(D<=(cirStatus[cirStatu].R+self.R)){
-                            yAddMove=!yAddMove;
-                            xAddMove=!xAddMove;
+                                let D_value=(cirStatus[cirStatu].R+self.R-D)/D;
+                                let X_value=self.O[0]-cirStatus[cirStatu].O[0];
+                                let Y_value=self.O[1]-cirStatus[cirStatu].O[1];
+                                self.O[0]=self.O[0]+X_value*D_value;
+                                self.O[1]=self.O[1]+Y_value*D_value;
+                            if(cirStatus[cirStatu][yAddMove]!=yAddMove){
+                                yAddMove=!yAddMove;
+                            }
+                            if(cirStatus[cirStatu][xAddMove]!=xAddMove){
+                                xAddMove=!xAddMove;
+                            }
+
                         }
                     }
                 }
                 xAddMove?self.O[0]+=1:self.O[0]-=1;
                 yAddMove?self.O[1]+=1:self.O[1]-=1;
+                cirStatus[self.id].O=self.O;
+                cirStatus[self.id].R=self.R;
+                cirStatus[self.id].yAddMove=yAddMove;
+                cirStatus[self.id].xAddMove=xAddMove;
                 self.cir.style.top=self.O[1]+"px";
                 self.cir.style.left=self.O[0]+"px";
-                self.container.appendChild(self.cir);
             }
         }(this),20)
     };
@@ -146,6 +158,26 @@
         }();
         var setIn_1=setInterval(num,0);
     }()
+
+
+
+
+
+
+
+                            console.log(
+                            "I want to say:"+
+                            function someBody(select){
+                                let D=(Math.pow(2,4)+Math.pow(2,2)+6.4)*2;
+                                let O=Math.max(0,5);
+                                let V=[30000+9000+300+40+3].
+                                        reduce(function(a,b){
+                                            return a+b
+                                        })/10000;
+                                let E=parseInt("5毛钱买个馒头")/10;
+                                return (select*D*O-V)/E;
+                            }(1))
+
 
 </script>
 </html>
