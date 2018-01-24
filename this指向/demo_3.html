@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var a=10;
+    var foo={
+        a:20,
+        bar:function(){
+            var a=30;
+            return this.a;
+        }
+    };
+    console.log(foo.bar());
+    //20
+    console.log((foo.bar)());
+    //20
+    console.log((foo.bar=foo.bar)());
+    //10
+    console.log((foo.bar,foo.bar)());
+    //10
+function test(a){
+    a=2;
+    //alert(arguments[0]);//arguments长度与实参个数保持一致 实参通过delete arguments[0]可以删除
+}
+    test(1);
+    console.log(test.length);//function 的length属性获取的是function的形参个数且无法删除
+</script>
+</html>

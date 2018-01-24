@@ -6,19 +6,31 @@
 </head>
 <body>
 <script>
-    function a(name,age){
-        console.log(name);
-        console.log(a.caller);
-        console.log(arguments.callee);
-    }
-    function b(){
-        a("小明",12);
-    }
-    b();
+//    function a(name,age){
+//        console.log(name);
+//        console.log(a.caller);
+//        console.log(arguments.callee);
+//    }
+//    function b(){
+//        a("小明",12);
+//    }
+//    b();
+//
+//    a=function (){
+//      alert("a");
+//    }()
 
-    a=function (){
-      alert("a");
-    }()
+    var num=0;
+    function test(){
+        num++;
+        if(num<10){
+            console.log(arguments.callee());
+        }else {
+           return num;
+        }
+    }
+    test();
+    alert(num);
 </script>
 </body>
 </html>

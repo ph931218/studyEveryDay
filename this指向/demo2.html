@@ -16,17 +16,21 @@
         }
     }
     var fun= a.say;
-    fun();
-    a.say();
+    fun();//222
+    a.say();//111
     var b={
         name:"333",
         say:function(fun){
             fun();
         }
     }
-    b.say(a.say);
+    b.say(a.say);//222
     b.say= a.say;
-    b.say();
+    b.say();//333
     //预计结果 222 111 222 333
+
+
+
+
 </script>
 </html>

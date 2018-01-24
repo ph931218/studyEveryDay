@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #a {
+            width: 100px;
+            height: 100px;
+            background: #000;
+        }
+    </style>
+</head>
+<body>
+<script>
+    alert("我在这")
+</script>
+<div id="a"></div>
+<button>点击触发回流</button>
+</body>
+<script>
+    document.getElementsByTagName("button")[0].onclick=function(){
+        document.getElementById("a").style.background="red";
+        document.getElementById("a").style.height="10px";
+    }
+</script>
+</html>

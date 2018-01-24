@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    var person_1 = {};
+    function a() {
+        this.name = arguments[0]
+    }
+    ;
+    var person_2 = new a("小明");
+    var person_3 = new Object(person_2);//产生的对象和传入的对象是恒等的
+    var person_4 = Object.create(person_2);//传入的对象作为产生对象的原型对象
+    //继承的方式
+    a.call(person_1, "小红");//通过call apply将构造函数中的代码段运行一遍，此时this是a
+    var person_5 = {};
+    person_5.__proto__ = person_2;//通过原型继承原型对象的方法和属性
+    //所谓对象就是一个具有一定属性和一些行为的一个集合，这样一个对象、知道自己该作什么该如何做
+    //下面是一个例子
+    var changeEl = function (baseAttr) {
+        this.width = baseAttr[0];
+        this.height = baseAttr[1];
+        this.color = baseAttr[2];
+        var el = document.createElement("div");
+        el.style.height = self.height + "px";
+        el.style.width = self.width + "px";
+        el.style.backgroundColor = self.color;
+        document.body.appendChild(el);
+        this.move = function () {
+            this.moveInterval = setInterval(function (self) {
+                return function () {
+                    el.style.height = (self.height++) + "px";
+                    el.style.width = (self.width++) + "px";
+                    el.style.backgroundColor = self.color;
+                    document.body.appendChild(el);
+                }
+            }(this), 20)
+        }
+        this.stopMove = function () {
+            clearInterval(this.moveInterval)
+        }
+    }
+    var el_1 = new changeEl([100, 100, "red"]);
+    el_1.move();
+    setTimeout(function () {
+        el_1.stopMove();
+    }, 2000)
+</script>
+</html>

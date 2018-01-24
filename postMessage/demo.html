@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button>打开对话</button>
+<input type="text">
+<button>创建新窗口并发送信息</button>
+<div id="info"></div>
+</body>
+<script>
+    var demo_1;
+    var btn = document.getElementsByTagName("button")[0];
+    var btn_1 = document.getElementsByTagName("button")[1];
+    btn.onclick = function () {
+        var demo_1 = window.open("./demo_1.html", "demo_1");
+
+        btn_1.addEventListener("click", function () {
+            var inp = document.getElementsByTagName("input")[0].value;
+            demo_1.postMessage(inp, "/");
+            var info = document.getElementById("info");
+            var newEl = document.createElement("h3");
+            newEl.innerHTML = inp;
+            newEl.style.textAlign = "left";
+            info.appendChild(newEl);
+        })
+    };
+
+
+    window.addEventListener("message", function (e) {
+        console.log(e);
+        var info = document.getElementById("info");
+        var newEl = document.createElement("h3");
+        newEl.innerHTML = e.data;
+        newEl.style.textAlign = "right";
+        info.appendChild(newEl);
+    })
+    document.onkeydown = function (event) {
+        if (event.keyCode == 13) {
+            btn_1.click();
+        }
+    }
+</script>
+</html>
