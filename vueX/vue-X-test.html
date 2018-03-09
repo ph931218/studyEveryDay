@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vue.js"></script>
+    <script src="js/Vue-x.js"></script>
+</head>
+<body>
+<div id="app"><ph v-bind:test="hi"></ph></div>
+
+</body>
+<script>
+
+    var xpw = {
+        template:"<div>我是一个小小的局部组件{{msg}}</div>",
+        props: ['test2'],
+        data: function () {
+            return {
+               msg:this.test2
+            }
+        },
+        mounted: function () {
+            var self = this;
+            setTimeout(function () {
+                self.msg += ",耶!"
+            },1000)
+        }
+    }
+    Vue.component("ph",{
+        template:"<div>我是普恒{{test}}<xzj v-bind:test2=test ></xzj></div>",
+        props: ['test'],
+        data: function(){
+            return {
+
+            }
+        },
+        components: {
+            xzj: xpw
+        }
+    });
+    const app = new Vue({
+        el: "#app",
+        data: {
+            hi: "大家好"
+        },
+        components: {
+            xzj: xpw
+        }
+    })
+
+</script>
+</html>

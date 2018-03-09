@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        html,body {
+            margin: 0 auto;
+        }
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .content {
+            width: 100%;
+        }
+        .mun_1{
+            width: 100%;
+        }
+
+        .mun_1>li {
+            position: relative;
+            float: left;
+        }
+        .mun_1:after{
+            content: "\0020";
+            display: block;
+            height: 0;
+            clear: left;
+        }
+        .mun_1>li>ul {
+            position: absolute;
+            width: 100%;
+            top: 100%;
+            left: 0;
+        }
+        .mun_1 li{
+            background: #2b542c;
+            height: 20px;
+            width: 100px;
+            border: 1px solid #0f0f0f;
+            box-sizing: border-box;
+        }
+        .mun_2>li {
+            position: relative;
+        }
+        .mun_2>li>ul {
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 100%;
+        }
+        .mun_1>li ul{
+            display: none;
+            position: absolute;
+        }
+        .mun_1 li:hover>ul {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div class="content">
+    <ul class="mun_1">
+        <li>
+            一级菜单
+            <ul class="mun_2">
+                <li>二级菜单</li>
+                <li>二级菜单</li>
+                <li>二级菜单</li>
+                <li>二级菜单
+                    <ul class="mun_3">
+                        <li>三级菜单</li>
+                        <li>三级菜单</li>
+                        <li>三级菜单</li>
+                        <li>三级菜单</li>
+                        <li>三级菜单</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>一级菜单</li>
+        <li>一级菜单</li>
+        <li>一级菜单</li>
+        <li>一级菜单</li>
+    </ul>
+</div>
+</body>
+</html>

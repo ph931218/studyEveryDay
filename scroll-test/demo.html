@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-3.2.1.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .test {
+            height: 1000px;
+            background: #0f0f0f;
+        }
+    </style>
+</head>
+<body>
+<div class="test"></div>
+<script>
+    $(window).scroll(function () {
+        var pageH = $(document.body).height();
+        var scrollT = $(window).scrollTop(); //滚动条top
+        var winH = $(window).height();
+        var aa = (pageH-winH-scrollT)/winH;
+        console.log((pageH-winH-scrollT)/winH)
+
+        if(aa == 0){
+            alert("123");
+        }
+    });
+</script>
+</body>
+</html>

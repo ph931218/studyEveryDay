@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .book {
+            width: 270px;
+            height: 129px;
+            background-image: url("./book.png") ;
+            background-repeat: no-repeat;
+            background-position: 0 0;
+        }
+    </style>
+</head>
+<body>
+<div class="book"></div>
+<script>
+    ~function () {
+        let bookContainer = document.querySelector(".book");
+        setInterval(function () {
+            let num = 0;
+            return function () {
+
+                if(num > 143) {
+                    bookContainer.style.backgroundPosition = 0;
+                    num = 0;
+                }else {
+                    bookContainer.style.backgroundPosition = (-270*num++)+"px";
+                }
+            }
+
+        }(),50)
+    }()
+
+</script>
+</body>
+</html>
