@@ -5,16 +5,7 @@
     <bookmark url="file://$PROJECT_DIR$/searchList.html" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9095de26-07c6-4899-ac33-5c249a3f9a58" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/scroll-test/demo.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/vueX/js/Vue-x.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/vueX/vue-X-test.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/多级导航/aaa.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/百度小动画/book.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/百度小动画/book.png" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="9095de26-07c6-4899-ac33-5c249a3f9a58" name="Default" comment="" />
     <ignored path="每日一试.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
