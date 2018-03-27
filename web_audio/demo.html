@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<button id="sound">点击声音</button>
+<script>
+    window.AudioContext = window.AudioContext || window.webkitAudioContext;
+    // 创建新的音频上下文接口
+    var audioCtx = new AudioContext();
+
+    // 发出的声音频率数据，表现为音调的高低
+    var arrFrequency = [196.00, 220.00,246.94, 261.63, 293.66, 329.63, 349.23, 392.00, 440.00, 493.88, 523.25, 587.33, 659.25, 698.46, 783.99, 880.00, 987.77, 1046.50];
+    var arrBoxing = ["sine","square","triangle","sawtooth"];
+    // 音调依次递增或者递减处理需要的参数
+    var start = 0, direction = 1,arrBoxingIndex = 0;
+    $("#sound").click(function () {
+            if (!window.AudioContext) {
+                alert('当前浏览器不支持Web Audio API');
+                return;
+            }
+
+            // 按钮元素
+
+
+
+            // 鼠标hover我们的按钮的时候
+                // 当前频率
+                var frequency = arrFrequency[start];
+                // 如果到头，改变音调的变化规则（增减切换）
+                if (!frequency) {
+                    direction = -1 * direction;
+                    start = start + 2 * direction;
+                    frequency = arrFrequency[start];
+                }
+                // 改变索引，下一次hover时候使用
+                start = start + direction;
+
+                // 创建一个OscillatorNode, 它表示一个周期性波形（振荡），基本上来说创造了一个音调
+                var oscillator = audioCtx.createOscillator();
+                // 创建一个GainNode,它可以控制音频的总音量
+                var gainNode = audioCtx.createGain();
+                // 把音量，音调和终节点进行关联
+                oscillator.connect(gainNode);
+                // audioCtx.destination返回AudioDestinationNode对象，表示当前audio context中所有节点的最终节点，一般表示音频渲染设备
+                gainNode.connect(audioCtx.destination);
+                // 指定音调的类型，其他还有square|triangle|sawtooth
+                if (arrBoxingIndex%4 == 0 && arrBoxingIndex != 0) {
+                    oscillator.type = arrBoxing[0];
+                    arrBoxingIndex = 0;
+                    console.log(arrBoxing[arrBoxingIndex]);
+                    arrBoxingIndex++
+                }else {
+                    oscillator.type = arrBoxing[arrBoxingIndex];
+                    console.log(arrBoxing[arrBoxingIndex]);
+                    arrBoxingIndex++
+                }
+
+                // 设置当前播放声音的频率，也就是最终播放声音的调调
+                oscillator.frequency.value = frequency;
+                // 当前时间设置音量为0
+                gainNode.gain.setValueAtTime(0, audioCtx.currentTime);
+                // 0.01秒后音量为1
+                gainNode.gain.linearRampToValueAtTime(1, audioCtx.currentTime + 0.01);
+                // 音调从当前时间开始播放
+                oscillator.start(audioCtx.currentTime);
+                // 1秒内声音慢慢降低，是个不错的停止声音的方法
+                gainNode.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 1);
+                // 1秒后完全停止声音
+                oscillator.stop(audioCtx.currentTime + 1);
+    })
+
+    var audioPlay = new AudioContext();
+    var thisTime = audioPlay .currentTime
+    $.each(arrFrequency,function (i,val) {
+        if (!window.AudioContext) {
+            alert('当前浏览器不支持Web Audio API');
+            return;
+        }
+        // 按钮元素
+
+
+
+        // 鼠标hover我们的按钮的时候
+        // 当前频率
+        // 如果到头，改变音调的变化规则（增减切换）
+
+        // 创建一个OscillatorNode, 它表示一个周期性波形（振荡），基本上来说创造了一个音调
+        var oscillator = audioPlay .createOscillator();
+        // 创建一个GainNode,它可以控制音频的总音量
+        var gainNode = audioPlay .createGain();
+        // 把音量，音调和终节点进行关联
+        oscillator.connect(gainNode);
+        // audioPlay .destination返回AudioDestinationNode对象，表示当前audio context中所有节点的最终节点，一般表示音频渲染设备
+        gainNode.connect(audioPlay .destination);
+        // 指定音调的类型，其他还有square|triangle|sawtooth
+        if (arrBoxingIndex%4 == 0 && arrBoxingIndex != 0) {
+            oscillator.type = arrBoxing[0];
+            arrBoxingIndex = 0;
+            console.log(arrBoxing[arrBoxingIndex]);
+            arrBoxingIndex++
+        }else {
+            oscillator.type = arrBoxing[arrBoxingIndex];
+            console.log(arrBoxing[arrBoxingIndex]);
+            arrBoxingIndex++
+        }
+
+        // 设置当前播放声音的频率，也就是最终播放声音的调调
+        oscillator.frequency.value = val;
+        // 当前时间设置音量为0
+        console.log(thisTime);
+        gainNode.gain.setValueAtTime(0, thisTime);
+        // 0.01秒后音量为1
+        gainNode.gain.linearRampToValueAtTime(1, 0);
+        // 音调从当前时间开始播放
+        oscillator.start(thisTime+i);
+        // 1秒内声音慢慢降低，是个不错的停止声音的方法
+        gainNode.gain.exponentialRampToValueAtTime(0.001, 10);
+        // 1秒后完全停止声音
+        oscillator.stop(thisTime+1+i);
+    })
+
+
+    // // 创建音频上下文
+    // var audioCtx = new AudioContext();
+    // // 创建音调控制对象
+    // var oscillator = audioCtx.createOscillator();
+    // // 创建音量控制对象
+    // var gainNode = audioCtx.createGain();
+    // // 音调音量关联
+    // oscillator.connect(gainNode);
+    // // 音量和设备关联
+    // gainNode.connect(audioCtx.destination);
+    // // 音调类型指定为正弦波
+    // oscillator.type = 'sine';
+    // // 设置音调频率
+    // oscillator.frequency.value = 196.00;
+    // // 先把当前音量设为0
+    // gainNode.gain.setValueAtTime(0, audioCtx.currentTime);
+    // // 0.01秒时间内音量从刚刚的0变成1，线性变化
+    // gainNode.gain.linearRampToValueAtTime(1, audioCtx.currentTime + 0.01);
+    // // 声音走起
+    // oscillator.start(audioCtx.currentTime);
+    // // 1秒时间内音量从刚刚的1变成0.001，指数变化
+    // gainNode.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 1);
+    // // 1秒后停止声音
+    // oscillator.stop(audioCtx.currentTime + 1);
+</script>
+</body>
+</html>

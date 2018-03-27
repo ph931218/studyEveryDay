@@ -6,19 +6,134 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9095de26-07c6-4899-ac33-5c249a3f9a58" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/360文字特效/demo.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cavans/demo.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/vueX/demo.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/文字换行.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/移动端时间插件/css/mobiscroll_002.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/移动端时间插件/css/mobiscroll_003.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/移动端时间插件/js/jquery-1.10.0.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/移动端时间插件/js/mobiscroll_002.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/移动端时间插件/js/mobiscroll_003.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/移动端时间插件/js/mobiscroll_004.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/移动端时间插件/js/mobiscroll_005.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/移动端时间插件/例子.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/canvas/jsmj@3x.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/demo.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/CHANGELOG.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/LICENSE.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/README.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/bower.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/dist/howler.core.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/dist/howler.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/dist/howler.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/dist/howler.spatial.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/3d/README.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/3d/assets/gun.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/3d/assets/skybox.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/3d/assets/speaker.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/3d/assets/sprite.mp3" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/3d/assets/sprite.webm" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/3d/assets/wall.jpg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/3d/index.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/3d/js/camera.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/3d/js/controls.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/3d/js/game.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/3d/js/map.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/3d/js/player.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/3d/js/sound.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/3d/js/texture.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/3d/styles.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/README.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/mydemo/demo.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/mydemo/music/Mixdown.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/mydemo/music/beisi.mp3" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/mydemo/music/jinmu.mp3" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/mydemo/music/xiaohao.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/player/README.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/player/audio/80s_vibe.mp3" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/player/audio/80s_vibe.webm" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/player/audio/rave_digger.mp3" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/player/audio/rave_digger.webm" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/player/audio/running_out.mp3" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/player/audio/running_out.webm" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/player/index.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/player/player.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/player/siriwave.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/player/styles.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/radio/README.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/radio/index.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/radio/radio.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/radio/styles.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/sprite/README.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/sprite/index.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/sprite/sprite.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/sprite/styles.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/package.json" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/src/howler.core.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/src/plugins/howler.spatial.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/tests/audio/sound1.mp3" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/tests/audio/sound1.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/tests/audio/sound1.webm" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/tests/audio/sound2.mp3" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/tests/audio/sound2.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/tests/audio/sound2.webm" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/tests/audio/sound3.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/tests/core.html5audio.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/tests/core.webaudio.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/tests/css/styles.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/tests/index.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/tests/js/core.html5audio.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/tests/js/core.webaudio.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/tests/js/spatial.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/tests/spatial.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/MIT-LICENSE.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/Makefile" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/README.md" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/build/webaudiox.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/analyser2canvas.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/analyser2volume.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/analyserbeatdetector.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/beatdetektorjs.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/binaural.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/gamesounds.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/helpers/webaudiox.analyser2canvas.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/helpers/webaudiox.analyserbeatdetector.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/helpers/webaudiox.analyserbeatdetectordatgui.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/helpers/webaudiox.gamesounds.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/jsfx-basic.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/jsfx.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/lineout.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/raw.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/sounds/149445__jhepkema__noise.mp3" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/sounds/95004__j1987__generator.mp3" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/sounds/Cissy_Strut_Edit.mp3" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/sounds/Kit3/hihat.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/sounds/Kit3/kick.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/sounds/Kit3/snare.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/sounds/eatpill.mp3" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/sounds/marbles.mp3" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/sounds/marbles.ogg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/sounds/perfume.mp3" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/sounds/rezoner-7DFPS-2013-2.mp3" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/sounds/techno.mp3" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/sounds/triggerrally/checkpoint.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/sounds/triggerrally/crash1.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/sounds/triggerrally/crash2.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/sounds/triggerrally/engine1.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/sounds/triggerrally/gearwhine.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/sounds/triggerrally/scrape2.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/sounds/triggerrally/wind.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/soundsbank.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/threejs-panner.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/threejs.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/vendor/beatdetektor.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/vendor/jsfx/audio.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/vendor/jsfx/jsfx.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/vendor/jsfx/jsfxlib.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/vendor/three.js/build/three.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/vendor/three.js/examples/js/ImprovedNoise.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/vendor/three.js/examples/js/libs/dat.gui.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/lib/webaudiox.absolutenormalizer.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/lib/webaudiox.adaptativenormalizer.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/lib/webaudiox.analyser2volume.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/lib/webaudiox.binaural.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/lib/webaudiox.bytetonormalizedfloat32array.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/lib/webaudiox.jsfx.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/lib/webaudiox.lineout.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/lib/webaudiox.loadbuffer.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/lib/webaudiox.shim.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/lib/webaudiox.three.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/cavans/demo.html" afterPath="$PROJECT_DIR$/canvas/demo.html" />
     </list>
     <ignored path="每日一试.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,62 +152,85 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="mobiscroll.css" pinned="false" current-in-tab="false">
-        <entry file="file://D:/pro/growth_web/static/timeScroll/mobiscroll.css">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web_audio/howler.js-master/examples/sprite/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19629">
-              <caret line="727" column="22" lean-forward="false" selection-start-line="727" selection-start-column="22" selection-end-line="727" selection-end-column="22" />
+            <state relative-caret-position="1053">
+              <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="例子.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/移动端时间插件/例子.html">
+      <file leaf-file-name="sprite.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web_audio/howler.js-master/examples/sprite/sprite.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="40" column="26" lean-forward="false" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
+            <state relative-caret-position="3402">
+              <caret line="134" column="11" lean-forward="false" selection-start-line="134" selection-start-column="11" selection-end-line="134" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="radio.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web_audio/howler.js-master/examples/radio/radio.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3024">
+              <caret line="120" column="8" lean-forward="false" selection-start-line="120" selection-start-column="4" selection-end-line="120" selection-end-column="8" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web_audio/howler.js-master/examples/radio/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="16" column="33" lean-forward="false" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web_audio/howler.js-master/examples/player/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="12" column="22" lean-forward="false" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="player.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web_audio/howler.js-master/examples/player/player.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="13" column="45" lean-forward="false" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="demo.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/cavans/demo.html">
+        <entry file="file://$PROJECT_DIR$/web_audio/howler.js-master/examples/mydemo/demo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
+            <state relative-caret-position="27">
+              <caret line="124" column="0" lean-forward="false" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mobiscroll_002.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/移动端时间插件/js/mobiscroll_002.js">
+      <file leaf-file-name="howler.core.min.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web_audio/howler.js-master/dist/howler.core.min.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="28323">
-              <caret line="1049" column="18" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1131" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-                <marker date="1396338243410" expanded="true" signature="1467:1512" ph="..." />
-                <marker date="1396338243410" expanded="true" signature="18238:18283" ph="..." />
-                <marker date="1396338243410" expanded="true" signature="18336:18381" ph="..." />
-                <marker date="1396338243410" expanded="true" signature="18389:18396" ph="–" />
-                <marker date="1396338243410" expanded="true" signature="18480:18539" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mobiscroll.js" pinned="false" current-in-tab="false">
-        <entry file="file://D:/pro/growth_web/static/timeScroll/mobiscroll.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48573">
-              <caret line="1799" column="9" lean-forward="true" selection-start-line="1799" selection-start-column="9" selection-end-line="1799" selection-end-column="9" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -100,52 +238,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mobiscroll_002.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/移动端时间插件/css/mobiscroll_002.css">
+      <file leaf-file-name="howler.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web_audio/howler.js-master/dist/howler.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19413">
-              <caret line="719" column="18" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="736" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mobiscroll_003.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/移动端时间插件/css/mobiscroll_003.css">
+      <file leaf-file-name="howler.spatial.min.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web_audio/howler.js-master/dist/howler.spatial.min.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="8" column="13" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="205" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mobiscroll_005.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/移动端时间插件/js/mobiscroll_005.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="12" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mobiscroll_004.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/移动端时间插件/js/mobiscroll_004.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="6" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mobiscroll_003.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/移动端时间插件/js/mobiscroll_003.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="9" column="24" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -155,11 +267,27 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
         <option value="HTML File" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>createOscillator</find>
+      <find>eleButton</find>
+      <find>audioCtx</find>
+      <find>audioPlay .currentTime</find>
+      <find>Howl</find>
+      <find>src</find>
+      <find>beisi</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>i[num++]</replace>
+      <replace>audioPlay</replace>
+      <replace>thisTime</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -167,11 +295,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/setTimeout/settimeout.html" />
-        <option value="$PROJECT_DIR$/bind.html" />
-        <option value="$PROJECT_DIR$/复制粘贴/test.html" />
-        <option value="$PROJECT_DIR$/中文变量/aaa.html" />
-        <option value="$PROJECT_DIR$/promise/test.html" />
         <option value="$PROJECT_DIR$/const/test.html" />
         <option value="$PROJECT_DIR$/sort.html" />
         <option value="$PROJECT_DIR$/小朋友的问题/demo1/aaa.css" />
@@ -218,6 +341,11 @@
         <option value="$PROJECT_DIR$/移动端时间插件/css/mobiscroll.css" />
         <option value="$PROJECT_DIR$/移动端时间插件/例子.html" />
         <option value="$PROJECT_DIR$/cavans/demo.html" />
+        <option value="$PROJECT_DIR$/canvas/demo.html" />
+        <option value="$PROJECT_DIR$/web_audio/demo.html" />
+        <option value="$PROJECT_DIR$/web_audio/howler.js-master/examples/mydemo/demo.css" />
+        <option value="$PROJECT_DIR$/web_audio/howler.js-master/examples/sprite/sprite.js" />
+        <option value="$PROJECT_DIR$/web_audio/howler.js-master/examples/mydemo/demo.html" />
       </list>
     </option>
   </component>
@@ -228,10 +356,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="2033" />
-    <option name="y" value="173" />
+    <option name="x" value="2162" />
+    <option name="y" value="54" />
     <option name="width" value="1298" />
-    <option name="height" value="801" />
+    <option name="height" value="803" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -248,6 +376,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -258,13 +387,30 @@
             <path>
               <item name="每日一试" type="b2602c69:ProjectViewProjectNode" />
               <item name="studyEveryDay" type="462c0819:PsiDirectoryNode" />
-              <item name="cavans" type="462c0819:PsiDirectoryNode" />
+              <item name="canvas" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="每日一试" type="b2602c69:ProjectViewProjectNode" />
+              <item name="studyEveryDay" type="462c0819:PsiDirectoryNode" />
+              <item name="web_audio" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="每日一试" type="b2602c69:ProjectViewProjectNode" />
+              <item name="studyEveryDay" type="462c0819:PsiDirectoryNode" />
+              <item name="web_audio" type="462c0819:PsiDirectoryNode" />
+              <item name="howler.js-master" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="每日一试" type="b2602c69:ProjectViewProjectNode" />
+              <item name="studyEveryDay" type="462c0819:PsiDirectoryNode" />
+              <item name="web_audio" type="462c0819:PsiDirectoryNode" />
+              <item name="howler.js-master" type="462c0819:PsiDirectoryNode" />
+              <item name="examples" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -280,15 +426,18 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Documents\GitHub\studyEveryDay\web_audio\howler.js-master\examples\mydemo\music" />
+      <recent name="F:\Documents\GitHub\studyEveryDay\web_audio" />
       <recent name="F:\每日一试" />
       <recent name="F:\每日一试\小朋友的问题\demo1" />
       <recent name="F:\每日一试\智农首页导航\css" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Documents\GitHub\studyEveryDay\web_audio\howler.js-master\examples\mydemo\music" />
+      <recent name="F:\Documents\GitHub\studyEveryDay\web_audio" />
+      <recent name="F:\Documents\GitHub\studyEveryDay\canvas" />
       <recent name="F:\Documents\GitHub\studyEveryDay\移动端时间插件" />
       <recent name="F:\Documents\GitHub\studyEveryDay\百度小动画" />
-      <recent name="F:\每日一试" />
-      <recent name="F:\每日一试\map" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -382,26 +531,29 @@
       <workItem from="1521165034810" duration="883000" />
       <workItem from="1521424314987" duration="47000" />
       <workItem from="1521452489717" duration="3392000" />
-      <workItem from="1521538967192" duration="180000" />
+      <workItem from="1521538967192" duration="1433000" />
+      <workItem from="1521706262371" duration="11961000" />
+      <workItem from="1521772917854" duration="29036000" />
+      <workItem from="1522029266242" duration="18763000" />
+      <workItem from="1522114700732" duration="649000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33527000" />
+    <option name="totallyTimeSpent" value="95189000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2033" y="173" width="1298" height="801" extended-state="0" />
-    <editor active="true" />
+    <frame x="2162" y="54" width="1298" height="803" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1825273" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20436817" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="运行" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -441,93 +593,17 @@
           <line>170</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/web_audio/howler.js-master/examples/mydemo/demo.html</url>
+          <line>140</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="3" />
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/垂直居中/bbb.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="11" column="9" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="29" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/垂直居中/aaa.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="12" column="21" lean-forward="false" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/小朋友的问题/demo1/aaaa.html" />
-    <entry file="file://$PROJECT_DIR$/小朋友的问题/demo3/aaa.html" />
-    <entry file="file://$PROJECT_DIR$/面试题测试/对象引用.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="8" column="7" lean-forward="false" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js" />
-    <entry file="file://$PROJECT_DIR$/面试题测试/async-function.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="18" column="29" lean-forward="false" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/面试题测试/ddd.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="13" column="16" lean-forward="false" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/面试题测试/bbb.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="10" column="20" lean-forward="false" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/面试题测试/aaa.html" />
-    <entry file="file://$PROJECT_DIR$/面试题测试/ccc/ccc.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/原型/aaa.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="13" column="20" lean-forward="false" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web worker/aaa.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="13" column="4" lean-forward="false" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web worker/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="15" lean-forward="false" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/map/tree.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="9" column="9" lean-forward="false" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hover.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="675">
@@ -692,7 +768,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="16" column="7" lean-forward="false" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -700,14 +775,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="28323">
           <caret line="1049" column="18" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1131" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <marker date="1396338243410" expanded="true" signature="1467:1512" ph="..." />
-            <marker date="1396338243410" expanded="true" signature="18238:18283" ph="..." />
-            <marker date="1396338243410" expanded="true" signature="18336:18381" ph="..." />
-            <marker date="1396338243410" expanded="true" signature="18389:18396" ph="–" />
-            <marker date="1396338243410" expanded="true" signature="18480:18539" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -715,7 +782,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="6" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -723,7 +789,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
           <caret line="9" column="24" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -731,17 +796,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="12" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://D:/pro/growth_web/static/timeScroll/mobiscroll.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48573">
-          <caret line="1799" column="9" lean-forward="true" selection-start-line="1799" selection-start-column="9" selection-end-line="1799" selection-end-column="9" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+          <caret line="1799" column="9" lean-forward="false" selection-start-line="1799" selection-start-column="9" selection-end-line="1799" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -749,7 +810,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
           <caret line="8" column="13" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="205" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -757,7 +817,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19413">
           <caret line="719" column="18" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="736" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -765,26 +824,138 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19629">
           <caret line="727" column="22" lean-forward="false" selection-start-line="727" selection-start-column="22" selection-end-line="727" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/移动端时间插件/例子.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
+        <state relative-caret-position="1080">
           <caret line="40" column="26" lean-forward="false" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/canvas/demo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="16" column="35" lean-forward="false" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_audio/webaudiox-master/lib/webaudiox.jsfx.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="39" lean-forward="false" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_audio/webaudiox-master/examples/analyser2canvas.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="35" lean-forward="false" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_audio/howler.js-master/src/plugins/howler.spatial.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_audio/demo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-679">
+          <caret line="25" column="19" lean-forward="true" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_audio/howler.js-master/examples/mydemo/demo.css" />
+    <entry file="file://$PROJECT_DIR$/web_audio/howler.js-master/examples/sprite/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1053">
+          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_audio/howler.js-master/examples/sprite/sprite.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3402">
+          <caret line="134" column="11" lean-forward="false" selection-start-line="134" selection-start-column="11" selection-end-line="134" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_audio/howler.js-master/examples/radio/radio.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3024">
+          <caret line="120" column="8" lean-forward="false" selection-start-line="120" selection-start-column="4" selection-end-line="120" selection-end-column="8" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#input#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cavans/demo.html">
+    <entry file="file://$PROJECT_DIR$/web_audio/howler.js-master/examples/radio/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="16" lean-forward="false" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="16" />
+        <state relative-caret-position="432">
+          <caret line="16" column="33" lean-forward="false" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_audio/howler.js-master/examples/player/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="12" column="22" lean-forward="false" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_audio/howler.js-master/examples/player/player.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="13" column="45" lean-forward="false" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_audio/howler.js-master/dist/howler.core.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_audio/howler.js-master/dist/howler.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_audio/howler.js-master/dist/howler.spatial.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_audio/howler.js-master/examples/mydemo/demo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="124" column="0" lean-forward="false" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
           <folding />
         </state>
       </provider>

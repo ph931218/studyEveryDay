@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width = device-width, initial-scale = 1.0,maximum-scale = 1.0, user-scalable = no">
+    <script src="../../../../jquery-3.2.1.min.js"></script>
+    <script src="../../dist/howler.core.min.js"></script>
+
+    <style>
+        html,body{
+            margin: 0;
+            padding: 0;
+        }
+        .make-music {
+            padding: 0;
+            overflow: hidden;
+            width: 99%;
+            display: block;
+            margin:  0 auto;
+        }
+        .instrument {
+            height: 100px;
+            width: 25%;
+            background: #2b542c;
+            line-height: 100px;
+            text-align: center;
+            border:1px solid #ddd;
+            box-sizing: border-box;
+            float: left;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+<ul class="make-music">
+    <li class="instrument" id = 'gu_1'>鼓</li>
+    <li class="instrument" id = 'beisi_1'>贝斯</li>
+    <li class="instrument" id = 'gu_2'>鼓</li>
+    <li class="instrument" id = 'beisi_2'>贝斯</li>
+    <li class="instrument" id = 'gu_3'>鼓</li>
+    <li class="instrument" id = 'beisi_3'>贝斯</li>
+    <li class="instrument" id = 'gu_4'>鼓</li>
+    <li class="instrument" id = 'beisi_4'>贝斯</li>
+</ul>
+<!--<audio src="music/jinmu.mp3" autoplay="autoplay"></audio>-->
+<button id="pause">播放</button>
+</body>
+<script>
+
+    var num = 0,isPlayDelay = true,soundStarTime,thisTime,
+        mySound = {
+            member: [],
+            delay:[]
+        },newSound;
+    var sound = new Howl({
+        src:['./music/Mixdown.wav'],
+        sprite: {
+            gu_1: [0, 400],
+            gu_2: [0, 400],
+            gu_3: [0, 400],
+            gu_4: [0, 400],
+            beisi_1: [850, 1679],
+            beisi_2: [850, 1679],
+            beisi_3: [850, 1679],
+            beisi_4: [850, 1679],
+            nosound:[1679,10000]
+        },
+        onplay: function () {
+        },
+        volume: 1,
+        onend: function () {
+
+         }
+    });
+
+
+    // $(".instrument").on("",function (event) {
+    //     console.log($(this));
+    //     if(mySound.member.length == 0){
+    //         soundStarTime = new Date().getTime();
+    //         mySound.delay.push(0);
+    //     }else {
+    //         thisTime=new Date().getTime();
+    //         mySound.delay.push(thisTime - soundStarTime);
+    //         soundStarTime = thisTime;
+    //     }
+    //     sound.play($(this).attr("id"));
+    //     mySound.member.push($(this).attr("id"));
+    //     $(".instrument").css({background:"#2b542c"});
+    //     $(this).css({background:"yellow"});
+    // });
+
+    var thisElId,
+        childWidth = $(".make-music").width()/4,
+        childHeight = $(".make-music").height()/2,
+        parentWidth =  $(".make-music").width(),
+        parentHeight =  $(".make-music").height();
+    $(".make-music").on("touchstart",".instrument",function (event) {
+        thisElId = $(this).attr("id");
+        if(mySound.member.length == 0){
+            soundStarTime = new Date().getTime();
+            mySound.delay.push(0);
+        }else {
+            thisTime=new Date().getTime();
+            mySound.delay.push(thisTime - soundStarTime);
+            soundStarTime = thisTime;
+        }
+        sound.play($(this).attr("id"));
+        mySound.member.push($(this).attr("id"));
+        $(".instrument").css({background:"#2b542c"});
+        $(this).css({background:"yellow"});
+    });
+    $(".make-music").on("touchmove",".instrument",function (event) {
+        if(event.targetTouches[0].pageX<parentWidth&&event.targetTouches[0].pageX>0&&event.targetTouches[0].pageY<parentHeight&&event.targetTouches[0].pageY>0){
+            console.log("在里面");
+            var childRow = Math.floor(event.targetTouches[0].pageY/childHeight);
+            var childCol = Math.floor(event.targetTouches[0].pageX/childWidth);
+
+            if(thisElId != $(".instrument").eq(childRow*4+childCol).attr("id")){
+                var self = $(".instrument").eq(childRow*4+childCol);
+                thisElId = $(".instrument").eq(childRow*4+childCol).attr("id");
+                $(".instrument").css({background:"#2b542c"});
+                self.css({background:"yellow"});
+
+                if(mySound.member.length == 0){
+                    soundStarTime = new Date().getTime();
+                    mySound.delay.push(0);
+                }else {
+                    thisTime=new Date().getTime();
+                    mySound.delay.push(thisTime - soundStarTime);
+                    soundStarTime = thisTime;
+                }
+                sound.play(self.attr("id"));
+                mySound.member.push(self.attr("id"));
+            }
+        }else {
+            thisElId = "";
+            console.log("在外面")
+        }
+    });
+    $(".instrument").on("touchmove",function (event) {
+
+    })
+    var sum = 0,setT = [];
+    $("#pause").mousedown(function () {
+        $.each(mySound.delay,function (i,val) {
+            setT[i] = setTimeout(function () {
+                sound.play(mySound.member[i]);
+                clearTimeout(setT[i]);
+            },sum);
+            sum += mySound.delay[i];
+        })
+    })
+
+
+
+
+</script>
+</html>
