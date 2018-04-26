@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="echarts.min.js"></script>
+    <style>
+        .demo {
+            height: 500px;
+            width: 500px;
+            background: url("./P6_juzi (2).png") no-repeat center;
+            background-size: contain;
+            position: relative;
+        }
+        .demo>div {
+            width: 45%;
+            height: 45%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -22.5%;
+            margin-top: -22.5%;
+        }
+    </style>
+</head>
+<body>
+<div class="demo"><div></div></div>
+<script>
+    var myChart = echarts.init(document.getElementsByClassName("demo")[0].getElementsByTagName("div")[0]);
+    option = {
+        title: { text:null }, // 隐藏图表标题
+        legend: { enabled: false }, // 隐藏图例
+        backgroundColor:'',
+        tooltip: {},
+        center: ['50%','50%'],
+        grid: { // 控制图的大小，调整下面这些值就可以，
+            width: 1,
+            height: 1
+        },
+        radar: {
+            // shape: 'circle',
+            name: {
+                textStyle: {
+                }
+            },
+            splitNumber:5,//横向线个数
+            axisLine:{//纵向线控制
+                show:false
+            },
+            splitLine:{
+                show:true,
+                lineStyle:{
+                    color:["#fabde7"],
+                    width:2
+                }
+            },
+            splitArea: {
+                areaStyle: {
+                    color: ['#fff']
+                }
+            },
+            indicator: [
+                { name: '', max: 16000},
+                { name: '', max: 30000},
+                { name: '', max: 38000},
+                { name: '', max: 52000},
+                { name: '', max: 25000}
+            ]
+        },
+        series: [{
+            type: 'radar',
+            symbol: "none",
+            symbolSize: 0,//拐点设置
+            itemStyle: {
+                opacity: 1,
+                borderColor: "#000"
+            },
+            areaStyle:{
+                color: "#cfff75",
+                opacity: 1
+            },
+            lineStyle:{
+                color: "#3dcf16",
+                width: 5
+            },
+            emphasis:{
+                itemStyle: {
+                    borderColor: "#000"
+                }
+            },
+            data : [
+                {
+                    value : [ 16000, 2000, 31000, 42000, 21000],
+                }
+            ],
+            tooltip : {
+                formatter: function () {
+                    return ""
+                }
+            }
+        }]
+    };
+    myChart.setOption(option);
+</script>
+</body>
+</html>

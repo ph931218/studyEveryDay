@@ -2,138 +2,23 @@
 <project version="4">
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/let And var.html" line="11" />
-    <bookmark url="file://$PROJECT_DIR$/searchList.html" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9095de26-07c6-4899-ac33-5c249a3f9a58" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/canvas/jsmj@3x.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/demo.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/CHANGELOG.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/LICENSE.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/bower.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/dist/howler.core.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/dist/howler.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/dist/howler.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/dist/howler.spatial.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/3d/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/3d/assets/gun.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/3d/assets/skybox.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/3d/assets/speaker.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/3d/assets/sprite.mp3" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/3d/assets/sprite.webm" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/3d/assets/wall.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/3d/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/3d/js/camera.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/3d/js/controls.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/3d/js/game.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/3d/js/map.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/3d/js/player.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/3d/js/sound.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/3d/js/texture.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/3d/styles.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/mydemo/demo.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/mydemo/music/Mixdown.wav" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/mydemo/music/beisi.mp3" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/mydemo/music/jinmu.mp3" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/mydemo/music/xiaohao.wav" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/player/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/player/audio/80s_vibe.mp3" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/player/audio/80s_vibe.webm" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/player/audio/rave_digger.mp3" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/player/audio/rave_digger.webm" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/player/audio/running_out.mp3" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/player/audio/running_out.webm" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/player/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/player/player.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/player/siriwave.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/player/styles.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/radio/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/radio/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/radio/radio.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/radio/styles.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/sprite/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/sprite/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/sprite/sprite.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/sprite/styles.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/package.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/src/howler.core.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/src/plugins/howler.spatial.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/tests/audio/sound1.mp3" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/tests/audio/sound1.wav" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/tests/audio/sound1.webm" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/tests/audio/sound2.mp3" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/tests/audio/sound2.wav" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/tests/audio/sound2.webm" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/tests/audio/sound3.wav" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/tests/core.html5audio.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/tests/core.webaudio.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/tests/css/styles.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/tests/index.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/tests/js/core.html5audio.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/tests/js/core.webaudio.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/tests/js/spatial.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/tests/spatial.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/MIT-LICENSE.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/Makefile" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/README.md" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/build/webaudiox.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/analyser2canvas.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/analyser2volume.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/analyserbeatdetector.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/beatdetektorjs.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/binaural.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/gamesounds.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/helpers/webaudiox.analyser2canvas.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/helpers/webaudiox.analyserbeatdetector.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/helpers/webaudiox.analyserbeatdetectordatgui.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/helpers/webaudiox.gamesounds.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/jsfx-basic.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/jsfx.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/lineout.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/raw.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/sounds/149445__jhepkema__noise.mp3" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/sounds/95004__j1987__generator.mp3" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/sounds/Cissy_Strut_Edit.mp3" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/sounds/Kit3/hihat.wav" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/sounds/Kit3/kick.wav" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/sounds/Kit3/snare.wav" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/sounds/eatpill.mp3" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/sounds/marbles.mp3" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/sounds/marbles.ogg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/sounds/perfume.mp3" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/sounds/rezoner-7DFPS-2013-2.mp3" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/sounds/techno.mp3" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/sounds/triggerrally/checkpoint.wav" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/sounds/triggerrally/crash1.wav" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/sounds/triggerrally/crash2.wav" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/sounds/triggerrally/engine1.wav" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/sounds/triggerrally/gearwhine.wav" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/sounds/triggerrally/scrape2.wav" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/sounds/triggerrally/wind.wav" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/soundsbank.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/threejs-panner.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/threejs.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/vendor/beatdetektor.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/vendor/jsfx/audio.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/vendor/jsfx/jsfx.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/vendor/jsfx/jsfxlib.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/vendor/three.js/build/three.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/vendor/three.js/examples/js/ImprovedNoise.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/examples/vendor/three.js/examples/js/libs/dat.gui.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/lib/webaudiox.absolutenormalizer.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/lib/webaudiox.adaptativenormalizer.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/lib/webaudiox.analyser2volume.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/lib/webaudiox.binaural.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/lib/webaudiox.bytetonormalizedfloat32array.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/lib/webaudiox.jsfx.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/lib/webaudiox.lineout.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/lib/webaudiox.loadbuffer.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/lib/webaudiox.shim.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/webaudiox-master/lib/webaudiox.three.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/echarts/P6_juzi (2).png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/echarts/demo.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/echarts/echarts.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/echarts/html.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/echarts/tree.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/playBar/demo.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/playBar/play-bar.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/playBar/play-bar.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/mydemo/music/myMusic.mp3" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/mydemo/music/无标题.wav" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/垂直居中/flex.html" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/cavans/demo.html" afterPath="$PROJECT_DIR$/canvas/demo.html" />
+      <change beforePath="$PROJECT_DIR$/searchList.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/web_audio/howler.js-master/examples/mydemo/demo.html" afterPath="$PROJECT_DIR$/web_audio/howler.js-master/examples/mydemo/demo.html" />
     </list>
     <ignored path="每日一试.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -152,11 +37,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="demo.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/canvas/demo.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="5" column="11" lean-forward="false" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="demo.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web_audio/howler.js-master/examples/mydemo/demo.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="351">
+              <caret line="70" column="32" lean-forward="true" selection-start-line="70" selection-start-column="32" selection-end-line="70" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web_audio/howler.js-master/examples/sprite/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1053">
-              <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+            <state relative-caret-position="1134">
+              <caret line="42" column="21" lean-forward="false" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -165,99 +70,69 @@
       <file leaf-file-name="sprite.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web_audio/howler.js-master/examples/sprite/sprite.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3402">
-              <caret line="134" column="11" lean-forward="false" selection-start-line="134" selection-start-column="11" selection-end-line="134" selection-end-column="11" />
+            <state relative-caret-position="3375">
+              <caret line="133" column="40" lean-forward="false" selection-start-line="133" selection-start-column="40" selection-end-line="133" selection-end-column="40" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="radio.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web_audio/howler.js-master/examples/radio/radio.js">
+      <file leaf-file-name="demo.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/echarts/demo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3024">
-              <caret line="120" column="8" lean-forward="false" selection-start-line="120" selection-start-column="4" selection-end-line="120" selection-end-column="8" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web_audio/howler.js-master/examples/radio/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="16" column="33" lean-forward="false" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
+            <state relative-caret-position="13716">
+              <caret line="508" column="27" lean-forward="false" selection-start-line="508" selection-start-column="27" selection-end-line="508" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web_audio/howler.js-master/examples/player/index.html">
+      <file leaf-file-name="html.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/echarts/html.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="12" column="22" lean-forward="false" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+            <state relative-caret-position="567">
+              <caret line="21" column="29" lean-forward="false" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="player.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web_audio/howler.js-master/examples/player/player.js">
+      <file leaf-file-name="play-bar.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/playBar/play-bar.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="13" column="45" lean-forward="false" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="demo.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web_audio/howler.js-master/examples/mydemo/demo.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="124" column="0" lean-forward="false" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+            <state relative-caret-position="2322">
+              <caret line="86" column="26" lean-forward="false" selection-start-line="86" selection-start-column="26" selection-end-line="86" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="howler.core.min.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web_audio/howler.js-master/dist/howler.core.min.js">
+      <file leaf-file-name="demo.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/playBar/demo.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="729">
+              <caret line="27" column="23" lean-forward="false" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="play-bar.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/playBar/play-bar.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3915">
+              <caret line="145" column="24" lean-forward="false" selection-start-line="145" selection-start-column="24" selection-end-line="145" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="echarts.min.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/echarts/echarts.min.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="howler.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web_audio/howler.js-master/dist/howler.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="howler.spatial.min.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web_audio/howler.js-master/dist/howler.spatial.min.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -267,9 +142,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="JavaScript File" />
         <option value="CSS File" />
-        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -282,6 +157,13 @@
       <find>Howl</find>
       <find>src</find>
       <find>beisi</find>
+      <find>BarBeginTime</find>
+      <find>Bar</find>
+      <find>BarFinishTime</find>
+      <find>setI</find>
+      <find>OpenBar</find>
+      <find>changeBar</find>
+      <find>timechange</find>
     </findStrings>
     <replaceStrings>
       <replace>i[num++]</replace>
@@ -295,12 +177,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/const/test.html" />
-        <option value="$PROJECT_DIR$/sort.html" />
-        <option value="$PROJECT_DIR$/小朋友的问题/demo1/aaa.css" />
-        <option value="$PROJECT_DIR$/小朋友的问题/demo1/aaaa.html" />
-        <option value="$PROJECT_DIR$/defineProperty/defineProperty.html" />
-        <option value="$PROJECT_DIR$/promise/promise.html" />
         <option value="$PROJECT_DIR$/面试题测试/aaa.html" />
         <option value="$PROJECT_DIR$/小朋友的问题/demo2/aaa.css" />
         <option value="$PROJECT_DIR$/小朋友的问题/demo2/11.html" />
@@ -345,6 +221,12 @@
         <option value="$PROJECT_DIR$/web_audio/demo.html" />
         <option value="$PROJECT_DIR$/web_audio/howler.js-master/examples/mydemo/demo.css" />
         <option value="$PROJECT_DIR$/web_audio/howler.js-master/examples/sprite/sprite.js" />
+        <option value="$PROJECT_DIR$/垂直居中/flex.html" />
+        <option value="$PROJECT_DIR$/echarts/demo.js" />
+        <option value="$PROJECT_DIR$/echarts/html.html" />
+        <option value="$PROJECT_DIR$/playBar/play-bar.css" />
+        <option value="$PROJECT_DIR$/playBar/play-bar.js" />
+        <option value="$PROJECT_DIR$/playBar/demo.html" />
         <option value="$PROJECT_DIR$/web_audio/howler.js-master/examples/mydemo/demo.html" />
       </list>
     </option>
@@ -356,10 +238,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="2162" />
-    <option name="y" value="54" />
+    <option name="x" value="2065" />
+    <option name="y" value="50" />
     <option name="width" value="1298" />
-    <option name="height" value="803" />
+    <option name="height" value="909" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -376,18 +258,12 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="每日一试" type="b2602c69:ProjectViewProjectNode" />
               <item name="studyEveryDay" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="每日一试" type="b2602c69:ProjectViewProjectNode" />
-              <item name="studyEveryDay" type="462c0819:PsiDirectoryNode" />
-              <item name="canvas" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="每日一试" type="b2602c69:ProjectViewProjectNode" />
@@ -407,10 +283,36 @@
               <item name="howler.js-master" type="462c0819:PsiDirectoryNode" />
               <item name="examples" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="每日一试" type="b2602c69:ProjectViewProjectNode" />
+              <item name="studyEveryDay" type="462c0819:PsiDirectoryNode" />
+              <item name="web_audio" type="462c0819:PsiDirectoryNode" />
+              <item name="howler.js-master" type="462c0819:PsiDirectoryNode" />
+              <item name="examples" type="462c0819:PsiDirectoryNode" />
+              <item name="mydemo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="每日一试" type="b2602c69:ProjectViewProjectNode" />
+              <item name="studyEveryDay" type="462c0819:PsiDirectoryNode" />
+              <item name="web_audio" type="462c0819:PsiDirectoryNode" />
+              <item name="howler.js-master" type="462c0819:PsiDirectoryNode" />
+              <item name="examples" type="462c0819:PsiDirectoryNode" />
+              <item name="mydemo" type="462c0819:PsiDirectoryNode" />
+              <item name="music" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="每日一试" type="b2602c69:ProjectViewProjectNode" />
+              <item name="studyEveryDay" type="462c0819:PsiDirectoryNode" />
+              <item name="web_audio" type="462c0819:PsiDirectoryNode" />
+              <item name="howler.js-master" type="462c0819:PsiDirectoryNode" />
+              <item name="examples" type="462c0819:PsiDirectoryNode" />
+              <item name="sprite" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -425,19 +327,19 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Documents\GitHub\studyEveryDay\web_audio\howler.js-master\examples\mydemo\music" />
+      <recent name="F:\Documents\GitHub\studyEveryDay\echarts" />
+      <recent name="F:\Documents\GitHub\studyEveryDay\web_audio" />
+      <recent name="F:\Documents\GitHub\studyEveryDay\canvas" />
+      <recent name="F:\Documents\GitHub\studyEveryDay\移动端时间插件" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\Documents\GitHub\studyEveryDay\web_audio\howler.js-master\examples\mydemo\music" />
       <recent name="F:\Documents\GitHub\studyEveryDay\web_audio" />
       <recent name="F:\每日一试" />
       <recent name="F:\每日一试\小朋友的问题\demo1" />
       <recent name="F:\每日一试\智农首页导航\css" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\Documents\GitHub\studyEveryDay\web_audio\howler.js-master\examples\mydemo\music" />
-      <recent name="F:\Documents\GitHub\studyEveryDay\web_audio" />
-      <recent name="F:\Documents\GitHub\studyEveryDay\canvas" />
-      <recent name="F:\Documents\GitHub\studyEveryDay\移动端时间插件" />
-      <recent name="F:\Documents\GitHub\studyEveryDay\百度小动画" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -535,17 +437,26 @@
       <workItem from="1521706262371" duration="11961000" />
       <workItem from="1521772917854" duration="29036000" />
       <workItem from="1522029266242" duration="18763000" />
-      <workItem from="1522114700732" duration="649000" />
+      <workItem from="1522114700732" duration="2328000" />
+      <workItem from="1522117123602" duration="943000" />
+      <workItem from="1522121410429" duration="11959000" />
+      <workItem from="1522204326477" duration="6612000" />
+      <workItem from="1522294702294" duration="2019000" />
+      <workItem from="1522374062093" duration="1796000" />
+      <workItem from="1522634237015" duration="832000" />
+      <workItem from="1522812261459" duration="399000" />
+      <workItem from="1522816433169" duration="2110000" />
+      <workItem from="1523152415223" duration="758000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95189000" />
+    <option name="totallyTimeSpent" value="124296000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2162" y="54" width="1298" height="803" extended-state="0" />
+    <frame x="2065" y="50" width="1298" height="909" extended-state="0" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20436817" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20436817" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -584,18 +495,13 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/searchList.html</url>
-          <line>280</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/格式整理/aa.html</url>
           <line>170</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/web_audio/howler.js-master/examples/mydemo/demo.html</url>
-          <line>140</line>
+          <line>132</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
@@ -604,124 +510,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/hover.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="25" column="19" lean-forward="false" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/格式整理/aa.html" />
-    <entry file="file://$PROJECT_DIR$/拖拽/aa.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="20" column="4" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/原生ajax请求.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="12" column="19" lean-forward="false" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js_set/set.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js_set/map.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="9" column="8" lean-forward="false" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vueX/js/Vue-x.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24948">
-          <caret line="924" column="8" lean-forward="false" selection-start-line="924" selection-start-column="8" selection-end-line="924" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vueX/router.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="18" column="17" lean-forward="false" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vueX/zujian.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="864">
-          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ball/demo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nodelist/demo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="9" column="14" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/with/withUse.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="13" column="19" lean-forward="false" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wj_Bootstrap/lesson1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wj_Bootstrap/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/searchList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7749">
-          <caret line="287" column="28" lean-forward="false" selection-start-line="287" selection-start-column="28" selection-end-line="287" selection-end-column="28" />
-          <folding>
-            <marker date="1519713024911" expanded="true" signature="10723:10750" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/多级导航/aaa.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1431">
-          <caret line="58" column="27" lean-forward="false" selection-start-line="58" selection-start-column="27" selection-end-line="58" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/百度小动画/book" />
-    <entry file="file://$PROJECT_DIR$/../../WeChat Files/PH19931218/Files/a.html" />
-    <entry file="file://$PROJECT_DIR$/百度小动画/book.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="26" column="28" lean-forward="false" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/淘宝双飞翼布局/demo.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -747,13 +535,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1188">
           <caret line="44" column="12" lean-forward="false" selection-start-line="44" selection-start-column="12" selection-end-line="44" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/多行文本溢出/demo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="12" column="34" lean-forward="false" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -834,13 +615,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/canvas/demo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="16" column="35" lean-forward="false" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web_audio/webaudiox-master/lib/webaudiox.jsfx.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -870,29 +644,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web_audio/howler.js-master/examples/mydemo/demo.css" />
-    <entry file="file://$PROJECT_DIR$/web_audio/howler.js-master/examples/sprite/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1053">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web_audio/howler.js-master/examples/sprite/sprite.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3402">
-          <caret line="134" column="11" lean-forward="false" selection-start-line="134" selection-start-column="11" selection-end-line="134" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web_audio/howler.js-master/examples/radio/radio.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3024">
           <caret line="120" column="8" lean-forward="false" selection-start-line="120" selection-start-column="4" selection-end-line="120" selection-end-column="8" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -900,7 +655,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="16" column="33" lean-forward="false" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -908,7 +662,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="12" column="22" lean-forward="false" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -916,9 +669,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="13" column="45" lean-forward="false" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -926,9 +676,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -936,9 +683,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -946,16 +690,177 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/searchList.html" />
+    <entry file="file://$PROJECT_DIR$/随便做/实验.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="13" column="25" lean-forward="true" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/获得来向链接/child.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/获得来向链接/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/闭包/test1.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="12" column="17" lean-forward="false" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/闭包/test2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/小东西/demo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="9" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/多行文本溢出/demo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="12" column="34" lean-forward="false" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/垂直居中/bbb.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="9" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/垂直居中/flex.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/多级导航/aaa.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1377">
+          <caret line="51" column="23" lean-forward="false" selection-start-line="51" selection-start-column="23" selection-end-line="51" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/垂直居中/aaa.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="20" column="16" lean-forward="false" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/复制粘贴/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/拖拽/aa.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="729">
+          <caret line="27" column="5" lean-forward="false" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/canvas/demo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="11" lean-forward="false" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/echarts/echarts.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/echarts/html.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="21" column="29" lean-forward="false" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/playBar/play-bar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3915">
+          <caret line="145" column="24" lean-forward="false" selection-start-line="145" selection-start-column="24" selection-end-line="145" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/echarts/demo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13716">
+          <caret line="508" column="27" lean-forward="false" selection-start-line="508" selection-start-column="27" selection-end-line="508" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/playBar/play-bar.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2322">
+          <caret line="86" column="26" lean-forward="false" selection-start-line="86" selection-start-column="26" selection-end-line="86" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/playBar/demo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="729">
+          <caret line="27" column="23" lean-forward="false" selection-start-line="27" selection-start-column="23" selection-end-line="27" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_audio/howler.js-master/examples/sprite/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1134">
+          <caret line="42" column="21" lean-forward="false" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web_audio/howler.js-master/examples/sprite/sprite.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3375">
+          <caret line="133" column="40" lean-forward="false" selection-start-line="133" selection-start-column="40" selection-end-line="133" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web_audio/howler.js-master/examples/mydemo/demo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="124" column="0" lean-forward="false" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
+        <state relative-caret-position="351">
+          <caret line="70" column="32" lean-forward="true" selection-start-line="70" selection-start-column="32" selection-end-line="70" selection-end-column="32" />
           <folding />
         </state>
       </provider>
