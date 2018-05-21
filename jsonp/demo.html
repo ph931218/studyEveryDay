@@ -4,36 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="../jquery-3.2.1.min.js"></script>
-    <script>
-        //    var xhr=new XMLHttpRequest();
-        //    xhr.open("get","https://api.douban.com/v2/book/search?q=javascript&count=1",true);
-        //    xhr.send();
-        //    xhr.onreadystatechange=function (){
-        //        if(xhr.readyState==4&&xhr.status==200){
-        //            console.log(xhr.responseText)
-        //        }
-        //    }
-        var sc=document.createElement("script");
-        sc.src="https://api.douban.com/v2/book/search?q=javascript&count=1&callback=getData";
-        var head=document.getElementsByTagName("head")[0];
-        head.appendChild(sc);
-        function getData(data){
-            console.log(data);
-            $("#main").html("<fmt:formatNumber value="+data.total+" type='number' pattern='0.00' maxFractionDigits='2' >")
-        }
 
-
-        var arr_1=["1","2","3","4"];
-        var arr_2=["一","二","三","四"];
-        var index=0;
-        arr_1.forEach(function(key,val,arr){
-
-            console.log("数组一的第"+(index+1)+"项："+val+",数组二的第"+(index+1)+"项:"+arr_2[index])
-            index++;
-        })
-
-
-    </script>
 </head>
 <body>
 <div id="main"></div>
@@ -50,5 +21,33 @@
 
     })
 
+</script>
+<script>
+    //    var xhr=new XMLHttpRequest();
+    //    xhr.open("get","https://api.douban.com/v2/book/search?q=javascript&count=1",true);
+    //    xhr.send();
+    //    xhr.onreadystatechange=function (){
+    //        if(xhr.readyState==4&&xhr.status==200){
+    //            console.log(xhr.responseText)
+    //        }
+    //    }
+    var sc=document.createElement("script");
+    sc.src="https://api.douban.com/v2/book/search?q=javascript&count=1&callback=getData";
+    var head=document.getElementsByTagName("head")[0];
+    head.appendChild(sc);
+    function getData(data){
+        console.log(data);
+        $("#main").html(JSON.stringify(data))
+    }
+
+
+    var arr_1=["1","2","3","4"];
+    var arr_2=["一","二","三","四"];
+    var index=0;
+    arr_1.forEach(function(key,val,arr){
+
+        console.log("数组一的第"+(index+1)+"项："+val+",数组二的第"+(index+1)+"项:"+arr_2[index])
+        index++;
+    })
 </script>
 </html>

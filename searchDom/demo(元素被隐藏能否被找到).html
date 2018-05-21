@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-3.2.1.min.js"></script>
+</head>
+<body>
+<div style="display: none"></div>
+<div></div>
+</body>
+<script>
+    var con = $("div");
+    console.log(con);
+    $("div").eq(0).remove();
+    console.log(document.getElementsByTagName("div"));
+    console.log([].join(""))
+</script>
+</html>

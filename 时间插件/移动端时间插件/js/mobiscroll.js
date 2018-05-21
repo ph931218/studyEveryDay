@@ -1,4 +1,5 @@
 /*jslint eqeq: true, plusplus: true, undef: true, sloppy: true, vars: true, forin: true */
+/*jslint eqeq: true, plusplus: true, undef: true, sloppy: true, vars: true, forin: true */
 /*!
  * jQuery MobiScroll v2.5.1
  * http://mobiscroll.com
@@ -7,6 +8,7 @@
  * Licensed under the MIT license.
  *
  */
+// 2222222222222222222222
 (function ($) {
 
     function Scroller(elem, settings) {
@@ -80,7 +82,7 @@
         }
 
         function scrollToPos(time, index, manual, dir, orig) {
-            
+
             // Call validation event
             if (event('validate', [dw, index, time]) !== false) {
 
@@ -92,14 +94,14 @@
                         v = cells.index(cell),
                         l = cells.length,
                         sc = i == index || index === undefined;
-                    
+
                     // Scroll to a valid cell
                     if (!cell.hasClass('dw-v')) {
                         var cell1 = cell,
                             cell2 = cell,
                             dist1 = 0,
                             dist2 = 0;
-                        
+
                         while (v - dist1 >= 0 && !cell1.hasClass('dw-v')) {
                             dist1++;
                             cell1 = cells.eq(v - dist1);
@@ -109,7 +111,7 @@
                             dist2++;
                             cell2 = cells.eq(v + dist2);
                         }
-                        
+
                         // If we have direction (+/- or mouse wheel), the distance does not count
                         if (((dist2 < dist1 && dist2 && dir !== 2) || !dist1 || (v - dist1 < 0) || dir == 1) && cell2.hasClass('dw-v')) {
                             cell = cell2;
@@ -119,7 +121,7 @@
                             v = v - dist1;
                         }
                     }
-                    
+
                     if (!(cell.hasClass('dw-sel')) || sc) {
                         // Set valid value
                         that.temp[i] = cell.attr('data-val');
@@ -133,11 +135,11 @@
                         that.scroll(t, i, v, sc ? time : 0.1, sc ? orig : undefined);
                     }
                 });
-                
+
                 // Reformat value if validation changed something
                 that.change(manual);
             }
-        
+
         }
 
         function position(check) {
@@ -145,7 +147,7 @@
             if (s.display == 'inline' || (ww === $(window).width() && rwh === $(window).height() && check)) {
                 return;
             }
-            
+
             var w,
                 l,
                 t,
@@ -165,12 +167,12 @@
                 d = $('.dw', dw),
                 css = {},
                 anchor = s.anchor === undefined ? elm : s.anchor;
-            
+
             ww = $(window).width();
             rwh = $(window).height();
             wh = window.innerHeight; // on iOS we need innerHeight
             wh = wh || rwh;
-            
+
             if (/modal|bubble/.test(s.display)) {
                 $('.dwc', dw).each(function () {
                     w = $(this).outerWidth(true);
@@ -180,10 +182,10 @@
                 w = totalw > ww ? minw : totalw;
                 wr.width(w);
             }
-            
+
             mw = d.outerWidth();
             mh = d.outerHeight(true);
-            
+
             if (s.display == 'modal') {
                 l = (ww - mw) / 2;
                 t = st + (wh - mh) / 2;
@@ -200,7 +202,7 @@
                 l = al - (d.outerWidth(true) - aw) / 2;
                 l = l > (ww - mw) ? (ww - (mw + 20)) : l;
                 l = l >= 0 ? l : 20;
-                
+
                 // vertical positioning
                 t = at - mh; //(mh + 3); // above the input
                 if ((t < st) || (at > st + wh)) { // if doesn't fit above or the input is out of the screen
@@ -211,7 +213,7 @@
                 }
 
                 //t = t >= st ? t : st;
-                
+
                 // Calculate Arrow position
                 arrw = arr.outerWidth();
                 arrl = al + aw / 2 - (l + (mw - arrw) / 2);
@@ -226,20 +228,20 @@
                     t = st + wh - mh;
                 }
             }
-            
+
             css.top = t < 0 ? 0 : t;
             css.left = l;
             d.css(css);
-            
+
             // If top + modal height > doc height, increase doc height
             $('.dw-persp', dw).height(0).height(t + mh > $(document).height() ? t + mh : $(document).height());
-            
+
             // Scroll needed
             if (scroll && ((t + mh > st + wh) || (at > st + wh))) {
                 $(window).scrollTop(t + mh - wh);
             }
         }
-        
+
         function testTouch(e) {
             if (e.type === 'touchstart') {
                 touch = true;
@@ -279,8 +281,8 @@
         // Public functions
 
         /**
-        * Enables the scroller and the associated input.
-        */
+         * Enables the scroller and the associated input.
+         */
         that.enable = function () {
             s.disabled = false;
             if (input) {
@@ -289,8 +291,8 @@
         };
 
         /**
-        * Disables the scroller and the associated input.
-        */
+         * Disables the scroller and the associated input.
+         */
         that.disable = function () {
             s.disabled = true;
             if (input) {
@@ -299,15 +301,15 @@
         };
 
         /**
-        * Scrolls target to the specified position
-        * @param {Object} t - Target wheel jQuery object.
-        * @param {Number} index - Index of the changed wheel.
-        * @param {Number} val - Value.
-        * @param {Number} time - Duration of the animation, optional.
-        * @param {Number} orig - Original value.
-        */
+         * Scrolls target to the specified position
+         * @param {Object} t - Target wheel jQuery object.
+         * @param {Number} index - Index of the changed wheel.
+         * @param {Number} val - Value.
+         * @param {Number} time - Duration of the animation, optional.
+         * @param {Number} orig - Original value.
+         */
         that.scroll = function (t, index, val, time, orig) {
-            
+
             function getVal(t, b, c, d) {
                 return c * Math.sin(t / d * (Math.PI / 2)) + b;
             }
@@ -317,27 +319,27 @@
                 delete iv[index];
                 t.data('pos', val).closest('.dwwl').removeClass('dwa');
             }
-            
+
             var px = (m - val) * hi,
                 i;
-            
+
             if (px == pixels[index] && iv[index]) {
                 return;
             }
-            
+
             if (time && px != pixels[index]) {
                 // Trigger animation start event
                 event('onAnimStart', [dw, index, time]);
             }
-            
+
             pixels[index] = px;
-            
+
             t.attr('style', (prefix + '-transition:all ' + (time ? time.toFixed(3) : 0) + 's ease-out;') + (has3d ? (prefix + '-transform:translate3d(0,' + px + 'px,0);') : ('top:' + px + 'px;')));
-            
+
             if (iv[index]) {
                 ready();
             }
-            
+
             if (time && orig !== undefined) {
                 i = 0;
                 t.closest('.dwwl').addClass('dwa');
@@ -352,26 +354,26 @@
                 t.data('pos', val);
             }
         };
-        
+
         /**
-        * Gets the selected wheel values, formats it, and set the value of the scroller instance.
-        * If input parameter is true, populates the associated input element.
-        * @param {Boolean} sc - Scroll the wheel in position.
-        * @param {Boolean} fill - Also set the value of the associated input element. Default is true.
-        * @param {Number} time - Animation time
-        * @param {Boolean} temp - If true, then only set the temporary value.(only scroll there but not set the value)
-        */
+         * Gets the selected wheel values, formats it, and set the value of the scroller instance.
+         * If input parameter is true, populates the associated input element.
+         * @param {Boolean} sc - Scroll the wheel in position.
+         * @param {Boolean} fill - Also set the value of the associated input element. Default is true.
+         * @param {Number} time - Animation time
+         * @param {Boolean} temp - If true, then only set the temporary value.(only scroll there but not set the value)
+         */
         that.setValue = function (sc, fill, time, temp) {
             if (!$.isArray(that.temp)) {
                 that.temp = s.parseValue(that.temp + '', that);
             }
-            
+
             if (visible && sc) {
                 scrollToPos(time);
             }
-            
+
             v = s.formatResult(that.temp);
-            
+
             if (!temp) {
                 that.values = that.temp.slice(0);
                 that.val = v;
@@ -383,11 +385,11 @@
                 }
             }
         };
-        
+
         that.getValues = function () {
             var ret = [],
                 i;
-            
+
             for (i in that._selectedValues) {
                 ret.push(that._selectedValues[i]);
             }
@@ -395,20 +397,20 @@
         };
 
         /**
-        * Checks if the current selected values are valid together.
-        * In case of date presets it checks the number of days in a month.
-        * @param {Number} time - Animation time
-        * @param {Number} orig - Original value
-        * @param {Number} i - Currently changed wheel index, -1 if initial validation.
-        * @param {Number} dir - Scroll direction
-        */
+         * Checks if the current selected values are valid together.
+         * In case of date presets it checks the number of days in a month.
+         * @param {Number} time - Animation time
+         * @param {Number} orig - Original value
+         * @param {Number} i - Currently changed wheel index, -1 if initial validation.
+         * @param {Number} dir - Scroll direction
+         */
         that.validate = function (i, dir, time, orig) {
             scrollToPos(time, i, true, dir, orig);
         };
 
         /**
-        *
-        */
+         *
+         */
         that.change = function (manual) {
             v = s.formatResult(that.temp);
             if (s.display == 'inline') {
@@ -423,8 +425,8 @@
         };
 
         /**
-        * Changes the values of a wheel, and scrolls to the correct position
-        */
+         * Changes the values of a wheel, and scrolls to the correct position
+         */
         that.changeWheel = function (idx, time) {
             if (dw) {
                 var i = 0,
@@ -449,21 +451,21 @@
                 }
             }
         };
-        
+
         /**
-        * Return true if the scroller is currently visible.
-        */
+         * Return true if the scroller is currently visible.
+         */
         that.isVisible = function () {
             return visible;
         };
-        
+
         /**
-        *
-        */
+         *
+         */
         that.tap = function (el, handler) {
             var startX,
                 startY;
-            
+
             if (s.tap) {
                 el.bind('touchstart', function (e) {
                     e.preventDefault();
@@ -480,20 +482,20 @@
                     }, 300);
                 });
             }
-            
+
             el.bind('click', function (e) {
                 if (!tap) {
                     // If handler was not called on touchend, call it on click;
                     handler.call(this, e);
                 }
             });
-            
+
         };
-        
+
         /**
-        * Shows the scroller instance.
-        * @param {Boolean} prevAnim - Prevent animation if true
-        */
+         * Shows the scroller instance.
+         * @param {Boolean} prevAnim - Prevent animation if true
+         */
         that.show = function (prevAnim) {
             if (s.disabled || visible) {
                 return false;
@@ -523,7 +525,7 @@
             }
             // Create wheels containers
             var html = '<div class="dw-trans ' + s.theme + ' dw-' + s.display + '">' + (s.display == 'inline' ? '<div class="dw dwbg dwi"><div class="dwwr">' : '<div class="dw-persp">' + '<div class="dwo"></div><div class="dw dwbg ' + mAnim + '"><div class="dw-arrw"><div class="dw-arrw-i"><div class="dw-arr"></div></div></div><div class="dwwr">' + (s.headerText ? '<div class="dwv"></div>' : ''));
-            
+
             for (i = 0; i < s.wheels.length; i++) {
                 html += '<div class="dwc' + (s.mode != 'scroller' ? ' dwpm' : ' dwsc') + (s.showLabel ? '' : ' dwhl') + '"><div class="dwwc dwrc"><table cellpadding="0" cellspacing="0"><tr>';
                 // Create wheels
@@ -541,7 +543,7 @@
             dw = $(html);
 
             scrollToPos();
-            
+
             event('onMarkupReady', [dw]);
 
             // Show
@@ -556,14 +558,14 @@
             } else {
                 dw.insertAfter(elm);
             }
-            
+
             event('onMarkupInserted', [dw]);
-            
+
             visible = true;
-            
+
             // Theme init
             theme.init(dw, that);
-            
+
             if (s.display != 'inline') {
                 // Init buttons
                 that.tap($('.dwb-s span', dw), function () {
@@ -596,7 +598,7 @@
                         $(this).addClass('dwtd').prop('disabled', true);
                     }
                 });
-                
+
                 // Set position
                 position();
                 $(window).bind('resize.dw', function () {
@@ -632,7 +634,7 @@
                     // + Button
                     var t = w.find('.dw-ul'),
                         func = $(this).hasClass('dwwbp') ? plus : minus;
-                    
+
                     setGlobals(t);
                     clearInterval(timer);
                     timer = setInterval(function () { func(t); }, s.delay);
@@ -662,10 +664,10 @@
 
             event('onShow', [dw, v]);
         };
-        
+
         /**
-        * Hides the scroller instance.
-        */
+         * Hides the scroller instance.
+         */
         that.hide = function (prevAnim, btn) {
             // If onClose handler returns false, prevent hide
             if (!visible || event('onClose', [v, btn]) === false) {
@@ -696,8 +698,8 @@
         };
 
         /**
-        * Cancel and hide the scroller instance.
-        */
+         * Cancel and hide the scroller instance.
+         */
         that.cancel = function () {
             if (that.hide(false, 'cancel') !== false) {
                 event('onCancel', [that.val]);
@@ -705,8 +707,8 @@
         };
 
         /**
-        * Scroller initialization.
-        */
+         * Scroller initialization.
+         */
         that.init = function (ss) {
             // Get theme defaults
             theme = extend({ defaults: {}, init: empty }, ms.themes[ss.theme || s.theme]);
@@ -756,11 +758,11 @@
                 }
             }
         };
-        
+
         that.trigger = function (name, params) {
             return event(name, params);
         };
-        
+
         that.values = null;
         that.val = null;
         that.temp = null;
@@ -794,7 +796,7 @@
     function getInst(e) {
         return scrollers[e.id];
     }
-    
+
     function getCoord(e, c) {
         var org = e.originalEvent,
             ct = e.changedTouches;
@@ -811,7 +813,7 @@
         val = val < min ? min : val;
         return val;
     }
-    
+
     function calc(t, val, dir, anim, orig) {
         val = constrain(val, min, max);
 
@@ -822,9 +824,9 @@
 
         // Set selected scroller value
         inst.temp[idx] = cell.attr('data-val');
-        
+
         inst.scroll(t, idx, val, time, orig);
-        
+
         setTimeout(function () {
             // Validate
             inst.validate(idx, dir, time, orig);
@@ -1044,7 +1046,7 @@
                 dist,
                 tindex,
                 ttop = target.offset().top;
-        
+
             if (time < 300) {
                 speed = (stop - start) / time;
                 dist = (speed * speed) / (2 * 0.0006);
@@ -1054,20 +1056,20 @@
             } else {
                 dist = stop - start;
             }
-            
+
             tindex = Math.round(pos - dist / h);
-            
+
             if (!dist && !moved) { // this is a "tap"
                 var idx = Math.floor((stop - ttop) / h),
                     li = $('.dw-li', target).eq(idx),
                     hl = scrollable;
-                
+
                 if (inst.trigger('onValueTap', [li]) !== false) {
                     tindex = idx;
                 } else {
                     hl = true;
                 }
-                
+
                 if (hl) {
                     li.addClass('dw-hl'); // Highlight
                     setTimeout(function () {
@@ -1075,14 +1077,14 @@
                     }, 200);
                 }
             }
-            
+
             if (scrollable) {
                 calc(target, tindex, 0, true, Math.round(val));
             }
-            
+
             move = false;
             target = null;
-        
+
             $(document).unbind(MOVE_EVENT, onMove);
         }
 
@@ -1090,9 +1092,9 @@
             clearInterval(timer);
             click = false;
         }
-    
+
         $('.dwb-a').removeClass('dwb-a');
-                
+
     }).bind('mouseover mouseup mousedown click', function (e) { // Prevent standard behaviour on body click
         if (tap) {
             e.stopPropagation();
@@ -1108,9 +1110,9 @@
 
     $.mobiscroll = $.mobiscroll || {
         /**
-        * Set settings for all instances.
-        * @param {Object} o - New default settings.
-        */
+         * Set settings for all instances.
+         * @param {Object} o - New default settings.
+         */
         setDefaults: function (o) {
             extend(defaults, o);
         },
@@ -1129,3 +1131,708 @@
     $.fn.scroller = $.fn.scroller || $.fn.mobiscroll;
 
 })(jQuery);
+// 4444444444444444444
+(function ($) {
+    $.mobiscroll.i18n.zh = $.extend($.mobiscroll.i18n.zh, {
+        setText: '确定',
+        cancelText: '取消'
+    });
+})(jQuery);
+
+// 1111111111111111111111111111
+(function ($) {
+
+    var ms = $.mobiscroll,
+        date = new Date(),
+        defaults = {
+            dateFormat: 'mm/dd/yy',
+            dateOrder: 'mmddy',
+            timeWheels: 'hhiiA',
+            timeFormat: 'hh:ii A',
+            startYear: date.getFullYear() - 100,
+            endYear: date.getFullYear() + 1,
+            monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+            monthNamesShort: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+            dayNames: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+            dayNamesShort: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+            shortYearCutoff: '+10',
+            monthText: 'Month',
+            dayText: 'Day',
+            yearText: 'Year',
+            hourText: 'Hours',
+            minuteText: 'Minutes',
+            secText: 'Seconds',
+            ampmText: '&nbsp;',
+            nowText: 'Now',
+            showNow: false,
+            stepHour: 1,
+            stepMinute: 1,
+            stepSecond: 1,
+            separator: ' '
+        },
+        preset = function (inst) {
+            var that = $(this),
+                html5def = {},
+                format;
+            // Force format for html5 date inputs (experimental)
+            if (that.is('input')) {
+                switch (that.attr('type')) {
+                case 'date':
+                    format = 'yy-mm-dd';
+                    break;
+                case 'datetime':
+                    format = 'yy-mm-ddTHH:ii:ssZ';
+                    break;
+                case 'datetime-local':
+                    format = 'yy-mm-ddTHH:ii:ss';
+                    break;
+                case 'month':
+                    format = 'yy-mm';
+                    html5def.dateOrder = 'mmyy';
+                    break;
+                case 'time':
+                    format = 'HH:ii:ss';
+                    break;
+                }
+                // Check for min/max attributes
+                var min = that.attr('min'),
+                    max = that.attr('max');
+                if (min) {
+                    html5def.minDate = ms.parseDate(format, min);
+                }
+                if (max) {
+                    html5def.maxDate = ms.parseDate(format, max);
+                }
+            }
+
+            // Set year-month-day order
+            var s = $.extend({}, defaults, html5def, inst.settings),
+                offset = 0,
+                wheels = [],
+                ord = [],
+                o = {},
+                i,
+                k,
+                f = { y: 'getFullYear', m: 'getMonth', d: 'getDate', h: getHour, i: getMinute, s: getSecond, a: getAmPm },
+                p = s.preset,
+                dord = s.dateOrder,
+                tord = s.timeWheels,
+                regen = dord.match(/D/),
+                ampm = tord.match(/a/i),
+                hampm = tord.match(/h/),
+                hformat = p == 'datetime' ? s.dateFormat + s.separator + s.timeFormat : p == 'time' ? s.timeFormat : s.dateFormat,
+                defd = new Date(),
+                stepH = s.stepHour,
+                stepM = s.stepMinute,
+                stepS = s.stepSecond,
+                mind = s.minDate || new Date(s.startYear, 0, 1),
+                maxd = s.maxDate || new Date(s.endYear, 11, 31, 23, 59, 59);
+                
+            inst.settings = s;
+
+            format = format || hformat;
+                
+            if (p.match(/date/i)) {
+
+                // Determine the order of year, month, day wheels
+                $.each(['y', 'm', 'd'], function (j, v) {
+                    i = dord.search(new RegExp(v, 'i'));
+                    if (i > -1) {
+                        ord.push({ o: i, v: v });
+                    }
+                });
+                ord.sort(function (a, b) { return a.o > b.o ? 1 : -1; });
+                $.each(ord, function (i, v) {
+                    o[v.v] = i;
+                });
+
+                var w = {};
+                for (k = 0; k < 3; k++) {
+                    if (k == o.y) {
+                        offset++;
+                        w[s.yearText] = {};
+                        var start = mind.getFullYear(),
+                            end = maxd.getFullYear();
+                        for (i = start; i <= end; i++) {
+                            w[s.yearText][i] = dord.match(/yy/i) ? i : (i + '').substr(2, 2);
+                        }
+                    } else if (k == o.m) {
+                        offset++;
+                        w[s.monthText] = {};
+                        for (i = 0; i < 12; i++) {
+                            var str = dord.replace(/[dy]/gi, '').replace(/mm/, i < 9 ? '0' + (i + 1) : i + 1).replace(/m/, (i + 1));
+                            w[s.monthText][i] = str.match(/MM/) ? str.replace(/MM/, '<span class="dw-mon">' + s.monthNames[i] + '</span>') : str.replace(/M/, '<span class="dw-mon">' + s.monthNamesShort[i] + '</span>');
+                        }
+                    } else if (k == o.d) {
+                        offset++;
+                        w[s.dayText] = {};
+                        for (i = 1; i < 32; i++) {
+                            w[s.dayText][i] = dord.match(/dd/i) && i < 10 ? '0' + i : i;
+                        }
+                    }
+                }
+                wheels.push(w);
+            }
+
+            if (p.match(/time/i)) {
+
+                // Determine the order of hours, minutes, seconds wheels
+                ord = [];
+                $.each(['h', 'i', 's', 'a'], function (i, v) {
+                    i = tord.search(new RegExp(v, 'i'));
+                    if (i > -1) {
+                        ord.push({ o: i, v: v });
+                    }
+                });
+                ord.sort(function (a, b) {
+                    return a.o > b.o ? 1 : -1;
+                });
+                $.each(ord, function (i, v) {
+                    o[v.v] = offset + i;
+                });
+
+                w = {};
+                for (k = offset; k < offset + 4; k++) {
+                    if (k == o.h) {
+                        offset++;
+                        w[s.hourText] = {};
+                        for (i = 0; i < (hampm ? 12 : 24); i += stepH) {
+                            w[s.hourText][i] = hampm && i == 0 ? 12 : tord.match(/hh/i) && i < 10 ? '0' + i : i;
+                        }
+                    } else if (k == o.i) {
+                        offset++;
+                        w[s.minuteText] = {};
+                        for (i = 0; i < 60; i += stepM) {
+                            w[s.minuteText][i] = tord.match(/ii/) && i < 10 ? '0' + i : i;
+                        }
+                    } else if (k == o.s) {
+                        offset++;
+                        w[s.secText] = {};
+                        for (i = 0; i < 60; i += stepS) {
+                            w[s.secText][i] = tord.match(/ss/) && i < 10 ? '0' + i : i;
+                        }
+                    } else if (k == o.a) {
+                        offset++;
+                        var upper = tord.match(/A/);
+                        w[s.ampmText] = { 0: upper ? 'AM' : 'am', 1: upper ? 'PM' : 'pm' };
+                    }
+                    
+                }
+
+                wheels.push(w);
+            }
+
+            function get(d, i, def) {
+                if (o[i] !== undefined) {
+                    return +d[o[i]];
+                }
+                if (def !== undefined) {
+                    return def;
+                }
+                return defd[f[i]] ? defd[f[i]]() : f[i](defd);
+            }
+
+            function step(v, st) {
+                return Math.floor(v / st) * st;
+            }
+
+            function getHour(d) {
+                var hour = d.getHours();
+                hour = hampm && hour >= 12 ? hour - 12 : hour;
+                return step(hour, stepH);
+            }
+
+            function getMinute(d) {
+                return step(d.getMinutes(), stepM);
+            }
+
+            function getSecond(d) {
+                return step(d.getSeconds(), stepS);
+            }
+
+            function getAmPm(d) {
+                return ampm && d.getHours() > 11 ? 1 : 0;
+            }
+
+            function getDate(d) {
+                var hour = get(d, 'h', 0);
+                return new Date(get(d, 'y'), get(d, 'm'), get(d, 'd', 1), get(d, 'a') ? hour + 12 : hour, get(d, 'i', 0), get(d, 's', 0));
+            }
+
+            inst.setDate = function (d, fill, time, temp) {
+                var i;
+                // Set wheels
+                for (i in o) {
+                    this.temp[o[i]] = d[f[i]] ? d[f[i]]() : f[i](d);
+                }
+                this.setValue(true, fill, time, temp);
+            };
+
+            inst.getDate = function (d) {
+                return getDate(d);
+            };
+
+            return {
+                button3Text: s.showNow ? s.nowText : undefined,
+                button3: s.showNow ? function () { inst.setDate(new Date(), false, 0.3, true); } : undefined,
+                wheels: wheels,
+                headerText: function (v) {
+                    return ms.formatDate(hformat, getDate(inst.temp), s);
+                },
+                /**
+                * Builds a date object from the wheel selections and formats it to the given date/time format
+                * @param {Array} d - An array containing the selected wheel values
+                * @return {String} - The formatted date string
+                */
+                formatResult: function (d) {
+                    return ms.formatDate(format, getDate(d), s);
+                },
+                /**
+                * Builds a date object from the input value and returns an array to set wheel values
+                * @return {Array} - An array containing the wheel values to set
+                */
+                parseValue: function (val) {
+                    var d = new Date(),
+                        i,
+                        result = [];
+                    try {
+                        d = ms.parseDate(format, val, s);
+                    } catch (e) {
+                    }
+                    // Set wheels
+                    for (i in o) {
+                        result[o[i]] = d[f[i]] ? d[f[i]]() : f[i](d);
+                    }
+                    return result;
+                },
+                /**
+                * Validates the selected date to be in the minDate / maxDate range and sets unselectable values to disabled
+                * @param {Object} dw - jQuery object containing the generated html
+                * @param {Integer} [i] - Index of the changed wheel, not set for initial validation
+                */
+                validate: function (dw, i) {
+                    var temp = inst.temp, //.slice(0),
+                        mins = { y: mind.getFullYear(), m: 0, d: 1, h: 0, i: 0, s: 0, a: 0 },
+                        maxs = { y: maxd.getFullYear(), m: 11, d: 31, h: step(hampm ? 11 : 23, stepH), i: step(59, stepM), s: step(59, stepS), a: 1 },
+                        minprop = true,
+                        maxprop = true;
+                    $.each(['y', 'm', 'd', 'a', 'h', 'i', 's'], function (x, i) {
+                        if (o[i] !== undefined) {
+                            var min = mins[i],
+                                max = maxs[i],
+                                maxdays = 31,
+                                val = get(temp, i),
+                                t = $('.dw-ul', dw).eq(o[i]),
+                                y,
+                                m;
+                            if (i == 'd') {
+                                y = get(temp, 'y');
+                                m = get(temp, 'm');
+                                maxdays = 32 - new Date(y, m, 32).getDate();
+                                max = maxdays;
+                                if (regen) {
+                                    $('.dw-li', t).each(function () {
+                                        var that = $(this),
+                                            d = that.data('val'),
+                                            w = new Date(y, m, d).getDay(),
+                                            str = dord.replace(/[my]/gi, '').replace(/dd/, d < 10 ? '0' + d : d).replace(/d/, d);
+                                        $('.dw-i', that).html(str.match(/DD/) ? str.replace(/DD/, '<span class="dw-day">' + s.dayNames[w] + '</span>') : str.replace(/D/, '<span class="dw-day">' + s.dayNamesShort[w] + '</span>'));
+                                    });
+                                }
+                            }
+                            if (minprop && mind) {
+                                min = mind[f[i]] ? mind[f[i]]() : f[i](mind);
+                            }
+                            if (maxprop && maxd) {
+                                max = maxd[f[i]] ? maxd[f[i]]() : f[i](maxd);
+                            }
+                            if (i != 'y') {
+                                var i1 = $('.dw-li', t).index($('.dw-li[data-val="' + min + '"]', t)),
+                                    i2 = $('.dw-li', t).index($('.dw-li[data-val="' + max + '"]', t));
+                                $('.dw-li', t).removeClass('dw-v').slice(i1, i2 + 1).addClass('dw-v');
+                                if (i == 'd') { // Hide days not in month
+                                    $('.dw-li', t).removeClass('dw-h').slice(maxdays).addClass('dw-h');
+                                }
+                            }
+                            if (val < min) {
+                                val = min;
+                            }
+                            if (val > max) {
+                                val = max;
+                            }
+                            if (minprop) {
+                                minprop = val == min;
+                            }
+                            if (maxprop) {
+                                maxprop = val == max;
+                            }
+                            // Disable some days
+                            if (s.invalid && i == 'd') {
+                                var idx = [];
+                                // Disable exact dates
+                                if (s.invalid.dates) {
+                                    $.each(s.invalid.dates, function (i, v) {
+                                        if (v.getFullYear() == y && v.getMonth() == m) {
+                                            idx.push(v.getDate() - 1);
+                                        }
+                                    });
+                                }
+                                // Disable days of week
+                                if (s.invalid.daysOfWeek) {
+                                    var first = new Date(y, m, 1).getDay(),
+                                        j;
+                                    $.each(s.invalid.daysOfWeek, function (i, v) {
+                                        for (j = v - first; j < maxdays; j += 7) {
+                                            if (j >= 0) {
+                                                idx.push(j);
+                                            }
+                                        }
+                                    });
+                                }
+                                // Disable days of month
+                                if (s.invalid.daysOfMonth) {
+                                    $.each(s.invalid.daysOfMonth, function (i, v) {
+                                        v = (v + '').split('/');
+                                        if (v[1]) {
+                                            if (v[0] - 1 == m) {
+                                                idx.push(v[1] - 1);
+                                            }
+                                        } else {
+                                            idx.push(v[0] - 1);
+                                        }
+                                    });
+                                }
+                                $.each(idx, function (i, v) {
+                                    $('.dw-li', t).eq(v).removeClass('dw-v');
+                                });
+                            }
+
+                            // Set modified value
+                            temp[o[i]] = val;
+                        }
+                    });
+                },
+                methods: {
+                    /**
+                    * Returns the currently selected date.
+                    * @param {Boolean} temp - If true, return the currently shown date on the picker, otherwise the last selected one
+                    * @return {Date}
+                    */
+                    getDate: function (temp) {
+                        var inst = $(this).mobiscroll('getInst');
+                        if (inst) {
+                            return inst.getDate(temp ? inst.temp : inst.values);
+                        }
+                    },
+                    /**
+                    * Sets the selected date
+                    * @param {Date} d - Date to select.
+                    * @param {Boolean} [fill] - Also set the value of the associated input element. Default is true.
+                    * @return {Object} - jQuery object to maintain chainability
+                    */
+                    setDate: function (d, fill, time, temp) {
+                        if (fill == undefined) {
+                            fill = false;
+                        }
+                        return this.each(function () {
+                            var inst = $(this).mobiscroll('getInst');
+                            if (inst) {
+                                inst.setDate(d, fill, time, temp);
+                            }
+                        });
+                    }
+                }
+            };
+        };
+
+    $.each(['date', 'time', 'datetime'], function (i, v) {
+        ms.presets[v] = preset;
+        ms.presetShort(v);
+    });
+
+    /**
+    * Format a date into a string value with a specified format.
+    * @param {String} format - Output format.
+    * @param {Date} date - Date to format.
+    * @param {Object} settings - Settings.
+    * @return {String} - Returns the formatted date string.
+    */
+    ms.formatDate = function (format, date, settings) {
+        if (!date) {
+            return null;
+        }
+        var s = $.extend({}, defaults, settings),
+            look = function (m) { // Check whether a format character is doubled
+                var n = 0;
+                while (i + 1 < format.length && format.charAt(i + 1) == m) {
+                    n++;
+                    i++;
+                }
+                return n;
+            },
+            f1 = function (m, val, len) { // Format a number, with leading zero if necessary
+                var n = '' + val;
+                if (look(m)) {
+                    while (n.length < len) {
+                        n = '0' + n;
+                    }
+                }
+                return n;
+            },
+            f2 = function (m, val, s, l) { // Format a name, short or long as requested
+                return (look(m) ? l[val] : s[val]);
+            },
+            i,
+            output = '',
+            literal = false;
+
+        for (i = 0; i < format.length; i++) {
+            if (literal) {
+                if (format.charAt(i) == "'" && !look("'")) {
+                    literal = false;
+                } else {
+                    output += format.charAt(i);
+                }
+            } else {
+                switch (format.charAt(i)) {
+                case 'd':
+                    output += f1('d', date.getDate(), 2);
+                    break;
+                case 'D':
+                    output += f2('D', date.getDay(), s.dayNamesShort, s.dayNames);
+                    break;
+                case 'o':
+                    output += f1('o', (date.getTime() - new Date(date.getFullYear(), 0, 0).getTime()) / 86400000, 3);
+                    break;
+                case 'm':
+                    output += f1('m', date.getMonth() + 1, 2);
+                    break;
+                case 'M':
+                    output += f2('M', date.getMonth(), s.monthNamesShort, s.monthNames);
+                    break;
+                case 'y':
+                    output += (look('y') ? date.getFullYear() : (date.getYear() % 100 < 10 ? '0' : '') + date.getYear() % 100);
+                    break;
+                case 'h':
+                    var h = date.getHours();
+                    output += f1('h', (h > 12 ? (h - 12) : (h == 0 ? 12 : h)), 2);
+                    break;
+                case 'H':
+                    output += f1('H', date.getHours(), 2);
+                    break;
+                case 'i':
+                    output += f1('i', date.getMinutes(), 2);
+                    break;
+                case 's':
+                    output += f1('s', date.getSeconds(), 2);
+                    break;
+                case 'a':
+                    output += date.getHours() > 11 ? 'pm' : 'am';
+                    break;
+                case 'A':
+                    output += date.getHours() > 11 ? 'PM' : 'AM';
+                    break;
+                case "'":
+                    if (look("'")) {
+                        output += "'";
+                    } else {
+                        literal = true;
+                    }
+                    break;
+                default:
+                    output += format.charAt(i);
+                }
+            }
+        }
+        return output;
+    };
+
+    /**
+    * Extract a date from a string value with a specified format.
+    * @param {String} format - Input format.
+    * @param {String} value - String to parse.
+    * @param {Object} settings - Settings.
+    * @return {Date} - Returns the extracted date.
+    */
+    ms.parseDate = function (format, value, settings) {
+        var def = new Date();
+
+        if (!format || !value) {
+            return def;
+        }
+
+        value = (typeof value == 'object' ? value.toString() : value + '');
+
+        var s = $.extend({}, defaults, settings),
+            shortYearCutoff = s.shortYearCutoff,
+            year = def.getFullYear(),
+            month = def.getMonth() + 1,
+            day = def.getDate(),
+            doy = -1,
+            hours = def.getHours(),
+            minutes = def.getMinutes(),
+            seconds = 0, //def.getSeconds(),
+            ampm = -1,
+            literal = false, // Check whether a format character is doubled
+            lookAhead = function (match) {
+                var matches = (iFormat + 1 < format.length && format.charAt(iFormat + 1) == match);
+                if (matches) {
+                    iFormat++;
+                }
+                return matches;
+            },
+            getNumber = function (match) { // Extract a number from the string value
+                lookAhead(match);
+                var size = (match == '@' ? 14 : (match == '!' ? 20 : (match == 'y' ? 4 : (match == 'o' ? 3 : 2)))),
+                    digits = new RegExp('^\\d{1,' + size + '}'),
+                    num = value.substr(iValue).match(digits);
+
+                if (!num) {
+                    return 0;
+                }
+                //throw 'Missing number at position ' + iValue;
+                iValue += num[0].length;
+                return parseInt(num[0], 10);
+            },
+            getName = function (match, s, l) { // Extract a name from the string value and convert to an index
+                var names = (lookAhead(match) ? l : s),
+                    i;
+
+                for (i = 0; i < names.length; i++) {
+                    if (value.substr(iValue, names[i].length).toLowerCase() == names[i].toLowerCase()) {
+                        iValue += names[i].length;
+                        return i + 1;
+                    }
+                }
+                return 0;
+                //throw 'Unknown name at position ' + iValue;
+            },
+            checkLiteral = function () {
+                //if (value.charAt(iValue) != format.charAt(iFormat))
+                //throw 'Unexpected literal at position ' + iValue;
+                iValue++;
+            },
+            iValue = 0,
+            iFormat;
+
+        for (iFormat = 0; iFormat < format.length; iFormat++) {
+            if (literal) {
+                if (format.charAt(iFormat) == "'" && !lookAhead("'")) {
+                    literal = false;
+                } else {
+                    checkLiteral();
+                }
+            } else {
+                switch (format.charAt(iFormat)) {
+                case 'd':
+                    day = getNumber('d');
+                    break;
+                case 'D':
+                    getName('D', s.dayNamesShort, s.dayNames);
+                    break;
+                case 'o':
+                    doy = getNumber('o');
+                    break;
+                case 'm':
+                    month = getNumber('m');
+                    break;
+                case 'M':
+                    month = getName('M', s.monthNamesShort, s.monthNames);
+                    break;
+                case 'y':
+                    year = getNumber('y');
+                    break;
+                case 'H':
+                    hours = getNumber('H');
+                    break;
+                case 'h':
+                    hours = getNumber('h');
+                    break;
+                case 'i':
+                    minutes = getNumber('i');
+                    break;
+                case 's':
+                    seconds = getNumber('s');
+                    break;
+                case 'a':
+                    ampm = getName('a', ['am', 'pm'], ['am', 'pm']) - 1;
+                    break;
+                case 'A':
+                    ampm = getName('A', ['am', 'pm'], ['am', 'pm']) - 1;
+                    break;
+                case "'":
+                    if (lookAhead("'")) {
+                        checkLiteral();
+                    } else {
+                        literal = true;
+                    }
+                    break;
+                default:
+                    checkLiteral();
+                }
+            }
+        }
+        if (year < 100) {
+            year += new Date().getFullYear() - new Date().getFullYear() % 100 +
+                (year <= (typeof shortYearCutoff != 'string' ? shortYearCutoff : new Date().getFullYear() % 100 + parseInt(shortYearCutoff, 10)) ? 0 : -100);
+        }
+        if (doy > -1) {
+            month = 1;
+            day = doy;
+            do {
+                var dim = 32 - new Date(year, month - 1, 32).getDate();
+                if (day <= dim) {
+                    break;
+                }
+                month++;
+                day -= dim;
+            } while (true);
+        }
+        hours = (ampm == -1) ? hours : ((ampm && hours < 12) ? (hours + 12) : (!ampm && hours == 12 ? 0 : hours));
+        var date = new Date(year, month - 1, day, hours, minutes, seconds);
+        if (date.getFullYear() != year || date.getMonth() + 1 != month || date.getDate() != day) {
+            throw 'Invalid date';
+        }
+        return date;
+    };
+
+})(jQuery);
+// 3333333333333333333
+<!--  陈廷峰增加中文资源包 (ceo@vmeitime.com)  -->
+(function ($) {
+    $.mobiscroll.i18n.zh = $.extend($.mobiscroll.i18n.zh, {
+        dateFormat: 'yyyy-mm-dd',
+        dateOrder: 'yymmdd',
+        dayNames: ['周日', '周一;', '周二;', '周三', '周四', '周五', '周六'],
+        dayNamesShort: ['日', '一', '二', '三', '四', '五', '六'],
+        dayText: '日',
+        hourText: '时',
+        minuteText: '分',
+        monthNames: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
+        monthNamesShort: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
+        monthText: '月',
+        secText: '秒',
+        timeFormat: 'HH:ii',
+        timeWheels: 'HHii',
+        yearText: '年'
+    });
+})(jQuery);
+// 555555555555555555555555
+(function ($) {
+    var theme = {
+        defaults: {
+            dateOrder: 'Mddyy',
+            mode: 'mixed',
+            rows: 5,
+            width: 70,
+            height: 36,
+            showLabel: true,
+            useShortLabels: true
+        }
+    }
+
+    $.mobiscroll.themes['android-ics'] = theme;
+    $.mobiscroll.themes['android-ics light'] = theme;
+
+})(jQuery);
+

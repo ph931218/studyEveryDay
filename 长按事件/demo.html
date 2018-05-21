@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+</head>
+<body>
+<button>点我点我</button>
+<div style="width: 100px;height: 100px;position: relative;background:#000"></div>
+</body>
+<script>
+var btn = document.getElementsByTagName("button")[0];
+var div = document.getElementsByTagName("div")[0];
+var num = 0,setT,setI,isSave = false;
+btn.ontouchstart = function (ev) {
+    setI = setInterval(function () {
+        div.style.left = (++num)+"px";
+    },10);
+    setT = setTimeout(function () {
+        isSave = true;
+    },1000);
+}
+btn.ontouchmove = function (ev) {
+    clearTimeout(setT);
+    clearInterval(setI);
+    if(!isSave){
+        num = 0;
+        div.style.left = num+"px";
+    }
+}
+btn.ontouchend = function () {
+    clearTimeout(setT);
+    clearInterval(setI);
+    if(!isSave){
+        num = 0;
+        div.style.left = num+"px";
+    }
+}
+</script>
+</html>
