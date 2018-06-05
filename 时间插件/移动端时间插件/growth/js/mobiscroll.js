@@ -77,8 +77,10 @@
         }
 
         function read() {
+            console.log("a");
             that.temp = ((input && that.val !== null && that.val != elm.val()) || that.values === null) ? s.parseValue(elm.val() || '', that) : that.values.slice(0);
             that.setValue(true);
+
         }
 
         function scrollToPos(time, index, manual, dir, orig) {
@@ -416,7 +418,9 @@
             if (s.display == 'inline') {
                 that.setValue(false, manual);
             } else {
-                $('.dwv', dw).html(formatHeader(v));
+                elm.parent().find("input").css({borderBottom:"1px solid #d8d8d8",color:"#333"});
+                elm.val(formatHeader(v));
+                elm.css({borderBottom:"1px solid #1B82D2",color:"#1B82D2"});
             }
 
             if (manual) {
@@ -497,9 +501,10 @@
          * @param {Boolean} prevAnim - Prevent animation if true
          */
         that.show = function (prevAnim) {
-            if (s.disabled || visible) {
-                return false;
-            }
+            // if (s.disabled || visible) {
+            //     console.log("a");
+            //     return false;
+            // }
 
             if (s.display == 'top') {
                 anim = 'slidedown';
@@ -593,11 +598,11 @@
                 }
 
                 // Disable inputs to prevent bleed through (Android bug)
-                $('input,select,button').each(function () {
-                    if (!$(this).prop('disabled')) {
-                        $(this).addClass('dwtd').prop('disabled', true);
-                    }
-                });
+                // $('input,select,button').each(function () {
+                //     if (!$(this).prop('disabled')) {
+                //         $(this).addClass('dwtd').prop('disabled', true);
+                //     }
+                // });
 
                 // Set position
                 position();
@@ -834,7 +839,6 @@
     }
 
     function init(that, method, args) {
-
         if (methods[method]) {
             return methods[method].apply(that, Array.prototype.slice.call(args, 1));
         }

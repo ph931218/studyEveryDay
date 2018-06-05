@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Symbol是一个新的基础数据类型，表示唯一标识常用作与其它属性名做区分
+    var i=Symbol('ph');
+    var m=Symbol();
+    var myObject = {firstName:'raja', lastName:'rao',m:"是谁"};
+    myObject[i]="是我"
+    console.log(Object.keys(myObject));
+    console.log(Object.getOwnPropertySymbols(myObject));
+
+    console.log(i);
+    console.log(m);
+</script>
+</body>
+</html>

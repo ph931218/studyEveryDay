@@ -18,7 +18,7 @@
 
 <body>
 <div class="time-select">
-	<input class="time-select-input"  readonly="readonly" />
+	<input class="time-select-input"  readonly="readonly" />至<input class="time-select-input"  readonly="readonly" />
 </div>
 </body>
 <script type="text/javascript">
@@ -35,9 +35,11 @@
         lang: 'zh',
         showNow: true,
         nowText: "今天",
-        startYear: currYear - 10, //开始年份
-        endYear: currYear + 80 //结束年份
+        startYear: currYear, //开始年份
+        endYear: currYear + 80, //结束年份
+        name: "ph"
     };
-    $(".time-select-input").mobiscroll($.extend(opt['date'], opt['default']));//年月日型
+    $(".time-select-input").eq(0).mobiscroll($.extend(opt['date'], opt['default']));//年月日型
+    $(".time-select-input").eq(1).mobiscroll($.extend(opt['date'], opt['default']));//年月日型
 </script>
 </html>

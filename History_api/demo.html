@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <button onclick="history.back();">上一页</button>
+    <button onclick="history.forward();">下一页</button>
+    <button id = "add" onclick='history.pushState("大家好","我是百度","../flex/aaa.html");'>增加一条记录</button>
+</head>
+<body>
+<script>
+    var add = document.getElementById("add");
+    window.onpopstate = function (data) {
+        history.go();
+    }
+</script>
+</body>
+</html>
