@@ -1,0 +1,19 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>接口测试</title>
+    <meta charset="utf-8">
+</head>
+<body></body>
+<script>
+    var url = "https://www.baidu.com/home/msg/data/personalcontent?num=8&indextype=manht&_req_seqid=0xa77291810001b3ca&asyn=1&t=1528686752869&sid=1437_26458_21113_26350_26431_26578";
+    var xhp = new XMLHttpRequest();
+    xhp.open("get",url);
+    xhp.setRequestHeader("Referer","https://www.baidu.com/");
+    xhp.onreadystatechange = function(){
+        console.log(this.responseText);
+    }
+    xhp.send();
+</script>
+</html>
