@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="val">
+<button>点击验证</button>
+</body>
+<script>
+    var t = /^([0-9A-Za-z\-_\.]+)@([0-9a-z]+\.[a-z]{2,3}(\.[a-z]{2})?)$/g;
+    document.getElementsByTagName("button")[0].addEventListener("click",function () {
+        t = null;
+        t = /^([0-9A-Za-z\-_\.]+)@([0-9a-z]+\.[a-z]{2,3}(\.[a-z]{2})?)$/g;
+        var inp = document.getElementById("val");
+        alert(inp.value);
+        alert(t.test(inp.value));
+    });
+</script>
+</html>
