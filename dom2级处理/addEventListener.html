@@ -22,10 +22,8 @@
 //    ulEl.onclick=function(event){
 //        console.log(event.target.innerHTML)
 //    };
-    ulEl.addEventListener("click",function(){
-        console.log(event.target.innerHTML);
-        var a=0;
-        alert(a||1)
+    ulEl.addEventListener("click",function(event){
+        alert(event.target.innerHTML)
     },true)
 </script>
 </html>

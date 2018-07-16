@@ -5,44 +5,50 @@
     <title>Title</title>
 </head>
 <body>
-<input id="inputVal" type="text" onchange="dataChanged()">
+<input id="inputVal" type="text" oninput="dataChanged(this)">
 <span id="content"></span>
+<button>我的值是哈哈哈</button>
 </body>
 <script>
     var a={};
-    Object.defineProperty(a,"name",{
-        value:"ph"
-        //writable:false,这三个属性默认会为对象a加上
-        //enumerable:false,且只能在第一次设置时添加这个设置
-        //configurable: false
-    })
-    Object.defineProperty(a,"b",{
-        value:"123"
-        //writable:false,这三个属性默认会为对象a加上
-        //enumerable:false,且只能在第一次设置时添加这个设置
-        //configurable: false
-    })
+    // Object.defineProperty(a,"name",{
+    //     value:"ph"
+    //     //writable:false,这三个属性默认会为对象a加上
+    //     //enumerable:false,且只能在第一次设置时添加这个设置
+    //     //configurable: false
+    // })
+    // Object.defineProperty(a,"b",{
+    //     value:"123"
+    //     //writable:false,这三个属性默认会为对象a加上
+    //     //enumerable:false,且只能在第一次设置时添加这个设置
+    //     //configurable: false
+    // })
 
-    console.log(a.b);
-    a.b="aaa";
-    console.log(a.b);
-    console.log(a.name);
+    // console.log(a.b);
+    // a.b="aaa";
+    // console.log(a.b);
+    // console.log(a.name);
+    var needToChange,needToChange = document.getElementById("content");;
+
     Object.defineProperty(a,"control",{
-        configurable: true,
-        enumerable:true,
-        set:function(val){
-            console.log(val);
-        },
+        set:setView,
         get:function(){
             console.log("你要获取control属性的值");
         }
     });
-    function dataChanged(){
-        a.control=document.getElementById("inputVal").value;
-        alert(a.control);
-        document.getElementById("content").innerText=a.control;
+    function  setView(data){
+        console.log(data);
+        needToChange.innerText = data;
     }
-
+    function dataChanged(inp){
+        console.log(this);
+        a.control = inp.value;
+    }
+    function c(){
+        console.log(this);
+        a.control = this.innerHTML;
+    }
+    document.getElementsByTagName("button")[0].addEventListener("click",c)
 
 </script>
 </html>
