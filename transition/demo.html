@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        div
+        {
+            width:100px;
+            height:100px;
+            background:blue;
+            transition:width 2s;
+            -moz-transition:width 2s; /* Firefox 4 */
+            -webkit-transition:width 2s; /* Safari and Chrome */
+            -o-transition:width 2s; /* Opera */
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div></div>
+<button>点击</button>
+<script>
+    document.getElementsByTagName("div")[0].addEventListener("click",function (evt) {
+        this.style.width = "300px";
+        this.style.display = "none";
+    })
+</script>
+</body>
+</html>
