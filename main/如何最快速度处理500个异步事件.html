@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>如何最快速度处理500个异步事件</title>
+</head>
+<body>
+    <script>
+        // 有500个请求需要等待发出 浏览器一次只能同时处理5个 怎么样能够以最快的速度处理完
+        function getData() {
+            return new Promise((resolve) => {
+                setTimeout(() => {
+                    resolve(Date.now())
+                }, Math.random() * 300)
+            })
+        }
+        let sending = 0
+        let sendNum = 0
+        function sendPost() {
+            while (sending <= 5 && sendNum < (200 - sending)) {
+                getData().then(() => {
+                    sending --
+                    sendNum ++
+                    sendPost();
+                    console.log(sendNum)
+                })
+                sending ++
+            }
+        }
+        sendPost()
+    </script>
+</body>
+</html>

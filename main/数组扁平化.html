@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+</body>
+<script>
+    const arr = [1,2,[3,4,[5,2,6,7,[1,2,233,4]]]]
+    function fun (arr) {
+        const newArr = []
+        if (Object.prototype.toString.apply(arr) === '[object Array]') {
+            arr.forEach(item => {
+                if (Object.prototype.toString.apply(item) === '[object Array]') {
+                    newArr.push(...fun(item))
+                } else {
+                    newArr.push(item)
+                }
+            });
+            return newArr
+        }
+        newArr.push(arr)
+        return newArr
+    }
+    console.log(fun(arr));
+</script>
+</html>

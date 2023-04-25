@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var twoSum = function(nums, target, index = 0) {
+        //     if (nums.length === 0) {
+        //         return null
+        //     }
+        //     const firstNum = nums[index];
+        //     const newArr = nums.slice(index + 1)
+        //     const restNum = target - firstNum;
+        //     const restIndex = newArr.indexOf(restNum);
+        //     if (
+        //         newArr.length > 0
+        //         && restIndex !== -1
+        //     ) {
+        //         return [index, restIndex + index + 1]
+        //     }
+        //     if (index < nums.length - 2) {
+        //         return twoSum(nums, target, index + 1)
+        //     }
+        // };
+        // const test = [];
+        // for (let i = 0; i <= 10000; i++) {
+        //     test.push(i);
+        // }
+        // console.log(twoSum(test,19999));
+        const l1 = [5, 7, 2, 1];
+        const l2 = [4, 8, 9];
+        var addTwoNumbers = function(l1, l2) {
+            const l1Len = l1.length;
+            const l2Len = l2.length;
+            let langer; 
+            let short;
+            l1Len > l2Len ? l1 : l2;
+
+            const sumRel = new ListNode();
+            function getRel(l1node, l2node, carry = 0, rel = sumRel) {
+                const val1 = l1node ? l1node.val : 0;
+                const val2 = l2node ? l2node.val : 0;
+
+                const onesPlace = (val1 + val2 + carry) % 10
+                const tensPlace = Math.floor((val1 + val2 + carry) / 10);
+                rel.val = onesPlace;
+                carry = tensPlace;
+                if (
+                    (l1node && l1node.next)
+                    || (l2node && l2node.next)
+                    || carry > 0
+                ) {
+                    rel.next = {}
+                    return getRel(l1node && l1node.next, l2node && l2node.next, carry, rel.next)
+                } else {
+                    rel.next = null;
+                    return sumRel
+                }
+            }
+            return getRel(l1, l2);
+        };
+    </script>
+</body>
+</html>

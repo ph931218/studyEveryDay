@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const arr = [
+            {
+                pid: 0,
+                id: 1,
+                name: 'test1'
+            },
+            {
+                pid: 1,
+                id: 2,
+                name: 'test2'
+            },
+            {
+                pid: 3,
+                id: 4,
+                name: 'test3'
+            },
+            {
+                pid: 1,
+                id: 5,
+                name: 'test1'
+            },
+            {
+                pid: 0,
+                id: 6,
+                name: 'test1'
+            }
+        ]
+        function getTree(arr=[]) {
+            const rel = {}
+            arr.forEach(item => {
+                const node = {
+                    ...item,
+                    children: [],
+                }
+                if (rel[item.id]) {
+                    Object.assign(
+                        rel[item.id],
+                        {
+                            pid: item.pid,
+                            name: item.name,
+                        }
+                    )
+                } else {
+                    rel[item.id] = node;
+                }
+                if (rel[item.pid]) {
+                    rel[item.pid].children.push(node);
+                } else {
+                    const parentNode = {
+                        id: item.pid,
+                        children: [node]
+                    }
+                    rel[item.pid] = parentNode;
+                }
+            })
+            return Object.values(rel).filter(item => {
+                return item.pid === undefined;
+            })
+        }
+        console.log(getTree(arr))
+    </script>
+</body>
+</html>

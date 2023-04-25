@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>如流jssdk测试</div>
+    <pre>
+        window.onBdHiJsReady = () => {
+            console.log('我在端里了');
+            BdHiJs && BdHiJs.appnative.menu.setIcon({
+                    data: { // data 应当为 JSON 字符串,。BdHiJs.sdk.version.get() >= 16，data 支持 js 对象
+                        count: 2, // 其中count值要同menu的个数相等。iconId是图标的 id，name是展示的名字，value是点击这个list之后要传到listener的值。
+                        isExposed: true|false,  // isExposed是否外露显示，最多可显示4个，如需更多菜单，由业务自己配置...菜单，点击事件调用BdHiJs.appnative.menu.showMore
+                        menu: [{
+                                //iconId和iconKey二选一
+                                iconId: 1, // icon展示样式可以参考 https://hi.baidu.com/client-guide.html#ui-menu 中的 iconid 对照表。
+                                        // [@"add",@"clean",@"creat",@"done",@"edit",@"help",@"list",@"me",@"more",@"record",@"send",@"setting",@"share",@"common",@"spinner",@"topic",@"files",@"calendar",@"today",@"forward"，@"permission"]，从0开始
+                                        // BdHiJs.sdk.version.get() >= 30 新增 files
+                                        // BdHiJs.sdk.version.get() >= 39 新增 calendar
+                                        // BdHiJs.sdk.version.get() >= 41 新增 today
+                                        // BdHiJs.sdk.version.get() >= 43 新增 forward
+                                iconKey:'add', // 可选，字符串，可代替iconId使用，BdHiJs.sdk.version.get() >= 30 新增支持。
+                                name: 'nnn',
+                                value: 'nnnValue',
+                            }, {
+                                iconId: 2,
+                                name:'vvv',
+                                value: 'vvvValue'
+                            }
+                        ]
+                    },
+                    onsuccess: function (data) {
+                        data.success //必填 设置成功字符串信息
+                    },
+                    onfail: function (err) {
+                        // 接口调用失败
+                        // err 为字符串，说明接口调用失败原因
+                    },
+                    listener: function (result) { // 被点击后的value被传到listener中
+                        document.write('点击了按钮')
+                    }
+                });
+            };
+    </pre>
+    <div style="height: 1000px"></div>
+</body>
+<script>
+    window.onBdHiJsReady = () => {
+        console.log('我在端里了');
+        //  BdHiJs.sdk.version.get() >= 58 新增
+        BdHiJs && BdHiJs.appnative.menu.setIcon({
+                        data: {
+                            count: 3,
+                            isExposed: true,
+                            menu: [{
+                                    iconKey:'share',
+                                    name: 'nnn',
+                                    value: 'share',
+                                },
+                                {
+                                    iconKey:'me',
+                                    name: 'me',
+                                    value: 'me',
+                                }, 
+                                {
+                                    iconKey:'more',
+                                    name:'more',
+                                    value: 'more'
+                                }
+                            ]
+                        },
+                        onsuccess: function (data) {
+                        },
+                        onfail: function (err) {
+                        },
+                        listener: function (result) {
+                            if (result === 'more') {
+                                console.log(result, '点击了按钮', window.BdHiJs)
+                                window.BdHiJs && window.BdHiJs.appnative.menu.showMore({
+                                        data: { 
+                                        },
+                                        onsuccess: function (data) {
+                                        },
+                                        onfail: function (err) {
+                                        }
+                                });
+                            } else if (result === 'share') {
+                                BdHiJs.service.share.sendWeb({
+                                    data: {
+                                        title: "测试",
+                                        desc: "测试测试",
+                                        picUrl: "https://c-ssl.duitang.com/uploads/blog/202107/19/20210719150601_4401e.jpg",
+                                        url: window.location.href,
+                                        content: {},
+                                    },
+                                    onfail: function(err) {
+                                        // 操作失败
+                                    },
+                                    onsuccess: function(data) {
+                                        // 操作成功
+                                    }
+                                });
+                            }
+                        }
+                    });
+        // BdHiJs && window.BdHiJs?.appnative.menu.setDefault({
+        //     onsuccess: () => {
+        //     },
+        //     onfail: () => {
+        //         reject(new Error('调用showMore失败'));
+        //     },
+        // });
+
+        // window.BdHiJs && window.BdHiJs.appnative.menu.showMore({
+        //                                 data: { 
+        //                                 },
+        //                                 onsuccess: function (data) {
+        //                                 },
+        //                                 onfail: function (err) {
+        //                                 }
+        //                         });
+
+        // data 应当为 JSON 字符串。BdHiJs.sdk.version.get() >= 16，data 支持 js 对象
+        // 顶部标题栏title是否显示， true 显示 false 隐藏
+        // 悬浮窗按钮是否显示， true 显示 false 隐藏
+        // 标题栏支持页面滚动隐藏显示， true 支持，false 不支持
+        BdHiJs.appnative.menu.config({
+            data: {
+                supportScrollHide: true,
+            },
+            onsuccess: function (data) {
+            },
+            onfail: function (err) {
+            }
+        });
+    }
+</script>
+</html>

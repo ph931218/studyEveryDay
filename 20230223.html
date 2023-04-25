@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const s = 'asfasdf';
+        const t = 'asdfaaj';
+
+        function fn(a, b) {
+            const rel = {};
+            for (let i = 0; i < a.length; i ++ ) {
+                const thisAChar = rel[a.splice(i, i+1)];
+                const thisBChar = a.splice(i, i+1);
+                if (thisChat && thisChat !== thisBChar) {
+                    return false;
+                }
+                rel[thisAChar] = thisBChar;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>

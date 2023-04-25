@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const strDemo = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!\"#$%&()*+,-';
+        var lengthOfLongestSubstring = function(s) {
+            function getMaxString(str='', data) {
+                let {
+                    lastStr,
+                    len
+                } = data;
+                if (str.length <= len) {
+                    return len
+                }
+                let newStr = lastStr || '';
+                let indexStr = lastStr ? lastStr.length : 0;
+                while (
+                    newStr.indexOf(str.slice(indexStr, indexStr + 1)) === -1 && indexStr + 1 <= str.length
+                ) {
+                    const thisChar = str.slice(indexStr, indexStr + 1);
+                    newStr += thisChar;
+                    indexStr++;
+                }
+                let newLen = newStr.length;
+                let repeatChar = str.slice(indexStr, indexStr + 1);
+                const nextStr = str.slice(str.indexOf(repeatChar) + 1);
+                data.lastStr = newStr.slice(newStr.indexOf(repeatChar) + 1);
+                data.len = Math.max(newLen, len);
+                lastStr = null;
+                len = null;
+                repeatChar = null;
+                newLen = null;
+                newStr = null;
+                indexStr = null;
+                return getMaxString(
+                    nextStr,
+                    data
+                );
+            }
+            return getMaxString(s, {
+                lastStr: '',
+                len: 0
+            });
+        };
+        console.log(lengthOfLongestSubstring(strDemo));
+    </script>
+</body>
+</html>

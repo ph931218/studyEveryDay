@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+ 2 <html>
+ 3   <head>
+ 4     <meta charset="utf-8" />
+ 5     <title>设置显示不同时区时间</title>
+ 6   </head>
+ 7 
+ 8   <body>
+1
+14     <script>
+            export function useDebounces(fn: () => void, time): () => void {
+                let timeoutId = null;
+                return () => {
+                    if (timeoutId) {
+                        clearTimeout(timeoutId);
+                        timeoutId = setTimeout(() => {
+                            fn && fn();
+                            timeoutId = null;
+                        }, time)
+                    } else {
+                        timeoutId = setTimeout(() => {
+                            fn && fn();
+                            timeoutId = null;
+                        }, time)
+                    }
+                }
+            };
+            const calback = useDebounces(() => {
+                console.log('1111');
+            }, 200);
+            setInterval(() => {
+                calback();
+            }, 100);
+50     </script>
+51   </body>
+52 </html>

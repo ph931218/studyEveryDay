@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    var findMedianSortedArrays = function(nums1, nums2) {
+        // 将第一个数组分成三部分 开始 重合 结束
+        const num1Len = nums1.length;
+        const num2Len = nums2.length;
+        const sumLen = num1Len + num2Len;
+        const isEven = sumLen % 2 === 0;
+        const mideValIndex = isEven
+                                ? [Math.floor((sumLen - 1) / 2), Math.ceil((sumLen - 1) / 2)]
+                                : [(sumLen - 1) / 2, (sumLen - 1) / 2];
+        let sumArr = []
+        console.log(mideValIndex)
+        // 有空
+        if (nums1.length === 0) {
+            return (nums2[mideValIndex[0]] + nums2[mideValIndex[1]]) / 2
+        } 
+        if (nums2.length === 0) {
+            return (nums1[mideValIndex[0]] + nums1[mideValIndex[1]]) / 2
+        } 
+        // 无交集状态
+        if (nums1[0] >= nums2[nums2.length - 1]) {
+            sumArr = nums2.concat(nums1)
+            return (sumArr[mideValIndex[0]] + sumArr[mideValIndex[1]]) / 2
+        }
+        // 有交集状态
+        // nums1 在前
+        let startH = 0;
+        sumArr = [...nums2]
+        for (let i = 0; i < num1Len; i++) {
+            let isOver = false;
+            for (let h = startH; h < sumArr.length; h++) {
+                if (nums1[i] < sumArr[h]) {
+                    sumArr.splice(h, 0, nums1[i])
+                    startH = h;
+                    break;
+                } else if (h === sumArr.length - 1) {
+                    sumArr.push(nums1[i])
+                    startH = sumArr.length - 1
+                    let isOver = true;
+                    break;
+                }
+            }
+            if (isOver) {
+                sumArr.concat(nums2.slice(i, nums2.length - 1))
+                break;
+            }
+        }
+        return (sumArr[mideValIndex[0]] + sumArr[mideValIndex[1]]) / 2
+        // nums2 在前
+    };
+    const nums1 = [1,3,5,7,8]
+    const nums2 = [3,7,8,10,28,40]
+    console.log(findMedianSortedArrays(nums1, nums2))
+</script>
+</html>

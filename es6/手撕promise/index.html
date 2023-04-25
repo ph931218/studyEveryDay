@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>手撕promise</title>
+    <script src="./index.js" ></script>
+</head>
+<body>
+    <script>
+        const p = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve('成功');
+            }, 1000)
+            // reject('失败');
+            // throw 'error';
+        });
+        p.then(rel => {
+            console.log(rel);
+            return 'rel2'
+        }).then(rel => {
+            console.log(rel)
+            return new Promise((resolve) => {
+                resolve('哈哈哈')
+            })
+        }).then(rel => {
+            console.log(rel)
+        })
+
+        p.then(rel => {
+            console.log(rel);
+            return 'rel4'
+        }).then(rel => {
+            console.log(rel)
+            return new Promise((resolve) => {
+                resolve('哈哈哈1')
+            })
+        }).then(rel => {
+            console.log(rel)
+        })
+        // .catch(err => {
+        //         console.error(err)
+        // })
+        console.log(p);
+    </script>
+</body>
+</html>

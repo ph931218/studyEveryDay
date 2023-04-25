@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body {
+            height: 100%;
+        }
+        .red {
+            color: red;
+        }
+        .mask {
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            z-index: 19999;
+            top: 0;
+            left: 0;
+            color: yellow;
+            background: rgba(0, 0, 255, .5);
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+    <button class="red" id="red">点击我</button>
+    <div class="mask"></div>
+    <script>
+        red.addEventListener('click', () => {
+            alert('点击button')
+        })
+
+        Function.prototype.sayFuc = function () {
+            console.log('fuc');
+        }
+        const Person = new Function('Person', 'console.log("afdfa")')
+        Person.prototype.sayName = function () {
+            console.log(this.name);
+        }
+        var sally = new Person('sally');
+        console.log(Function)
+    </script>
+</body>
+</html>

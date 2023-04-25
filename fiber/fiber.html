@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<div id="test" style="word-break: break-all;"></div>
+</body>
+<script>
+    let count = 0
+    const intervalId = setInterval(() => {
+        if (count > 999999) {
+            clearInterval(intervalId);
+            return;
+        }
+        count ++ 
+        const test = document.querySelector('#test')
+        test.innerHTML = test.innerHTML + 1
+    }, 16.6)
+    // let str = ''
+    // for (let i = 0; i < 999999999; i ++) {
+    //     str += 1;
+    // }
+    // console.log(str)
+    function repeat(str, count) {
+        let maxLoopCount = 999;
+        async function runTask(count, cb) {
+            let taskStr = '';
+            let taskResult = new Promise((rs) => {
+                window.requestIdleCallback(() => {
+                    for (let i = 0; i < count && i < maxLoopCount; i++) {
+                        taskStr += str;
+                    }
+                    if (count > maxLoopCount) {
+                        runTask(count - maxLoopCount, (restValue) => {
+                            cb && cb(taskStr + restValue)
+                            rs(taskStr + restValue);
+                        })
+                    } else {
+                        cb && cb(taskStr)
+                        rs(taskStr)
+                    }
+                })
+            });
+            return taskResult
+        }
+        return runTask(count)
+    }
+    repeat('1', 99999999).then(result => console.log(result))
+</script>
+
+</html>

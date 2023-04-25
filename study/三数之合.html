@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const arr = [-13,5,13,12,-2,-11,-1,12,-3,0,-3,-7,-7,-5,-3,-15,-2,14,14,13,6,-11,-11,5,-15,-14,5,-5,-2,0,3,-8,-10,-7,11,-5,-10,-5,-7,-6,2,5,3,2,7,7,3,-10,-2,2,-12,-11,-1,14,10,-9,-15,-8,-7,-9,7,3,-2,5,11,-13,-15,8,-3,-7,-12,7,5,-2,-6,-3,-10,4,2,-5,14,-3,-1,-10,-3,-14,-4,-3,-7,-4,3,8,14,9,-2,10,11,-10,-4,-15,-9,-1,-1,3,4,1,8,1];
+        function getArrList(list) {
+            list = list.sort()
+            return list.reduce((rel, item) => {
+                if (item === 0) {
+                    rel[1].push(item);
+                } else if (item > 0) {
+                    rel[2].push(item);
+                } else {
+                    rel[0].push(item);
+                }
+                return rel;
+            }, [[], [], []])
+        }
+        const threeItem = {};
+        function getZeroListByTwoArr(arr1 = [], arr2 = []) {
+            arr1.forEach(item => {
+                if (arr2.includes(-item)) {
+                    threeItem[`${item}-0-${-item}`] = [-item, 0, item];
+                }
+            })
+        }
+        const newList = getArrList(arr);
+        const relList = [];
+        const canGetZero = newList[0].length > 0 && newList[2].length > 0;
+        if (newList[1].length > 0 && canGetZero) {
+            getZeroListByTwoArr(newList[2], newList[0])
+        }
+        if (canGetZero) {
+            newList[0].forEach((item, index) => {
+                const restArr = newList[0].slice(index + 1)
+                restArr.forEach(restItem => {
+                    if (newList[2].includes(-item - restItem)) {
+                        threeItem[`${item}-${restItem}-${-item - restItem}`] = [item, restItem, -item - restItem]
+                    }
+                })
+            })
+            newList[2].forEach((item, index) => {
+                const restArr = newList[2].slice(index + 1)
+                restArr.forEach(restItem => {
+                    if (newList[0].includes(-item - restItem)) {
+                        threeItem[`${-item - restItem}-${item}-${restItem}`] = [-item - restItem, item, restItem]
+                    }
+                })
+            })
+        }
+        if (newList[1].length >= 3) {
+            relList.push([0, 0, 0])
+        }
+        Object.values(threeItem).forEach(item => {
+            relList.push([...item])
+        });
+        console.log(relList)
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var reformat = function(s) {
+            const arr = s.split('');
+            const newArrObj = arr.reduce((rel, item) => {
+                if (parseInt(item) == item) {
+                    rel.num.push(item);
+                } else {
+                    rel.string.push(item);
+                }
+                return rel;
+            }, {
+                string: [],
+                num: []
+            })
+            const dif = newArrObj.string.length - newArrObj.num.length;
+            if (dif === 1 || dif === 0) {
+                return newArrObj.string.reduce((rel, item, index) => {
+                    rel += newArrObj.num[index]
+                            ? `${item}${newArrObj.num[index]}`
+                            : item
+                    return rel
+                }, '')
+            } else if (dif === -1) {
+                return newArrObj.num.reduce((rel, item, index) => {
+                    rel += newArrObj.string[index]
+                            ? `${item}${newArrObj.string[index]}`
+                            : item
+                    return rel
+                }, '')
+            }
+            return ''
+        };
+        console.log(reformat('a0b1c2v'));
+    </script>
+</body>
+</html>

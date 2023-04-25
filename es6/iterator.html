@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const obj = {
+            name: 'hahaha',
+            list: [1,2,3,45,8],
+            [Symbol.iterator]: function() {
+                let index = 0;
+                return {
+                    next: () => {
+                        const rel = {
+                            value: this.list[index],
+                            done: index >= this.list.length
+                        };
+                        index++;
+                        return rel;
+                    },
+                }
+            }
+        }
+        for (let a of obj) {
+            console.log(a);
+        }
+    </script>
+</body>
+</html>

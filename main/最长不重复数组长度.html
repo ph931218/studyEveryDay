@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var lengthOfLongestSubstring = function(s, index = 0, allRel = 1) {
+            if (s.length === 0) {
+                return 0;
+            }
+            if (index > s.length - 1) {
+                return allRel;
+            } 
+            const arr = s.split('');
+            const len = arr.length;
+            let isContinue = true;
+            const newArr = []
+            let i = index;
+            let needLen = 0;
+            while (isContinue) {
+                if (newArr.includes(arr[i]) || i > (s.length - 1)) {
+                    isContinue = false;
+                    needLen = newArr.length;
+                } else {
+                    newArr.push(arr[i]);
+                    i++;
+                };
+            }
+            let newIndex = 0
+            if (i < s.length - 1) {
+                newIndex = newArr.indexOf(arr[i]);
+            }
+            return lengthOfLongestSubstring(s, index + newIndex + 1, Math.max(allRel, needLen))
+        };
+        console.log(lengthOfLongestSubstring('aab'))
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 先递进  后回归
+        // 实现一个阶乘function
+        // 正常递归
+        function fn1(num) {
+            if (num <= 1) {
+                return 1
+            }
+            return num * fn1(num - 1)
+        }
+        // 尾递归
+        function fn2(num, rel = 1) {
+            if (num <= 1) {
+                return rel;
+            }
+            rel = num * rel;
+            return fn2(num - 1, rel)
+        }
+        console.log(fn1(4), fn2(4));
+    </script>
+</body>
+</html>

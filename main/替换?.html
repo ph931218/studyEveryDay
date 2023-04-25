@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const modifyString = function(s) {
+            const arr = s.split('')
+            const newStr = arr.reduce((rel, item, index) => {
+                const charCode = item.charCodeAt();
+                const previous = arr[index - 1];
+                const next = arr[index + 1];
+                const canNotArr = [];
+                const relLen = rel.length;
+                if (charCode < 97 || charCode > 122) {
+                    if (rel) {
+                        const lastChar = rel.substring(relLen - 1);
+                        canNotArr.push(lastChar.charCodeAt())
+                        console.log(lastChar, 'lastChar')
+                    }
+                    if (
+                        next
+                    ) {
+                        canNotArr.push(next.charCodeAt());
+                        console.log(next, next.charCodeAt(), 'next')
+                    }
+                    console.log(canNotArr)
+                    let i = 97
+                    let newRel = ''
+                    while(i <= 122) {
+                            if (canNotArr.indexOf(i) === -1) {
+                                newRel = rel + String.fromCharCode(i);
+                                i = 123
+                                break;
+                            }
+                            i++
+                        }
+                    if (newRel) {
+                        return newRel
+                    }
+                }
+                return rel + item;
+            }, '')
+            return newStr;
+        };
+        console.log(modifyString("?"), "j?qg??b")
+    </script>
+</body>
+</html>

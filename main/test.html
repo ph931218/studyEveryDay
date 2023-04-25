@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const str = 'aabbcca';
+        // function fn(s) {
+        //     const arr = str.split('')
+        //     let max = ['', 0]
+        //     arr.reduce((rel, item) => {
+        //         if (!rel[item]) {
+        //             rel[item] = 1
+        //         }
+        //         rel[item]++;
+        //         if (rel[item] > max[1]) {
+        //             max = [item, rel[item]]
+        //         }
+        //         return rel
+        //     }, {})
+        // }
+        function fn(s, index = 0, cur = '', rel = '', num = 0) {
+            console.log(cur, rel)
+            if (index > s.length) {
+                return rel;
+            }
+            const arr = s.split('');
+            if (!cur) {
+                cur = arr[index]
+            }
+            if (arr[index] === cur) {
+                return fn(s, index + 1, cur, rel, num + 1)
+            } else if (arr[index] !== cur) {
+                rel += `${cur}:${num}`
+                num = 1;
+                cur = arr[index];
+                return fn(s, index + 1, cur, rel, num)
+            }
+        }
+        console.log(fn(str))
+    </script>
+</body>
+</html>

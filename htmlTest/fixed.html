@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            position: relative;
+            overflow: auto;
+            width: 100px;
+            height: 200px;
+            background: #000;
+            z-index: 1;
+        }
+        .editor {
+            position: fixed;
+            width: 200px;
+            height: 300px;
+            background: #f00;
+            z-index: 20;
+            left: 0;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+    <div style="position: absolute;z-index: 10;">我是标题</div>
+    <div class="container">
+        <div class="editor">
+            我是编辑器
+        </div>
+    </div>
+</body>
+</html>

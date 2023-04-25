@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // createObj('a,b,c,d') {a: {b: {c: {d: null}}}}
+        function createObj (str, rel = {}) {
+            if (!str) {
+                return null
+            }
+            if (Object.prototype.toString.call(str) === '[object Array]') {
+                if (str.length > 1) {
+                    const key = str[0]
+                    rel[key] = {}
+                    createObj(str.splice(1), rel[key])
+                    console.log(str)
+                    return rel
+                } else {
+                    rel[str[0]] = null
+                    return rel;
+                }
+            }
+            const arr = str.split(',');
+            return createObj(arr, {})
+        }
+        console.log(createObj('a,b,c,d'))
+    </script>
+</body>
+</html>

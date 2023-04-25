@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 去掉连续的 a 和 c, 保留所有 b['a','a','b','c','b','c','c']=>bcb
+        const arr = ['a','a','b','c','b','c','c'];
+        function getNewArr(myArr = []) {
+            let mark = [];
+            return arr.reduce((rel, item, index) => {
+                if (mark.includes(index)) {
+                    return rel;
+                }
+                const next = arr[index + 1];
+                if (
+                    item === next && item !== 'b'
+                ) {
+                    mark.push(index, index + 1);
+                } else {
+                    rel.push(item);
+                }
+                return rel;
+            }, [])
+        }
+        console.log(getNewArr(arr));
+    </script>
+</body>
+</html>

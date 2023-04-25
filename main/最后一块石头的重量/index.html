@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 创建一个背包 有总容量  最小可使用单位容量属性
+        const test = [31,26,33,21,40];
+        var lastStoneWeightII = function(stones) {
+            const allWeight = stones.reduce((rel, item) => rel + item, 0);
+            function getCheckStoneWeight(stones, weight) {
+                let allCapacity = weight;
+                let thisStone;
+                const len = stones.length;
+                let restStones = []
+                for (let i = 0; i < len; i++) {
+                    const canGet = allCapacity >= stones[i]
+                    if (canGet && !thisStone) {
+                        thisStone = stones[i];
+                    } else if (canGet) {
+                        restStones.push(stones[i])
+                    }
+                }
+                if (thisStone) {
+                    const restWeight = allCapacity - thisStone;
+                    if (restWeight === 0) {
+                        return thisStone
+                    }
+                    const checkStoneWeight = thisStone + getCheckStoneWeight(restStones, restWeight);
+                    const unCheckWeight = getCheckStoneWeight(restStones, allCapacity);
+                    if (checkStoneWeight > unCheckWeight) {
+                        return checkStoneWeight
+                    } else {
+                        return unCheckWeight
+                    }
+                } 
+                return 0
+            }
+            const relCheckWeight = getCheckStoneWeight(stones, allWeight / 2);
+            return ((allWeight / 2) - relCheckWeight) * 2
+        }
+        console.log(lastStoneWeightII([89,23,100,93,82,98,91,85,33,95,72,98,63,46,17,91,92,72,77,79,99,96,55,72,24,98,79,93,88,92]))
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    window.onBdHiJsReady = () => {
+        console.log('我在端里了');
+        // 全部端 BdHiJs.sdk.version.get() >= 30 新增
+        BdHiJs.service.infopipeline.register({
+            onsuccess: function () {
+                // 注册成功
+            },
+            onfail: function (err) {
+                // 注册失败，err 错误信息
+            },
+            listener: function (data) {
+                data.info // 接收到的信息，信息具体格式请看 `信息格式` 部分
+            }
+        });
+        BdHiJs.service.infopipeline.send({
+            data: {
+                info: 'innerapp://unread?type=3&count=1&appagentids=111,222,333',
+                forever: true,
+            },
+            onsuccess: function () {
+                console.log('接口调用成功');
+            },
+            onfail: function (err) {
+                // 接口调用失败，err 错误信息
+            }
+        });
+    }
+</script>
+</html>

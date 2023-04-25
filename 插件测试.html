@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <body></body>
+    <script>
+       const list = [{
+           id: '111',
+           name: '111'
+       }, {
+           id: '222',
+           name: '222'
+       }]
+       function getNewArr(arr) {
+           return arr.map(item => {
+               const newItem = {
+                   ...item
+               }
+               const rel = {
+                    ...newItem,
+                    idd: newItem.id
+               }
+               delete rel.id
+               return rel;
+           })
+       }
+       console.log(getNewArr(list))
+    </script>
+</html>

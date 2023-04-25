@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+</body>
+<script>
+    function createObj () {
+        const arg = Array.prototype.slice.call(arguments, 0);
+        // const {nextObj, ...rest} = arg.reduce((obj, item, index) => {
+        //     // 是否为最后一个参数
+        //     const nextObj = {};
+        //     if (obj.nextObj) {
+        //         if (index < arg.length - 1) {
+        //             obj.nextObj[item] = nextObj;
+        //             obj.nextObj = nextObj
+        //         } else {
+        //             // 最后一个元素
+        //             obj.nextObj[item] = null;
+        //             obj.nextObj = null;
+        //         }
+        //     } else {
+        //         obj[item] = nextObj;
+        //         obj.nextObj = nextObj;
+        //     }
+        //     return obj
+        // }, {});
+        // return rest
+        return arg.reverse().reduce((rel, item) => {
+            return rel ? {[item]: rel} : {[item]: null}
+        }, null)
+    }
+    const rel = createObj('a', 'b', 'c', 'd');
+    console.log(rel)
+</script>
+</html>

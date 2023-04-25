@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function test() {
+            return 'test';
+        }
+        const obj = {
+            a: {
+                a1: '哈哈哈',
+                a2: {
+                    a21: 'wa'
+                }
+            },
+            b: test,
+            c: [1,2,3,4],
+            d: 1,
+            e: undefined,
+            f: null,
+        };
+        function clone(obj, rel) {
+            if (obj && typeof obj === 'object') {
+                if (Array.isArray(obj)) {
+                    rel = [];
+                    return obj.map(item => {
+                        return clone(item)
+                    })
+                } else {
+                    rel = {};
+                    for (let key in obj) { 
+                        rel[key] = clone(obj[key])
+                    }
+                    return rel;
+                }
+            } else {
+                return obj;
+            }
+        }
+        const rel = clone(obj);
+        obj.a.a1 = '嘿嘿嘿';
+        obj.a.a2.a21 = 'o';
+        obj.c.push(5);
+        console.log(rel, obj)
+    </script>
+</body>
+</html>

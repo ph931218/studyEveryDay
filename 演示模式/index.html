@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <header></header>
+    <body>
+
+    </body>
+    <script>
+        React.useEffect(() => {
+        document.addEventListener(
+            'fullscreenchange',
+            fullscreenChange
+        );
+        if (isFirstRender) {
+            // 页面第一次渲染成功 不是用户操作导致的全屏相关操作 不执行全屏相关操作
+            setIsFirstRender(false);
+        }
+        else {
+            // 进入全屏
+            if (
+                mode
+                && mode.type === 'fullScreen'
+                && !document.fullscreenElement
+            ) {
+                typeof mode.fullScreen.enterFn === 'function'
+                    ? mode.fullScreen.enterFn()
+                    : document.documentElement.requestFullscreen();
+            }
+            else if (mode && mode.fullScreen && document.fullscreenElement) {
+                // 退出全屏
+                typeof mode.fullScreen.exitFn === 'function'
+                    ? mode.fullScreen.exitFn()
+                    : document.exitFullscreen();
+            }
+        }
+        return () => {
+            document.removeEventListener(
+                'fullscreenchange',
+                fullscreenChange
+            );
+        };
+    }, [mode]);
+    function fullscreenChange(event) {
+        let callBack = (type: 'fullScreen' | 'normal') => {};
+        if (
+            mode
+            && mode.fullScreen
+            && mode.fullScreen.callBack
+            && typeof mode.fullScreen.callBack === 'function'
+        ) {
+            // fullscreenChange 发生在全屏之前
+            document.fullscreenElement
+                ? mode.fullScreen.callBack('fullScreen')
+                : mode.fullScreen.callBack('normal');
+        }
+    }
+    </script>
+</html>

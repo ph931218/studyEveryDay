@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    function joinVal(array, position, val) {
+        if (Object.prototype.toString.call(array) === '[object Array]') {
+            // 方式1
+            // const newArrLen = Math.ceil(array.length / position)
+            // const newArr = new Array(newArrLen);
+            // array.reduce((rel, item, index) => {
+            //     const newArrSub = Math.floor(index / position)
+            //     if (!rel[newArrSub]) {
+            //         rel[newArrSub] = [item];
+            //         return rel
+            //     }
+            //     rel[newArrSub].push(item);
+            //     return rel
+            // }, newArr);
+            // console.log(newArr.join(`,${val},`));
+            // return newArr.join(`,${val},`).split(',')
+
+            // 方式二
+            const newArr = [...array];
+            const needControlTimes = Math.ceil(newArr.length / position);
+            for (let i = 1; i < needControlTimes; i++) {
+                const controlPosition = (position * i) + (i - 1);
+                newArr.splice(controlPosition, 0, val)
+            }
+            return newArr
+        }
+        console.log('入参有误');
+        return null
+    }
+    const rel = joinVal([1,2,3,4,5,6,7,8,7], 3, 'a');
+    console.log(rel)
+</script>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+    let list = [1, 2, 3, 4, 5, 6, 7]
+    const square = num => {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve(num * num)
+            }, 1000)
+        })
+    }
+
+    function test() {
+        // const listLen = list.length
+        // const squareList = new Array(listLen);
+        // for (let i = (listLen - 1); i >= 0; i-- ) {
+        //     const node = {};
+        //     if (i === listLen - 1) {
+        //         node.start = () => {
+        //             square(list[i]).then((num) => {
+        //                 console.log(num)
+        //             })
+        //         }
+        //         node.next = null
+        //     } else {
+        //         node.next = squareList[i + 1];
+        //         node.start = () => {
+        //             square(list[i]).then((num) => {
+        //                 console.log(num);
+        //                 node.next && node.next.start()
+        //             })
+        //         }
+        //     }
+        //     squareList[i] = node
+        // }
+        // squareList[0].start()
+        list.forEach(async (x, index) => {
+            const res = square(x);
+            console.log(res)
+        })
+        // 上述相当于 执行了多个callBack
+        // async (x, index) => {
+        //     const res = square(x);
+        //     console.log(res)
+        // }
+        // async (x, index) => {
+        //     const res = square(x);
+        //     console.log(res)
+        // }
+        // ...
+        // for (var i = 0; i < list.length; i++) {
+        //     const res = await square(list[i])
+        //     console.log(res)
+        // }
+        // for循环相当于执行多个语句
+        // const res = await square(list[i])
+        // console.log(res)
+        //
+        // const res = await square(list[i])
+        // console.log(res)
+        // ....
+
+    }
+    test()
+
+    
+</script>
+</html>
